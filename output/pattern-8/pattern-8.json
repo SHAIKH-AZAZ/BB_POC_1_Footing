@@ -1,0 +1,304 @@
+{
+  "footings": [
+    {
+      "footing_id": "F1",
+      "column_id": null,
+      "size": {
+        "width": "3300",
+        "depth": "1100",
+        "length": "4200"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F2",
+      "column_id": null,
+      "size": {
+        "width": "2700",
+        "depth": "1000",
+        "length": "3600"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "125 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F3",
+      "column_id": null,
+      "size": {
+        "width": "3500",
+        "depth": "1100",
+        "length": "8050"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F4",
+      "column_id": null,
+      "size": {
+        "width": "3350",
+        "depth": "1200",
+        "length": "4250"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F5",
+      "column_id": null,
+      "size": {
+        "width": "3100",
+        "depth": "1200",
+        "length": "4000"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F6",
+      "column_id": null,
+      "size": {
+        "width": "3300",
+        "depth": "1075",
+        "length": "4200"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "125 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F7",
+      "column_id": null,
+      "size": {
+        "width": "1850",
+        "depth": "650",
+        "length": "2100"
+      },
+      "reinforcement": {
+        "dia": [
+          "10T"
+        ],
+        "spacing": [
+          "125 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F8",
+      "column_id": null,
+      "size": {
+        "width": "3250",
+        "depth": "1075",
+        "length": "4250"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "125 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F9",
+      "column_id": null,
+      "size": {
+        "width": "2950",
+        "depth": "1175",
+        "length": "3850"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F10",
+      "column_id": null,
+      "size": {
+        "width": "2650",
+        "depth": "900",
+        "length": "3550"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "150 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F11",
+      "column_id": null,
+      "size": {
+        "width": "3100",
+        "depth": "900",
+        "length": "3600"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "150 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F12",
+      "column_id": null,
+      "size": {
+        "width": "3250",
+        "depth": "1350",
+        "length": "4150"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F13",
+      "column_id": null,
+      "size": {
+        "width": "3300",
+        "depth": "900",
+        "length": "4200"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "150 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "F14",
+      "column_id": null,
+      "size": {
+        "width": "2700",
+        "depth": "1250",
+        "length": "3600"
+      },
+      "reinforcement": {
+        "dia": [
+          "12T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    },
+    {
+      "footing_id": "CFT-1",
+      "column_id": null,
+      "size": {
+        "width": null,
+        "depth": "900",
+        "length": null
+      },
+      "reinforcement": {
+        "dia": [
+          "10T"
+        ],
+        "spacing": [
+          "100 C/C"
+        ]
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    }
+  ]
+}

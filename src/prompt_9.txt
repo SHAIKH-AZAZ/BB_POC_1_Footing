@@ -1,0 +1,95 @@
+You are extracting a structured FOOTING SCHEDULE table.
+
+This table contains RAFT columns:
+RAFT-1, RAFT-2, RAFT-3, etc.
+
+Return STRICT JSON in this format:
+
+{
+  "footings": [
+    {
+      "footing_id": "",
+      "column_id": null,
+      "size": {
+        "width": null,
+        "depth": null,
+        "length": null
+      },
+      "reinforcement": {
+        "dia": [],
+        "spacing": []
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    }
+  ]
+}
+
+========================
+STRICT RULES
+========================
+
+1) COLUMN LOCK:
+For each RAFT column (RAFT-1, RAFT-2, RAFT-3):
+Only read values vertically under that exact column.
+Never shift left or right.
+
+2) IGNORE COMPLETELY:
+- Row labeled: B' x L' (PCC)
+
+3) SIZE EXTRACTION:
+
+From row labeled:
+B x L
+
+If cell contains:
+REFER PLAN
+Then:
+width = null
+length = null
+
+From row labeled:
+D
+depth = value
+
+Ignore:
+T row
+Any other rows
+
+4) REINFORCEMENT:
+
+Extract from:
+
+STEEL // - B (SHORT SIDE) (BOTTOM FACE)
+STEEL // - L (LONG SIDE) (BOTTOM FACE)
+STEEL // - B (SHORT SIDE) (TOP FACE)
+STEEL // - L (LONG SIDE) (TOP FACE)
+
+If cell contains:
+16T-100 c/c
+
+Extract:
+dia = "16T"
+spacing = "100 C/C"
+
+Rules:
+- Keep dia exactly as written (16T, 12T etc.)
+- Do NOT convert format.
+- Convert spacing to uppercase format "100 C/C"
+- If "-", ignore.
+- Do NOT merge values from other columns.
+- Do NOT guess.
+
+5) footing_id:
+Use column header exactly (RAFT-1, RAFT-2, RAFT-3)
+
+6) column_id = null
+7) nos = null
+8) mix = null
+9) steel_grade = null
+
+Return ONLY JSON.
+No explanation.
+No extra text.
+If unsure, return null instead of wrong value.

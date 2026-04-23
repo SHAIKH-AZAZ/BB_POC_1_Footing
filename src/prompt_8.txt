@@ -1,0 +1,99 @@
+You are extracting a structured FOOTING SCHEDULE table.
+
+The table contains labeled rows.
+
+Return STRICT JSON in this format:
+
+{
+  "footings": [
+    {
+      "footing_id": "",
+      "column_id": null,
+      "size": {
+        "width": null,
+        "depth": null,
+        "length": null
+      },
+      "reinforcement": {
+        "dia": [],
+        "spacing": []
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    }
+  ]
+}
+
+========================
+VERY STRICT RULES
+========================
+
+1. COLUMN LOCK:
+For each footing column (F1, F2, F3, ... CFT-1):
+Only extract values vertically under that exact column.
+Never shift left or right.
+
+2. IGNORE COMPLETELY:
+- Row labeled: B' x L' (PCC)
+Never use any values from this row.
+
+3. SIZE EXTRACTION:
+
+From row labeled exactly:
+B x L
+
+- First value = width
+- Second value = length
+
+From row labeled exactly:
+D
+
+- depth = value in that column
+
+Do NOT use values from:
+- PCC row
+- t row
+- Any other row
+
+If value is unclear or unreadable, return null.
+Do NOT guess.
+Do NOT approximate.
+Do NOT invent.
+
+4. REINFORCEMENT:
+
+Extract from these rows under same column:
+
+STEEL // - B (SHORT SIDE) (BOTTOM FACE)
+STEEL // - L (LONG SIDE) (BOTTOM FACE)
+STEEL // - B (SHORT SIDE) (TOP FACE)
+STEEL // - L (LONG SIDE) (TOP FACE)
+
+If cell contains:
+12T-100 c/c
+
+Extract:
+dia = "12T"
+spacing = "100 C/C"
+
+Rules:
+- Keep dia exactly as written (12T, 16T, 10T etc.)
+- Do NOT convert to T12.
+- Convert spacing to uppercase format "100 C/C"
+- If cell contains "-", ignore.
+- Do NOT merge values from other columns.
+- Do NOT guess missing reinforcement.
+
+5. footing_id:
+Use column header exactly (F1, F2, F3, ... CFT-1).
+
+6. column_id = null
+7. nos = null
+8. mix = null
+9. steel_grade = null
+
+Return ONLY JSON.
+No explanation.
+No extra text.
+If unsure, return null instead of wrong value.

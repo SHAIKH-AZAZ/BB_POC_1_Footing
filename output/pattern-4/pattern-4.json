@@ -1,34 +1,34 @@
 {
   "footings": [
     {
-      "footing_id": "F1",
+      "footing_id": null,
       "column_id": null,
       "size": {
         "width": 3500,
-        "depth": 600,
+        "depth": null,
         "length": 3500
       },
       "reinforcement": {
         "dia": [],
         "spacing": []
       },
-      "nos": 4,
+      "nos": null,
       "mix": null,
       "steel_grade": null
     },
     {
-      "footing_id": "F2",
+      "footing_id": null,
       "column_id": null,
       "size": {
         "width": 3000,
-        "depth": 500,
+        "depth": null,
         "length": 3000
       },
       "reinforcement": {
         "dia": [],
         "spacing": []
       },
-      "nos": 6,
+      "nos": null,
       "mix": null,
       "steel_grade": null
     }

@@ -1,103 +1,98 @@
 {
   "footings": [
     {
-      "footing_id": "1",
-      "column_id": "GC1, GC3, GC7",
+      "column_id": "GC1,GC3,GC7",
       "size": {
-        "width": 1900,
-        "depth": 230,
-        "length": 2000
+        "length": 1900,
+        "width": 2000
+      },
+      "depth": {
+        "top": 450,
+        "bottom": 230
       },
       "reinforcement": {
-        "dia": [
-          "12"
-        ],
-        "spacing": [
-          "150 C/C"
-        ]
+        "short_span": "T12 @ 115 C/C",
+        "long_span": "T12 @ 115 C/C",
+        "dia": [],
+        "spacing": []
       },
-      "nos": 2,
-      "mix": "M200",
+      "concrete_mix": "M200",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "2",
-      "column_id": "GC2, GC9, GC10, GC13",
+      "column_id": "GC2,GC9,GC10,GC13",
       "size": {
-        "width": 2000,
-        "depth": 230,
-        "length": 2200
+        "length": 2000,
+        "width": 2200
+      },
+      "depth": {
+        "top": 500,
+        "bottom": 230
       },
       "reinforcement": {
-        "dia": [
-          "12"
-        ],
-        "spacing": [
-          "100 C/C"
-        ]
+        "short_span": "T12 @ 100 C/C",
+        "long_span": "T12 @ 100 C/C",
+        "dia": [],
+        "spacing": []
       },
-      "nos": 12,
-      "mix": "M200",
+      "concrete_mix": "M200",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "3",
-      "column_id": "GC4, GC5, GC11, GC12, GC13, GC14, GC15",
+      "column_id": "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
       "size": {
-        "width": 1600,
-        "depth": 200,
-        "length": 1650
+        "length": 1600,
+        "width": 1650
+      },
+      "depth": {
+        "top": 400,
+        "bottom": 200
       },
       "reinforcement": {
-        "dia": [
-          "12"
-        ],
-        "spacing": [
-          "150 C/C"
-        ]
+        "short_span": "T12 @ 150 C/C",
+        "long_span": "T12 @ 150 C/C",
+        "dia": [],
+        "spacing": []
       },
-      "nos": 12,
-      "mix": "M200",
+      "concrete_mix": "M200",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "4",
-      "column_id": "GC6, GC8, RGC",
+      "column_id": "GC6,GC8,EGC",
       "size": {
-        "width": 1000,
-        "depth": 200,
-        "length": 1650
+        "length": 1000,
+        "width": 1650
+      },
+      "depth": {
+        "top": 450,
+        "bottom": 200
       },
       "reinforcement": {
-        "dia": [
-          "12"
-        ],
-        "spacing": [
-          "150 C/C"
-        ]
+        "short_span": "T12 @ 150 C/C",
+        "long_span": "T12 @ 150 C/C",
+        "dia": [],
+        "spacing": []
       },
-      "nos": 2,
-      "mix": "M200",
+      "concrete_mix": "M200",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "5",
-      "column_id": "GC16, GC17",
+      "column_id": "GC16,GC17",
       "size": {
-        "width": 1600,
-        "depth": 230,
-        "length": 1650
+        "length": 1600,
+        "width": 1650
+      },
+      "depth": {
+        "top": 400,
+        "bottom": 230
       },
       "reinforcement": {
-        "dia": [
-          "12"
-        ],
-        "spacing": [
-          "150 C/C"
-        ]
+        "short_span": "T12 @ 150 C/C",
+        "long_span": "T12 @ 150 C/C",
+        "dia": [],
+        "spacing": []
       },
-      "nos": 12,
-      "mix": "M200",
+      "concrete_mix": "M200",
       "steel_grade": "FE500"
     }
   ]

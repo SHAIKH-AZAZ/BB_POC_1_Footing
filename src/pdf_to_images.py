@@ -2,7 +2,7 @@ import fitz
 import os
 
 
-def convert_pdf_to_images(pdf_path, output_folder, dpi=450):
+def convert_pdf_to_images(pdf_path, output_folder, dpi=600):
 
     os.makedirs(output_folder, exist_ok=True)
 

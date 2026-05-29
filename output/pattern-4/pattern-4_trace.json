@@ -1,0 +1,277 @@
+{
+  "project": "footing",
+  "pdf_stem": "pattern-4",
+  "pages": {
+    "page_1.png": {
+      "project": "footing",
+      "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-4/page_1.png",
+      "page_index": 0,
+      "pdf_path": null,
+      "generated_at": "2026-05-29T06:02:08.173718+00:00",
+      "think": {
+        "image_quality": "high",
+        "table_bounds": {
+          "x1": 40,
+          "y1": 700,
+          "x2": 1450,
+          "y2": 900
+        },
+        "column_groups": [
+          "FOOTING ID",
+          "LENGTH(L)",
+          "BREADTH(B)",
+          "DEPTH(D)",
+          "NOS",
+          "GRID REFERENCE"
+        ],
+        "row_structure": [
+          "COLUMN MARK",
+          "SIZE",
+          "D TO d",
+          "SHORT SPAN",
+          "LONG SPAN"
+        ],
+        "global_notes": {},
+        "expected_count": 2,
+        "zoom_plan": [
+          {
+            "region_id": "header_footing_id",
+            "purpose": "header",
+            "x1": 40,
+            "y1": 700,
+            "x2": 200,
+            "y2": 740,
+            "reason": "Read FOOTING ID header"
+          },
+          {
+            "region_id": "header_length",
+            "purpose": "header",
+            "x1": 200,
+            "y1": 700,
+            "x2": 400,
+            "y2": 740,
+            "reason": "Read LENGTH(L) header"
+          },
+          {
+            "region_id": "header_breadth",
+            "purpose": "header",
+            "x1": 400,
+            "y1": 700,
+            "x2": 600,
+            "y2": 740,
+            "reason": "Read BREADTH(B) header"
+          },
+          {
+            "region_id": "header_depth",
+            "purpose": "header",
+            "x1": 600,
+            "y1": 700,
+            "x2": 800,
+            "y2": 740,
+            "reason": "Read DEPTH(D) header"
+          },
+          {
+            "region_id": "header_nos",
+            "purpose": "header",
+            "x1": 800,
+            "y1": 700,
+            "x2": 900,
+            "y2": 740,
+            "reason": "Read NOS header"
+          },
+          {
+            "region_id": "row1_footing_id",
+            "purpose": "row_label",
+            "x1": 40,
+            "y1": 740,
+            "x2": 200,
+            "y2": 780,
+            "reason": "Read footing id F1"
+          },
+          {
+            "region_id": "row1_length",
+            "purpose": "data_cell",
+            "x1": 200,
+            "y1": 740,
+            "x2": 400,
+            "y2": 780,
+            "reason": "Read length for F1"
+          },
+          {
+            "region_id": "row1_breadth",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 740,
+            "x2": 600,
+            "y2": 780,
+            "reason": "Read breadth for F1"
+          },
+          {
+            "region_id": "row1_depth",
+            "purpose": "data_cell",
+            "x1": 600,
+            "y1": 740,
+            "x2": 800,
+            "y2": 780,
+            "reason": "Read depth for F1"
+          },
+          {
+            "region_id": "row1_nos",
+            "purpose": "data_cell",
+            "x1": 800,
+            "y1": 740,
+            "x2": 900,
+            "y2": 780,
+            "reason": "Read nos for F1"
+          },
+          {
+            "region_id": "row2_footing_id",
+            "purpose": "row_label",
+            "x1": 40,
+            "y1": 780,
+            "x2": 200,
+            "y2": 820,
+            "reason": "Read footing id F2"
+          },
+          {
+            "region_id": "row2_length",
+            "purpose": "data_cell",
+            "x1": 200,
+            "y1": 780,
+            "x2": 400,
+            "y2": 820,
+            "reason": "Read length for F2"
+          },
+          {
+            "region_id": "row2_breadth",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 780,
+            "x2": 600,
+            "y2": 820,
+            "reason": "Read breadth for F2"
+          },
+          {
+            "region_id": "row2_depth",
+            "purpose": "data_cell",
+            "x1": 600,
+            "y1": 780,
+            "x2": 800,
+            "y2": 820,
+            "reason": "Read depth for F2"
+          },
+          {
+            "region_id": "row2_nos",
+            "purpose": "data_cell",
+            "x1": 800,
+            "y1": 780,
+            "x2": 900,
+            "y2": 820,
+            "reason": "Read nos for F2"
+          }
+        ],
+        "normalization_rules": [
+          "Trim spaces",
+          "Convert numeric strings to numbers"
+        ],
+        "extraction_order": [
+          "FOOTING ID",
+          "LENGTH(L)",
+          "BREADTH(B)",
+          "DEPTH(D)",
+          "NOS"
+        ]
+      },
+      "zoom_regions": [],
+      "confirmed_reads": [],
+      "pdf_reads": [],
+      "records": [
+        {
+          "footing_id": "F1",
+          "column_id": null,
+          "size": {
+            "width": 3500,
+            "depth": null,
+            "length": 3500
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": 4,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F2",
+          "column_id": null,
+          "size": {
+            "width": 3000,
+            "depth": null,
+            "length": 3000
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": 6,
+          "mix": null,
+          "steel_grade": null
+        }
+      ],
+      "added_records": [
+        {
+          "record": {
+            "footing_id": "F1",
+            "column_id": null,
+            "size": {
+              "width": 3500,
+              "depth": null,
+              "length": 3500
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": 4,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F2",
+            "column_id": null,
+            "size": {
+              "width": 3000,
+              "depth": null,
+              "length": 3000
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": 6,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        }
+      ],
+      "expected_count": 2,
+      "actual_count": 2,
+      "warnings": [
+        "duplicate record key detected: ('None',)"
+      ]
+    }
+  },
+  "summary": {
+    "page_count": 1,
+    "record_count": 2,
+    "warning_count": 1,
+    "warnings": [
+      "duplicate record key detected: ('None',)"
+    ]
+  }
+}

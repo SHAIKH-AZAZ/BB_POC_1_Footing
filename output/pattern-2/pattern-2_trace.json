@@ -1,0 +1,850 @@
+{
+  "project": "footing",
+  "pdf_stem": "pattern-2",
+  "pages": {
+    "page_1.png": {
+      "project": "footing",
+      "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-2/page_1.png",
+      "page_index": 0,
+      "pdf_path": null,
+      "generated_at": "2026-05-29T06:01:45.398690+00:00",
+      "think": {
+        "image_quality": "good",
+        "table_bounds": {
+          "x1": 0,
+          "y1": 800,
+          "x2": 2500,
+          "y2": 1100
+        },
+        "column_groups": [
+          "C1",
+          "C2",
+          "C2A",
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8",
+          "C9",
+          "C10",
+          "C11"
+        ],
+        "row_structure": [
+          "PEDESTAL SIZE",
+          "CONC. MIX",
+          "HORI. STEEL",
+          "VERTI. STEEL",
+          "P.C.C SIZE",
+          "FOOTING SIZE",
+          "DEPTH (D TO D)",
+          "RENF. / NOS",
+          "RENF. / L.",
+          "FOOTING MIX.",
+          "FLOOR",
+          "COL. MARK"
+        ],
+        "global_notes": {
+          "CONCRETE MIX": "M25",
+          "STEEL GRADE": null
+        },
+        "expected_count": 12,
+        "zoom_plan": [
+          {
+            "region_id": "header_C1",
+            "purpose": "header",
+            "x1": 0,
+            "y1": 1050,
+            "x2": 200,
+            "y2": 1100,
+            "reason": "Column header C1"
+          },
+          {
+            "region_id": "rowlabel_COLMARK",
+            "purpose": "row_label",
+            "x1": 0,
+            "y1": 1080,
+            "x2": 100,
+            "y2": 1100,
+            "reason": "Row label COL. MARK"
+          },
+          {
+            "region_id": "data_C1_footingsize",
+            "purpose": "data_cell",
+            "x1": 200,
+            "y1": 900,
+            "x2": 300,
+            "y2": 950,
+            "reason": "Footing size for C1"
+          },
+          {
+            "region_id": "data_C1_depth",
+            "purpose": "data_cell",
+            "x1": 200,
+            "y1": 950,
+            "x2": 300,
+            "y2": 1000,
+            "reason": "Depth for C1"
+          },
+          {
+            "region_id": "data_C1_renf",
+            "purpose": "data_cell",
+            "x1": 200,
+            "y1": 1000,
+            "x2": 300,
+            "y2": 1050,
+            "reason": "Reinforcement for C1"
+          },
+          {
+            "region_id": "data_C2_footingsize",
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 900,
+            "x2": 400,
+            "y2": 950,
+            "reason": "Footing size for C2"
+          },
+          {
+            "region_id": "data_C2_depth",
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 950,
+            "x2": 400,
+            "y2": 1000,
+            "reason": "Depth for C2"
+          },
+          {
+            "region_id": "data_C2_renf",
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 1000,
+            "x2": 400,
+            "y2": 1050,
+            "reason": "Reinforcement for C2"
+          },
+          {
+            "region_id": "data_C2A_footingsize",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 900,
+            "x2": 500,
+            "y2": 950,
+            "reason": "Footing size for C2A"
+          },
+          {
+            "region_id": "data_C2A_depth",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 950,
+            "x2": 500,
+            "y2": 1000,
+            "reason": "Depth for C2A"
+          },
+          {
+            "region_id": "data_C2A_renf",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 1000,
+            "x2": 500,
+            "y2": 1050,
+            "reason": "Reinforcement for C2A"
+          },
+          {
+            "region_id": "data_C3_footingsize",
+            "purpose": "data_cell",
+            "x1": 500,
+            "y1": 900,
+            "x2": 600,
+            "y2": 950,
+            "reason": "Footing size for C3"
+          },
+          {
+            "region_id": "data_C3_depth",
+            "purpose": "data_cell",
+            "x1": 500,
+            "y1": 950,
+            "x2": 600,
+            "y2": 1000,
+            "reason": "Depth for C3"
+          },
+          {
+            "region_id": "data_C3_renf",
+            "purpose": "data_cell",
+            "x1": 500,
+            "y1": 1000,
+            "x2": 600,
+            "y2": 1050,
+            "reason": "Reinforcement for C3"
+          },
+          {
+            "region_id": "data_C4_footingsize",
+            "purpose": "data_cell",
+            "x1": 600,
+            "y1": 900,
+            "x2": 700,
+            "y2": 950,
+            "reason": "Footing size for C4"
+          },
+          {
+            "region_id": "data_C4_depth",
+            "purpose": "data_cell",
+            "x1": 600,
+            "y1": 950,
+            "x2": 700,
+            "y2": 1000,
+            "reason": "Depth for C4"
+          },
+          {
+            "region_id": "data_C4_renf",
+            "purpose": "data_cell",
+            "x1": 600,
+            "y1": 1000,
+            "x2": 700,
+            "y2": 1050,
+            "reason": "Reinforcement for C4"
+          },
+          {
+            "region_id": "data_C5_footingsize",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 900,
+            "x2": 800,
+            "y2": 950,
+            "reason": "Footing size for C5"
+          },
+          {
+            "region_id": "data_C5_depth",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 950,
+            "x2": 800,
+            "y2": 1000,
+            "reason": "Depth for C5"
+          },
+          {
+            "region_id": "data_C5_renf",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 1000,
+            "x2": 800,
+            "y2": 1050,
+            "reason": "Reinforcement for C5"
+          },
+          {
+            "region_id": "data_C6_footingsize",
+            "purpose": "data_cell",
+            "x1": 800,
+            "y1": 900,
+            "x2": 900,
+            "y2": 950,
+            "reason": "Footing size for C6"
+          },
+          {
+            "region_id": "data_C6_depth",
+            "purpose": "data_cell",
+            "x1": 800,
+            "y1": 950,
+            "x2": 900,
+            "y2": 1000,
+            "reason": "Depth for C6"
+          },
+          {
+            "region_id": "data_C6_renf",
+            "purpose": "data_cell",
+            "x1": 800,
+            "y1": 1000,
+            "x2": 900,
+            "y2": 1050,
+            "reason": "Reinforcement for C6"
+          },
+          {
+            "region_id": "data_C7_footingsize",
+            "purpose": "data_cell",
+            "x1": 900,
+            "y1": 900,
+            "x2": 1000,
+            "y2": 950,
+            "reason": "Footing size for C7"
+          },
+          {
+            "region_id": "data_C7_depth",
+            "purpose": "data_cell",
+            "x1": 900,
+            "y1": 950,
+            "x2": 1000,
+            "y2": 1000,
+            "reason": "Depth for C7"
+          },
+          {
+            "region_id": "data_C7_renf",
+            "purpose": "data_cell",
+            "x1": 900,
+            "y1": 1000,
+            "x2": 1000,
+            "y2": 1050,
+            "reason": "Reinforcement for C7"
+          },
+          {
+            "region_id": "data_C8_footingsize",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 900,
+            "x2": 1100,
+            "y2": 950,
+            "reason": "Footing size for C8"
+          },
+          {
+            "region_id": "data_C8_depth",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 950,
+            "x2": 1100,
+            "y2": 1000,
+            "reason": "Depth for C8"
+          },
+          {
+            "region_id": "data_C8_renf",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 1000,
+            "x2": 1100,
+            "y2": 1050,
+            "reason": "Reinforcement for C8"
+          },
+          {
+            "region_id": "data_C9_footingsize",
+            "purpose": "data_cell",
+            "x1": 1100,
+            "y1": 900,
+            "x2": 1200,
+            "y2": 950,
+            "reason": "Footing size for C9"
+          },
+          {
+            "region_id": "data_C9_depth",
+            "purpose": "data_cell",
+            "x1": 1100,
+            "y1": 950,
+            "x2": 1200,
+            "y2": 1000,
+            "reason": "Depth for C9"
+          },
+          {
+            "region_id": "data_C9_renf",
+            "purpose": "data_cell",
+            "x1": 1100,
+            "y1": 1000,
+            "x2": 1200,
+            "y2": 1050,
+            "reason": "Reinforcement for C9"
+          },
+          {
+            "region_id": "data_C10_footingsize",
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 900,
+            "x2": 1300,
+            "y2": 950,
+            "reason": "Footing size for C10"
+          },
+          {
+            "region_id": "data_C10_depth",
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 950,
+            "x2": 1300,
+            "y2": 1000,
+            "reason": "Depth for C10"
+          },
+          {
+            "region_id": "data_C10_renf",
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 1000,
+            "x2": 1300,
+            "y2": 1050,
+            "reason": "Reinforcement for C10"
+          },
+          {
+            "region_id": "data_C11_footingsize",
+            "purpose": "data_cell",
+            "x1": 1300,
+            "y1": 900,
+            "x2": 1400,
+            "y2": 950,
+            "reason": "Footing size for C11"
+          },
+          {
+            "region_id": "data_C11_depth",
+            "purpose": "data_cell",
+            "x1": 1300,
+            "y1": 950,
+            "x2": 1400,
+            "y2": 1000,
+            "reason": "Depth for C11"
+          },
+          {
+            "region_id": "data_C11_renf",
+            "purpose": "data_cell",
+            "x1": 1300,
+            "y1": 1000,
+            "x2": 1400,
+            "y2": 1050,
+            "reason": "Reinforcement for C11"
+          }
+        ],
+        "normalization_rules": [
+          "Convert reinforcement 'TOR' to 'T'",
+          "Extract width and length from 'FOOTING SIZE' row",
+          "Extract smaller depth from 'DEPTH (D TO D)' row",
+          "Ignore rows: PEDESTAL SIZE, CONC. MIX, HORI. STEEL, VERTI. STEEL, P.C.C SIZE",
+          "If text contains 'REFER RAFT FOOTING PLAN' or similar, set footing data to null",
+          "Spacing array for reinforcement is always empty"
+        ],
+        "extraction_order": [
+          "COL. MARK",
+          "FOOTING SIZE",
+          "DEPTH (D TO D)",
+          "RENF. / NOS",
+          "FOOTING MIX."
+        ]
+      },
+      "zoom_regions": [],
+      "confirmed_reads": [],
+      "pdf_reads": [],
+      "records": [
+        {
+          "footing_id": "C1",
+          "column_id": "C1",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C2",
+          "column_id": "C2",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C2A",
+          "column_id": "C2A",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C3",
+          "column_id": "C3",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C4",
+          "column_id": "C4",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C5",
+          "column_id": "C5",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C6",
+          "column_id": "C6",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C7",
+          "column_id": "C7",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C8",
+          "column_id": "C8",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C9",
+          "column_id": "C9",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C10",
+          "column_id": "C10",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "C11",
+          "column_id": "C11",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null
+        }
+      ],
+      "added_records": [
+        {
+          "record": {
+            "footing_id": "C1",
+            "column_id": "C1",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C2",
+            "column_id": "C2",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C2A",
+            "column_id": "C2A",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C3",
+            "column_id": "C3",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C4",
+            "column_id": "C4",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C5",
+            "column_id": "C5",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C6",
+            "column_id": "C6",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C7",
+            "column_id": "C7",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C8",
+            "column_id": "C8",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C9",
+            "column_id": "C9",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C10",
+            "column_id": "C10",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C11",
+            "column_id": "C11",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        }
+      ],
+      "expected_count": 12,
+      "actual_count": 12,
+      "warnings": []
+    }
+  },
+  "summary": {
+    "page_count": 1,
+    "record_count": 12,
+    "warning_count": 0,
+    "warnings": []
+  }
+}

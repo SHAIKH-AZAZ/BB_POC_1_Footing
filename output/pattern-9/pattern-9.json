@@ -1,11 +1,11 @@
 {
   "footings": [
     {
-      "footing_id": null,
+      "footing_id": "RAFT-1",
       "column_id": null,
       "size": {
         "width": null,
-        "depth": null,
+        "depth": 1000,
         "length": null
       },
       "reinforcement": {
@@ -17,11 +17,11 @@
       "steel_grade": null
     },
     {
-      "footing_id": null,
+      "footing_id": "RAFT-2",
       "column_id": null,
       "size": {
         "width": null,
-        "depth": null,
+        "depth": 1000,
         "length": null
       },
       "reinforcement": {
@@ -33,11 +33,11 @@
       "steel_grade": null
     },
     {
-      "footing_id": null,
+      "footing_id": "RAFT-3",
       "column_id": null,
       "size": {
         "width": null,
-        "depth": null,
+        "depth": 1000,
         "length": null
       },
       "reinforcement": {

@@ -1,0 +1,329 @@
+{
+  "project": "footing",
+  "pdf_stem": "pattern-9",
+  "pages": {
+    "page_1.png": {
+      "project": "footing",
+      "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-9/page_1.png",
+      "page_index": 0,
+      "pdf_path": null,
+      "generated_at": "2026-05-29T05:57:34.108807+00:00",
+      "think": {
+        "image_quality": "good",
+        "table_bounds": {
+          "x1": 0,
+          "y1": 0,
+          "x2": 2048,
+          "y2": 1536
+        },
+        "column_groups": [
+          "RAFT-1",
+          "RAFT-2",
+          "RAFT-3"
+        ],
+        "row_structure": [
+          "B' x L' (PCC)",
+          "B x L",
+          "D",
+          "T",
+          "STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
+          "STEEL // - L (LONG SIDE) (BOTTOM FACE)",
+          "STEEL // - B (SHORT SIDE) (TOP FACE)",
+          "STEEL // - L (LONG SIDE) (TOP FACE)",
+          "REMARK"
+        ],
+        "global_notes": {},
+        "expected_count": 3,
+        "zoom_plan": [
+          {
+            "region_id": "r1",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 300,
+            "x2": 500,
+            "y2": 350,
+            "reason": "B x L row is REFER PLAN for all columns"
+          },
+          {
+            "region_id": "r2",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 350,
+            "x2": 500,
+            "y2": 400,
+            "reason": "D row depth 1000 for RAFT-1"
+          },
+          {
+            "region_id": "r3",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 350,
+            "x2": 800,
+            "y2": 400,
+            "reason": "D row depth 1000 for RAFT-2"
+          },
+          {
+            "region_id": "r4",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 350,
+            "x2": 1100,
+            "y2": 400,
+            "reason": "D row depth 1000 for RAFT-3"
+          },
+          {
+            "region_id": "r5",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 450,
+            "x2": 500,
+            "y2": 500,
+            "reason": "STEEL // - B (SHORT SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-1"
+          },
+          {
+            "region_id": "r6",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 450,
+            "x2": 800,
+            "y2": 500,
+            "reason": "STEEL // - B (SHORT SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-2"
+          },
+          {
+            "region_id": "r7",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 450,
+            "x2": 1100,
+            "y2": 500,
+            "reason": "STEEL // - B (SHORT SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-3"
+          },
+          {
+            "region_id": "r8",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 500,
+            "x2": 500,
+            "y2": 550,
+            "reason": "STEEL // - L (LONG SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-1"
+          },
+          {
+            "region_id": "r9",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 500,
+            "x2": 800,
+            "y2": 550,
+            "reason": "STEEL // - L (LONG SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-2"
+          },
+          {
+            "region_id": "r10",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 500,
+            "x2": 1100,
+            "y2": 550,
+            "reason": "STEEL // - L (LONG SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-3"
+          },
+          {
+            "region_id": "r11",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 550,
+            "x2": 500,
+            "y2": 600,
+            "reason": "STEEL // - B (SHORT SIDE) (TOP FACE) 16T-100C/C for RAFT-1"
+          },
+          {
+            "region_id": "r12",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 550,
+            "x2": 800,
+            "y2": 600,
+            "reason": "STEEL // - B (SHORT SIDE) (TOP FACE) 16T-100C/C for RAFT-2"
+          },
+          {
+            "region_id": "r13",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 550,
+            "x2": 1100,
+            "y2": 600,
+            "reason": "STEEL // - B (SHORT SIDE) (TOP FACE) 16T-100C/C for RAFT-3"
+          },
+          {
+            "region_id": "r14",
+            "purpose": "data_cell",
+            "x1": 400,
+            "y1": 600,
+            "x2": 500,
+            "y2": 650,
+            "reason": "STEEL // - L (LONG SIDE) (TOP FACE) 16T-100C/C for RAFT-1"
+          },
+          {
+            "region_id": "r15",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 600,
+            "x2": 800,
+            "y2": 650,
+            "reason": "STEEL // - L (LONG SIDE) (TOP FACE) 16T-100C/C for RAFT-2"
+          },
+          {
+            "region_id": "r16",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 600,
+            "x2": 1100,
+            "y2": 650,
+            "reason": "STEEL // - L (LONG SIDE) (TOP FACE) 16T-100C/C for RAFT-3"
+          }
+        ],
+        "normalization_rules": [
+          "Convert spacing to uppercase format '100 C/C'",
+          "Ignore row B' x L' (PCC)",
+          "If B x L is 'REFER PLAN' then width and length are null",
+          "Extract depth from row D",
+          "Extract reinforcement from STEEL rows with format dia-spacing",
+          "Do not guess values",
+          "Use footing_id as column header",
+          "Set column_id, nos, mix, steel_grade to null"
+        ],
+        "extraction_order": [
+          "B x L",
+          "D",
+          "STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
+          "STEEL // - L (LONG SIDE) (BOTTOM FACE)",
+          "STEEL // - B (SHORT SIDE) (TOP FACE)",
+          "STEEL // - L (LONG SIDE) (TOP FACE)"
+        ]
+      },
+      "zoom_regions": [],
+      "confirmed_reads": [],
+      "pdf_reads": [],
+      "records": [
+        {
+          "footing_id": "RAFT-1",
+          "column_id": null,
+          "size": {
+            "width": null,
+            "depth": 1000,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "RAFT-2",
+          "column_id": null,
+          "size": {
+            "width": null,
+            "depth": 1000,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "RAFT-3",
+          "column_id": null,
+          "size": {
+            "width": null,
+            "depth": 1000,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        }
+      ],
+      "added_records": [
+        {
+          "record": {
+            "footing_id": "RAFT-1",
+            "column_id": null,
+            "size": {
+              "width": null,
+              "depth": 1000,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "RAFT-2",
+            "column_id": null,
+            "size": {
+              "width": null,
+              "depth": 1000,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "RAFT-3",
+            "column_id": null,
+            "size": {
+              "width": null,
+              "depth": 1000,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        }
+      ],
+      "expected_count": 3,
+      "actual_count": 3,
+      "warnings": [
+        "duplicate record key detected: ('None',)"
+      ]
+    }
+  },
+  "summary": {
+    "page_count": 1,
+    "record_count": 3,
+    "warning_count": 1,
+    "warnings": [
+      "duplicate record key detected: ('None',)"
+    ]
+  }
+}

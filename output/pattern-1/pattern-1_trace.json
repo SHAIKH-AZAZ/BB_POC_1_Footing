@@ -1,0 +1,568 @@
+{
+  "project": "footing",
+  "pdf_stem": "pattern-1",
+  "pages": {
+    "page_1.png": {
+      "project": "footing",
+      "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-1/page_1.png",
+      "page_index": 0,
+      "pdf_path": null,
+      "generated_at": "2026-05-29T06:33:04.438245+00:00",
+      "think": {
+        "image_quality": "high",
+        "table_bounds": {
+          "x1": 0,
+          "y1": 400,
+          "x2": 2500,
+          "y2": 900
+        },
+        "column_groups": [
+          "GC1,GC3,GC7",
+          "GC2,GC9,GC10,GC13",
+          "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
+          "GC6,GC8",
+          "GC16,GC17"
+        ],
+        "row_structure": [
+          "COLUMN MARK",
+          "SIZE",
+          "D TO d",
+          "SHORT SPAN",
+          "LONG SPAN"
+        ],
+        "global_notes": {
+          "concrete_mix": "M25",
+          "steel_grade": "FE500"
+        },
+        "expected_count": 5,
+        "zoom_plan": [
+          {
+            "region_id": "header_1",
+            "purpose": "header",
+            "x1": 0,
+            "y1": 400,
+            "x2": 2500,
+            "y2": 440,
+            "reason": "Table header with column marks and footing details"
+          },
+          {
+            "region_id": "column_mark_1",
+            "purpose": "row_label",
+            "x1": 100,
+            "y1": 440,
+            "x2": 300,
+            "y2": 480,
+            "reason": "Column mark GC1,GC3,GC7"
+          },
+          {
+            "region_id": "size_1",
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 480,
+            "x2": 500,
+            "y2": 520,
+            "reason": "Size for GC1,GC3,GC7"
+          },
+          {
+            "region_id": "depth_1",
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 520,
+            "x2": 500,
+            "y2": 560,
+            "reason": "Depth for GC1,GC3,GC7"
+          },
+          {
+            "region_id": "short_span_1",
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 560,
+            "x2": 500,
+            "y2": 600,
+            "reason": "Short span reinforcement for GC1,GC3,GC7"
+          },
+          {
+            "region_id": "long_span_1",
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 600,
+            "x2": 500,
+            "y2": 640,
+            "reason": "Long span reinforcement for GC1,GC3,GC7"
+          },
+          {
+            "region_id": "column_mark_2",
+            "purpose": "row_label",
+            "x1": 500,
+            "y1": 440,
+            "x2": 700,
+            "y2": 480,
+            "reason": "Column mark GC2,GC9,GC10,GC13"
+          },
+          {
+            "region_id": "size_2",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 480,
+            "x2": 900,
+            "y2": 520,
+            "reason": "Size for GC2,GC9,GC10,GC13"
+          },
+          {
+            "region_id": "depth_2",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 520,
+            "x2": 900,
+            "y2": 560,
+            "reason": "Depth for GC2,GC9,GC10,GC13"
+          },
+          {
+            "region_id": "short_span_2",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 560,
+            "x2": 900,
+            "y2": 600,
+            "reason": "Short span reinforcement for GC2,GC9,GC10,GC13"
+          },
+          {
+            "region_id": "long_span_2",
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 600,
+            "x2": 900,
+            "y2": 640,
+            "reason": "Long span reinforcement for GC2,GC9,GC10,GC13"
+          },
+          {
+            "region_id": "column_mark_3",
+            "purpose": "row_label",
+            "x1": 900,
+            "y1": 440,
+            "x2": 1200,
+            "y2": 480,
+            "reason": "Column mark GC4,GC5,GC11,GC12,GC13,GC14,GC15"
+          },
+          {
+            "region_id": "size_3",
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 480,
+            "x2": 1500,
+            "y2": 520,
+            "reason": "Size for GC4,GC5,GC11,GC12,GC13,GC14,GC15"
+          },
+          {
+            "region_id": "depth_3",
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 520,
+            "x2": 1500,
+            "y2": 560,
+            "reason": "Depth for GC4,GC5,GC11,GC12,GC13,GC14,GC15"
+          },
+          {
+            "region_id": "short_span_3",
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 560,
+            "x2": 1500,
+            "y2": 600,
+            "reason": "Short span reinforcement for GC4,GC5,GC11,GC12,GC13,GC14,GC15"
+          },
+          {
+            "region_id": "long_span_3",
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 600,
+            "x2": 1500,
+            "y2": 640,
+            "reason": "Long span reinforcement for GC4,GC5,GC11,GC12,GC13,GC14,GC15"
+          },
+          {
+            "region_id": "column_mark_4",
+            "purpose": "row_label",
+            "x1": 1500,
+            "y1": 440,
+            "x2": 1700,
+            "y2": 480,
+            "reason": "Column mark GC6,GC8"
+          },
+          {
+            "region_id": "size_4",
+            "purpose": "data_cell",
+            "x1": 1700,
+            "y1": 480,
+            "x2": 1900,
+            "y2": 520,
+            "reason": "Size for GC6,GC8"
+          },
+          {
+            "region_id": "depth_4",
+            "purpose": "data_cell",
+            "x1": 1700,
+            "y1": 520,
+            "x2": 1900,
+            "y2": 560,
+            "reason": "Depth for GC6,GC8"
+          },
+          {
+            "region_id": "short_span_4",
+            "purpose": "data_cell",
+            "x1": 1700,
+            "y1": 560,
+            "x2": 1900,
+            "y2": 600,
+            "reason": "Short span reinforcement for GC6,GC8"
+          },
+          {
+            "region_id": "long_span_4",
+            "purpose": "data_cell",
+            "x1": 1700,
+            "y1": 600,
+            "x2": 1900,
+            "y2": 640,
+            "reason": "Long span reinforcement for GC6,GC8"
+          },
+          {
+            "region_id": "column_mark_5",
+            "purpose": "row_label",
+            "x1": 1900,
+            "y1": 440,
+            "x2": 2200,
+            "y2": 480,
+            "reason": "Column mark GC16,GC17"
+          },
+          {
+            "region_id": "size_5",
+            "purpose": "data_cell",
+            "x1": 2200,
+            "y1": 480,
+            "x2": 2500,
+            "y2": 520,
+            "reason": "Size for GC16,GC17"
+          },
+          {
+            "region_id": "depth_5",
+            "purpose": "data_cell",
+            "x1": 2200,
+            "y1": 520,
+            "x2": 2500,
+            "y2": 560,
+            "reason": "Depth for GC16,GC17"
+          },
+          {
+            "region_id": "short_span_5",
+            "purpose": "data_cell",
+            "x1": 2200,
+            "y1": 560,
+            "x2": 2500,
+            "y2": 600,
+            "reason": "Short span reinforcement for GC16,GC17"
+          },
+          {
+            "region_id": "long_span_5",
+            "purpose": "data_cell",
+            "x1": 2200,
+            "y1": 600,
+            "x2": 2500,
+            "y2": 640,
+            "reason": "Long span reinforcement for GC16,GC17"
+          },
+          {
+            "region_id": "global_note_1",
+            "purpose": "global_note",
+            "x1": 0,
+            "y1": 350,
+            "x2": 400,
+            "y2": 400,
+            "reason": "Global concrete mix and steel grade notes"
+          }
+        ],
+        "normalization_rules": [
+          "Convert spacing values to 'xxx C/C' format",
+          "Use bottom d value from 'D TO d' as depth",
+          "Extract reinforcement diameters as Txx",
+          "Keep grouped column IDs as is",
+          "Use plan_width and plan_length from size cell"
+        ],
+        "extraction_order": [
+          "COLUMN MARK",
+          "SIZE",
+          "D TO d",
+          "SHORT SPAN",
+          "LONG SPAN"
+        ]
+      },
+      "zoom_regions": [],
+      "confirmed_reads": [],
+      "pdf_reads": [],
+      "records": [
+        {
+          "footing_id": "GC1,GC3,GC7",
+          "column_id": "GC1,GC3,GC7",
+          "size": {
+            "width": 1900,
+            "depth": 230,
+            "length": 2000
+          },
+          "reinforcement": {
+            "dia": [
+              "T12"
+            ],
+            "spacing": [
+              "150 C/C"
+            ]
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": "FE500"
+        },
+        {
+          "footing_id": "GC2,GC9,GC10,GC13",
+          "column_id": "GC2,GC9,GC10,GC13",
+          "size": {
+            "width": 2000,
+            "depth": 230,
+            "length": 2200
+          },
+          "reinforcement": {
+            "dia": [
+              "T12"
+            ],
+            "spacing": [
+              "600 C/C"
+            ]
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": "FE500"
+        },
+        {
+          "footing_id": "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
+          "column_id": "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
+          "size": {
+            "width": 1600,
+            "depth": 200,
+            "length": 1650
+          },
+          "reinforcement": {
+            "dia": [
+              "T12"
+            ],
+            "spacing": [
+              "1500 C/C",
+              "450 C/C"
+            ]
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": "FE500"
+        },
+        {
+          "footing_id": "GC6,GC8",
+          "column_id": "GC6,GC8",
+          "size": {
+            "width": 1000,
+            "depth": 200,
+            "length": 1650
+          },
+          "reinforcement": {
+            "dia": [
+              "T12"
+            ],
+            "spacing": [
+              "1500 C/C"
+            ]
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": "FE500"
+        },
+        {
+          "footing_id": "GC16,GC17",
+          "column_id": "GC16,GC17",
+          "size": {
+            "width": 1600,
+            "depth": 230,
+            "length": 1650
+          },
+          "reinforcement": {
+            "dia": [
+              "T12"
+            ],
+            "spacing": [
+              "1500 C/C"
+            ]
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": "FE500"
+        }
+      ],
+      "added_records": [
+        {
+          "record": {
+            "footing_id": "GC1,GC3,GC7",
+            "column_id": "GC1,GC3,GC7",
+            "size": {
+              "width": 1900,
+              "depth": 230,
+              "length": 2000
+            },
+            "reinforcement": {
+              "dia": [
+                "T12"
+              ],
+              "spacing": [
+                "150 C/C"
+              ]
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": "FE500"
+          },
+          "source_region_ids": [
+            "column_mark_1",
+            "size_1",
+            "depth_1",
+            "short_span_1",
+            "long_span_1",
+            "global_note_1"
+          ]
+        },
+        {
+          "record": {
+            "footing_id": "GC2,GC9,GC10,GC13",
+            "column_id": "GC2,GC9,GC10,GC13",
+            "size": {
+              "width": 2000,
+              "depth": 230,
+              "length": 2200
+            },
+            "reinforcement": {
+              "dia": [
+                "T12"
+              ],
+              "spacing": [
+                "600 C/C"
+              ]
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": "FE500"
+          },
+          "source_region_ids": [
+            "column_mark_2",
+            "size_2",
+            "depth_2",
+            "short_span_2",
+            "long_span_2",
+            "global_note_1"
+          ]
+        },
+        {
+          "record": {
+            "footing_id": "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
+            "column_id": "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
+            "size": {
+              "width": 1600,
+              "depth": 200,
+              "length": 1650
+            },
+            "reinforcement": {
+              "dia": [
+                "T12"
+              ],
+              "spacing": [
+                "1500 C/C",
+                "450 C/C"
+              ]
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": "FE500"
+          },
+          "source_region_ids": [
+            "column_mark_3",
+            "size_3",
+            "depth_3",
+            "short_span_3",
+            "long_span_3",
+            "global_note_1"
+          ]
+        },
+        {
+          "record": {
+            "footing_id": "GC6,GC8",
+            "column_id": "GC6,GC8",
+            "size": {
+              "width": 1000,
+              "depth": 200,
+              "length": 1650
+            },
+            "reinforcement": {
+              "dia": [
+                "T12"
+              ],
+              "spacing": [
+                "1500 C/C"
+              ]
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": "FE500"
+          },
+          "source_region_ids": [
+            "column_mark_4",
+            "size_4",
+            "depth_4",
+            "short_span_4",
+            "long_span_4",
+            "global_note_1"
+          ]
+        },
+        {
+          "record": {
+            "footing_id": "GC16,GC17",
+            "column_id": "GC16,GC17",
+            "size": {
+              "width": 1600,
+              "depth": 230,
+              "length": 1650
+            },
+            "reinforcement": {
+              "dia": [
+                "T12"
+              ],
+              "spacing": [
+                "1500 C/C"
+              ]
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": "FE500"
+          },
+          "source_region_ids": [
+            "column_mark_5",
+            "size_5",
+            "depth_5",
+            "short_span_5",
+            "long_span_5",
+            "global_note_1"
+          ]
+        }
+      ],
+      "expected_count": 5,
+      "actual_count": 5,
+      "warnings": []
+    }
+  },
+  "summary": {
+    "page_count": 1,
+    "record_count": 5,
+    "warning_count": 0,
+    "warnings": []
+  }
+}

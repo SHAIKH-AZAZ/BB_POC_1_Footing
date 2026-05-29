@@ -1,0 +1,979 @@
+{
+  "project": "footing",
+  "pdf_stem": "pattern-8",
+  "pages": {
+    "page_1.png": {
+      "project": "footing",
+      "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-8/page_1.png",
+      "page_index": 0,
+      "pdf_path": null,
+      "generated_at": "2026-05-29T06:04:13.482977+00:00",
+      "think": {
+        "image_quality": "high",
+        "table_bounds": {
+          "x1": 0,
+          "y1": 0,
+          "x2": 2048,
+          "y2": 600
+        },
+        "column_groups": [
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5",
+          "F6",
+          "F7",
+          "F8",
+          "F9",
+          "F10",
+          "F11",
+          "F12",
+          "F13",
+          "F14",
+          "CFT-1"
+        ],
+        "row_structure": [
+          "B' x L' (PCC)",
+          "B x L",
+          "D",
+          "t",
+          "STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
+          "STEEL // - L (LONG SIDE) (BOTTOM FACE)",
+          "STEEL // - B (SHORT SIDE) (TOP FACE)",
+          "STEEL // - L (LONG SIDE) (TOP FACE)",
+          "REMARK"
+        ],
+        "global_notes": {},
+        "expected_count": 15,
+        "zoom_plan": [
+          {
+            "region_id": "r1",
+            "purpose": "data_cell",
+            "x1": 100,
+            "y1": 100,
+            "x2": 180,
+            "y2": 130,
+            "reason": "Confirm B x L for F1"
+          },
+          {
+            "region_id": "r2",
+            "purpose": "data_cell",
+            "x1": 280,
+            "y1": 100,
+            "x2": 360,
+            "y2": 130,
+            "reason": "Confirm B x L for F2"
+          },
+          {
+            "region_id": "r3",
+            "purpose": "data_cell",
+            "x1": 460,
+            "y1": 100,
+            "x2": 540,
+            "y2": 130,
+            "reason": "Confirm B x L for F3"
+          },
+          {
+            "region_id": "r4",
+            "purpose": "data_cell",
+            "x1": 640,
+            "y1": 100,
+            "x2": 720,
+            "y2": 130,
+            "reason": "Confirm B x L for F4"
+          },
+          {
+            "region_id": "r5",
+            "purpose": "data_cell",
+            "x1": 820,
+            "y1": 100,
+            "x2": 900,
+            "y2": 130,
+            "reason": "Confirm B x L for F5"
+          },
+          {
+            "region_id": "r6",
+            "purpose": "data_cell",
+            "x1": 1000,
+            "y1": 100,
+            "x2": 1080,
+            "y2": 130,
+            "reason": "Confirm B x L for F6"
+          },
+          {
+            "region_id": "r7",
+            "purpose": "data_cell",
+            "x1": 1180,
+            "y1": 100,
+            "x2": 1260,
+            "y2": 130,
+            "reason": "Confirm B x L for F7"
+          },
+          {
+            "region_id": "r8",
+            "purpose": "data_cell",
+            "x1": 1360,
+            "y1": 100,
+            "x2": 1440,
+            "y2": 130,
+            "reason": "Confirm B x L for F8"
+          },
+          {
+            "region_id": "r9",
+            "purpose": "data_cell",
+            "x1": 1460,
+            "y1": 100,
+            "x2": 1540,
+            "y2": 130,
+            "reason": "Confirm B x L for F9"
+          },
+          {
+            "region_id": "r10",
+            "purpose": "data_cell",
+            "x1": 1560,
+            "y1": 100,
+            "x2": 1640,
+            "y2": 130,
+            "reason": "Confirm B x L for F10"
+          },
+          {
+            "region_id": "r11",
+            "purpose": "data_cell",
+            "x1": 1660,
+            "y1": 100,
+            "x2": 1740,
+            "y2": 130,
+            "reason": "Confirm B x L for F11"
+          },
+          {
+            "region_id": "r12",
+            "purpose": "data_cell",
+            "x1": 1760,
+            "y1": 100,
+            "x2": 1840,
+            "y2": 130,
+            "reason": "Confirm B x L for F12"
+          },
+          {
+            "region_id": "r13",
+            "purpose": "data_cell",
+            "x1": 1850,
+            "y1": 100,
+            "x2": 1930,
+            "y2": 130,
+            "reason": "Confirm B x L for F13"
+          },
+          {
+            "region_id": "r14",
+            "purpose": "data_cell",
+            "x1": 1940,
+            "y1": 100,
+            "x2": 2020,
+            "y2": 130,
+            "reason": "Confirm B x L for F14"
+          },
+          {
+            "region_id": "r15",
+            "purpose": "data_cell",
+            "x1": 2030,
+            "y1": 100,
+            "x2": 2110,
+            "y2": 130,
+            "reason": "Confirm B x L for CFT-1"
+          }
+        ],
+        "normalization_rules": [
+          "Convert spacing to uppercase format '100 C/C'",
+          "Keep dia exactly as written (12T, 16T, 10T etc.)",
+          "Do NOT use values from PCC row",
+          "Do NOT use values from t row",
+          "Do NOT guess or approximate values",
+          "Extract size width and length from B x L row",
+          "Extract depth from D row",
+          "Extract reinforcement from STEEL rows"
+        ],
+        "extraction_order": [
+          "B x L",
+          "D",
+          "STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
+          "STEEL // - L (LONG SIDE) (BOTTOM FACE)",
+          "STEEL // - B (SHORT SIDE) (TOP FACE)",
+          "STEEL // - L (LONG SIDE) (TOP FACE)"
+        ]
+      },
+      "zoom_regions": [
+        {
+          "region_id": "r1",
+          "purpose": "data_cell",
+          "x1": 100.0,
+          "y1": 100.0,
+          "x2": 180.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F1"
+        },
+        {
+          "region_id": "r2",
+          "purpose": "data_cell",
+          "x1": 280.0,
+          "y1": 100.0,
+          "x2": 360.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F2"
+        },
+        {
+          "region_id": "r3",
+          "purpose": "data_cell",
+          "x1": 460.0,
+          "y1": 100.0,
+          "x2": 540.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F3"
+        },
+        {
+          "region_id": "r4",
+          "purpose": "data_cell",
+          "x1": 640.0,
+          "y1": 100.0,
+          "x2": 720.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F4"
+        },
+        {
+          "region_id": "r5",
+          "purpose": "data_cell",
+          "x1": 820.0,
+          "y1": 100.0,
+          "x2": 900.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F5"
+        },
+        {
+          "region_id": "r6",
+          "purpose": "data_cell",
+          "x1": 1000.0,
+          "y1": 100.0,
+          "x2": 1080.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F6"
+        },
+        {
+          "region_id": "r7",
+          "purpose": "data_cell",
+          "x1": 1180.0,
+          "y1": 100.0,
+          "x2": 1260.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F7"
+        },
+        {
+          "region_id": "r8",
+          "purpose": "data_cell",
+          "x1": 1360.0,
+          "y1": 100.0,
+          "x2": 1440.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F8"
+        },
+        {
+          "region_id": "r9",
+          "purpose": "data_cell",
+          "x1": 1460.0,
+          "y1": 100.0,
+          "x2": 1540.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F9"
+        },
+        {
+          "region_id": "r10",
+          "purpose": "data_cell",
+          "x1": 1560.0,
+          "y1": 100.0,
+          "x2": 1640.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F10"
+        },
+        {
+          "region_id": "r11",
+          "purpose": "data_cell",
+          "x1": 1660.0,
+          "y1": 100.0,
+          "x2": 1740.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F11"
+        },
+        {
+          "region_id": "r12",
+          "purpose": "data_cell",
+          "x1": 1760.0,
+          "y1": 100.0,
+          "x2": 1840.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F12"
+        },
+        {
+          "region_id": "r13",
+          "purpose": "data_cell",
+          "x1": 1850.0,
+          "y1": 100.0,
+          "x2": 1930.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F13"
+        },
+        {
+          "region_id": "r14",
+          "purpose": "data_cell",
+          "x1": 1940.0,
+          "y1": 100.0,
+          "x2": 2020.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for F14"
+        },
+        {
+          "region_id": "r15",
+          "purpose": "data_cell",
+          "x1": 2030.0,
+          "y1": 100.0,
+          "x2": 2110.0,
+          "y2": 130.0,
+          "reason": "Confirm B x L for CFT-1"
+        }
+      ],
+      "confirmed_reads": [
+        {
+          "region_id": "r1",
+          "text": "3300 X 4200",
+          "confidence": "high",
+          "applies_to": "B x L for F1"
+        },
+        {
+          "region_id": "r2",
+          "text": "2700 X 3600",
+          "confidence": "high",
+          "applies_to": "B x L for F2"
+        },
+        {
+          "region_id": "r3",
+          "text": "3500 X 8050",
+          "confidence": "high",
+          "applies_to": "B x L for F3"
+        },
+        {
+          "region_id": "r4",
+          "text": "3350 X 4250",
+          "confidence": "high",
+          "applies_to": "B x L for F4"
+        },
+        {
+          "region_id": "r5",
+          "text": "3100 X 4000",
+          "confidence": "high",
+          "applies_to": "B x L for F5"
+        },
+        {
+          "region_id": "r6",
+          "text": "3300 X 4200",
+          "confidence": "high",
+          "applies_to": "B x L for F6"
+        },
+        {
+          "region_id": "r7",
+          "text": "1850 X 2100",
+          "confidence": "high",
+          "applies_to": "B x L for F7"
+        },
+        {
+          "region_id": "r8",
+          "text": "3250 X 4250",
+          "confidence": "high",
+          "applies_to": "B x L for F8"
+        },
+        {
+          "region_id": "r9",
+          "text": "2950 X 3850",
+          "confidence": "high",
+          "applies_to": "B x L for F9"
+        },
+        {
+          "region_id": "r10",
+          "text": "2650 X 3550",
+          "confidence": "high",
+          "applies_to": "B x L for F10"
+        },
+        {
+          "region_id": "r11",
+          "text": "3100 X 3600",
+          "confidence": "high",
+          "applies_to": "B x L for F11"
+        },
+        {
+          "region_id": "r12",
+          "text": "3250 X 4150",
+          "confidence": "high",
+          "applies_to": "B x L for F12"
+        },
+        {
+          "region_id": "r13",
+          "text": "3300 X 4200",
+          "confidence": "high",
+          "applies_to": "B x L for F13"
+        },
+        {
+          "region_id": "r14",
+          "text": "2700 X 3600",
+          "confidence": "high",
+          "applies_to": "B x L for F14"
+        },
+        {
+          "region_id": "r15",
+          "text": "900",
+          "confidence": "high",
+          "applies_to": "B x L for CFT-1"
+        }
+      ],
+      "pdf_reads": [],
+      "records": [
+        {
+          "footing_id": "F1",
+          "column_id": "",
+          "size": {
+            "width": 3300,
+            "depth": null,
+            "length": 4200
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F2",
+          "column_id": "",
+          "size": {
+            "width": 2700,
+            "depth": null,
+            "length": 3600
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F3",
+          "column_id": "",
+          "size": {
+            "width": 3500,
+            "depth": null,
+            "length": 8050
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F4",
+          "column_id": "",
+          "size": {
+            "width": 3350,
+            "depth": null,
+            "length": 4250
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F5",
+          "column_id": "",
+          "size": {
+            "width": 3100,
+            "depth": null,
+            "length": 4000
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F6",
+          "column_id": "",
+          "size": {
+            "width": 3300,
+            "depth": null,
+            "length": 4200
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F7",
+          "column_id": "",
+          "size": {
+            "width": 1850,
+            "depth": null,
+            "length": 2100
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F8",
+          "column_id": "",
+          "size": {
+            "width": 3250,
+            "depth": null,
+            "length": 4250
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F9",
+          "column_id": "",
+          "size": {
+            "width": 2950,
+            "depth": null,
+            "length": 3850
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F10",
+          "column_id": "",
+          "size": {
+            "width": 2650,
+            "depth": null,
+            "length": 3550
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F11",
+          "column_id": "",
+          "size": {
+            "width": 3100,
+            "depth": null,
+            "length": 3600
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F12",
+          "column_id": "",
+          "size": {
+            "width": 3250,
+            "depth": null,
+            "length": 4150
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F13",
+          "column_id": "",
+          "size": {
+            "width": 3300,
+            "depth": null,
+            "length": 4200
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "F14",
+          "column_id": "",
+          "size": {
+            "width": 2700,
+            "depth": null,
+            "length": 3600
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        },
+        {
+          "footing_id": "CFT-1",
+          "column_id": "",
+          "size": {
+            "width": 900,
+            "depth": null,
+            "length": 900
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null
+        }
+      ],
+      "added_records": [
+        {
+          "record": {
+            "footing_id": "F1",
+            "column_id": "",
+            "size": {
+              "width": 3300,
+              "depth": null,
+              "length": 4200
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F2",
+            "column_id": "",
+            "size": {
+              "width": 2700,
+              "depth": null,
+              "length": 3600
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F3",
+            "column_id": "",
+            "size": {
+              "width": 3500,
+              "depth": null,
+              "length": 8050
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F4",
+            "column_id": "",
+            "size": {
+              "width": 3350,
+              "depth": null,
+              "length": 4250
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F5",
+            "column_id": "",
+            "size": {
+              "width": 3100,
+              "depth": null,
+              "length": 4000
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F6",
+            "column_id": "",
+            "size": {
+              "width": 3300,
+              "depth": null,
+              "length": 4200
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F7",
+            "column_id": "",
+            "size": {
+              "width": 1850,
+              "depth": null,
+              "length": 2100
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F8",
+            "column_id": "",
+            "size": {
+              "width": 3250,
+              "depth": null,
+              "length": 4250
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F9",
+            "column_id": "",
+            "size": {
+              "width": 2950,
+              "depth": null,
+              "length": 3850
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F10",
+            "column_id": "",
+            "size": {
+              "width": 2650,
+              "depth": null,
+              "length": 3550
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F11",
+            "column_id": "",
+            "size": {
+              "width": 3100,
+              "depth": null,
+              "length": 3600
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F12",
+            "column_id": "",
+            "size": {
+              "width": 3250,
+              "depth": null,
+              "length": 4150
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F13",
+            "column_id": "",
+            "size": {
+              "width": 3300,
+              "depth": null,
+              "length": 4200
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "F14",
+            "column_id": "",
+            "size": {
+              "width": 2700,
+              "depth": null,
+              "length": 3600
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "CFT-1",
+            "column_id": "",
+            "size": {
+              "width": 900,
+              "depth": null,
+              "length": 900
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null
+          },
+          "source_region_ids": []
+        }
+      ],
+      "expected_count": 15,
+      "actual_count": 15,
+      "warnings": [
+        "duplicate record key detected: ('',)"
+      ]
+    }
+  },
+  "summary": {
+    "page_count": 1,
+    "record_count": 15,
+    "warning_count": 1,
+    "warnings": [
+      "duplicate record key detected: ('',)"
+    ]
+  }
+}

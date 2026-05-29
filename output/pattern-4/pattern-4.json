@@ -1,7 +1,7 @@
 {
   "footings": [
     {
-      "footing_id": null,
+      "footing_id": "F1",
       "column_id": null,
       "size": {
         "width": 3500,
@@ -12,12 +12,12 @@
         "dia": [],
         "spacing": []
       },
-      "nos": null,
+      "nos": 4,
       "mix": null,
       "steel_grade": null
     },
     {
-      "footing_id": null,
+      "footing_id": "F2",
       "column_id": null,
       "size": {
         "width": 3000,
@@ -28,7 +28,7 @@
         "dia": [],
         "spacing": []
       },
-      "nos": null,
+      "nos": 6,
       "mix": null,
       "steel_grade": null
     }

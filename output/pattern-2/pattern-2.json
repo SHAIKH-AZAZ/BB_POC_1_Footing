@@ -1,220 +1,196 @@
 {
   "footings": [
     {
+      "footing_id": "1",
       "column_id": "C1",
       "size": {
-        "length": 3100,
-        "width": 2800
-      },
-      "depth": {
-        "top": 230,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": "25-10T",
-        "long_span": "21-10T"
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": "M25",
-      "steel_grade": null,
-      "footing_id": "1"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "2",
       "column_id": "C2",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "2"
+      "nos": null,
+      "mix": "M25",
+      "steel_grade": null
     },
     {
+      "footing_id": "3",
       "column_id": "C2A",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "3"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "4",
       "column_id": "C3",
       "size": {
-        "length": 2600,
-        "width": 3200
-      },
-      "depth": {
-        "top": 230,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": "31-12T",
-        "long_span": "28-12T"
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": "M25",
-      "steel_grade": null,
-      "footing_id": "4"
+      "nos": null,
+      "mix": "M25",
+      "steel_grade": null
     },
     {
+      "footing_id": "5",
       "column_id": "C4",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "5"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "6",
       "column_id": "C5",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "6"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "7",
       "column_id": "C6",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "7"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "8",
       "column_id": "C7",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "8"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "9",
       "column_id": "C8",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "9"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "10",
       "column_id": "C9",
       "size": {
-        "length": null,
-        "width": null
-      },
-      "depth": {
-        "top": null,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": null,
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": null,
-      "steel_grade": null,
-      "footing_id": "10"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "11",
       "column_id": "C10",
       "size": {
-        "length": 2250,
-        "width": 3100
-      },
-      "depth": {
-        "top": 230,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": "18-10T",
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": "M25",
-      "steel_grade": null,
-      "footing_id": "11"
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
     },
     {
+      "footing_id": "12",
       "column_id": "C11",
       "size": {
-        "length": 2400,
-        "width": 3200
-      },
-      "depth": {
-        "top": 230,
-        "bottom": null
+        "width": null,
+        "depth": null,
+        "length": null
       },
       "reinforcement": {
-        "short_span": "18-10T",
-        "long_span": null
+        "dia": [],
+        "spacing": []
       },
-      "concrete_mix": "M25",
-      "steel_grade": null,
-      "footing_id": "12"
+      "nos": null,
+      "mix": "M25",
+      "steel_grade": null
     }
   ]
 }

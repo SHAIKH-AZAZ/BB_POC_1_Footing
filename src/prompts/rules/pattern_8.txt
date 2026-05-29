@@ -36,12 +36,19 @@ Do NOT invent.
 
 4. REINFORCEMENT:
 
-Extract from these rows under same column:
+Extract from these four rows under the SAME footing column and combine
+them into the reinforcement fields of add_footing:
 
-STEEL // - B (SHORT SIDE) (BOTTOM FACE)
-STEEL // - L (LONG SIDE) (BOTTOM FACE)
-STEEL // - B (SHORT SIDE) (TOP FACE)
-STEEL // - L (LONG SIDE) (TOP FACE)
+  STEEL // - B (SHORT SIDE) (BOTTOM FACE)  -> short_span_reinf
+  STEEL // - L (LONG SIDE) (BOTTOM FACE)   -> long_span_reinf
+  STEEL // - B (SHORT SIDE) (TOP FACE)     -> append to short_span_reinf
+  STEEL // - L (LONG SIDE) (TOP FACE)      -> append to long_span_reinf
+
+When two SHORT-side cells share a value, pass the value once. When they
+differ, pass both, comma-separated, e.g. "12T-100c/c, 16T-150c/c".
+Never leave the reinforcement fields empty just because the four cells
+visually look identical — pass the value through so it lands in
+reinforcement.dia and reinforcement.spacing.
 
 If cell contains:
 12T-100 c/c
@@ -54,8 +61,8 @@ Rules:
 - Keep dia exactly as written (12T, 16T, 10T etc.)
 - Do NOT convert to T12.
 - Convert spacing to uppercase format "100 C/C"
-- If cell contains "-", ignore.
-- Do NOT merge values from other columns.
+- If a cell contains only "-", ignore that single cell (still extract the others).
+- Do NOT merge values from other footing columns.
 - Do NOT guess missing reinforcement.
 
 5. footing_id:

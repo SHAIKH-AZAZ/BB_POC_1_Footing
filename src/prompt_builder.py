@@ -53,6 +53,31 @@ FLAT_SCHEMA = """{
   ]
 }"""
 
+FOOTING_WITH_STIRRUPS_SCHEMA = """{
+  "footings": [
+    {
+      "footing_id": "",
+      "column_id": null,
+      "size": {
+        "width": null,
+        "depth": null,
+        "length": null
+      },
+      "reinforcement": {
+        "dia": [],
+        "spacing": []
+      },
+      "stirrups": {
+        "dia": [],
+        "spacing": []
+      },
+      "nos": null,
+      "mix": null,
+      "steel_grade": null
+    }
+  ]
+}"""
+
 STEPPED_SCHEMA = """{
   "footings": [
     {
@@ -132,7 +157,7 @@ PATTERN_CONFIG = {
             "This table contains RAFT columns:\n"
             "RAFT-1, RAFT-2, RAFT-3, etc."
         ),
-        "schema": FLAT_SCHEMA,
+        "schema": FOOTING_WITH_STIRRUPS_SCHEMA,
     },
     10: {
         "role": "You are an expert structural drawing extractor specialized in RCC footing detail tables.",

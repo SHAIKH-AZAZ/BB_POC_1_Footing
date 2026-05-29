@@ -1,95 +1,233 @@
-You are extracting a structured FOOTING SCHEDULE table.
+You are extracting a structured FOOTING SCHEDULE table from an engineering drawing or PDF.
 
-This table contains RAFT columns:
-RAFT-1, RAFT-2, RAFT-3, etc.
+The schedule may contain footing headers such as:
+RAFT-1, RAFT-2, RAFT-3, R1, F1, BF1, CP1, CF1, RW, AF1, BRF2, AC1, NF1, FC1, ARF1, FP1, CWF1, CWF2A, etc.
+
+The schedule may also be organized by column numbers such as:
+C1, C2, C12, C25, etc.
 
 Return STRICT JSON in this format:
 
 {
-  "footings": [
-    {
-      "footing_id": "",
-      "column_id": null,
-      "size": {
-        "width": null,
-        "depth": null,
-        "length": null
-      },
-      "reinforcement": {
-        "dia": [],
-        "spacing": []
-      },
-      "nos": null,
-      "mix": null,
-      "steel_grade": null
-    }
-  ]
+"footings": [
+{
+"footing_id": "",
+"column_id": null,
+"size": {
+"width": null,
+"depth": null,
+"length": null
+},
+"reinforcement": {
+"dia": [],
+"spacing": []
+},
+"stirrups": {
+"dia": [],
+"spacing": []
+},
+"nos": null,
+"mix": null,
+    "steel_grade": null
+}
+]
 }
 
 ========================
 STRICT RULES
-========================
+============
 
-1) COLUMN LOCK:
-For each RAFT column (RAFT-1, RAFT-2, RAFT-3):
-Only read values vertically under that exact column.
+1. FOOTING / COLUMN IDENTIFICATION
+
+A) If the table header is a footing label, such as:
+RAFT-1, RAFT-2, R1, F1, BF1, CP1, CF1, RW, AF1, BRF2, AC1, NF1, FC1, ARF1, FP1, CWF1, CWF2A
+
+Then:
+
+* footing_id = exact header value
+* column_id = null unless a column number is explicitly provided
+
+B) If the table header is a column number, such as:
+C1, C2, C12, C25
+
+Then:
+
+* column_id = exact column header value
+* footing_id must be taken only from the footing designation/reference shown in that same column or mapped schedule cell
+
+Do not assume:
+
+* C1 = F1
+* C12 = F12
+* Column number automatically equals footing number
+
+Only use explicit schedule mapping.
+
+If footing_id is unclear, return null.
+
+2. COLUMN LOCK
+
+For each footing or column header:
+Only read values vertically under that exact header.
 Never shift left or right.
+Never borrow values from neighboring columns.
+Never merge values from adjacent footing columns.
 
-2) IGNORE COMPLETELY:
-- Row labeled: B' x L' (PCC)
+3. IGNORE COMPLETELY
 
-3) SIZE EXTRACTION:
+Ignore rows labeled:
+
+* B' x L' (PCC)
+* PCC SIZE
+* PCC
+* LEAN CONCRETE SIZE
+
+Also ignore:
+
+* T row
+* REMARK row
+* Any other row not explicitly required below
+
+4. SIZE EXTRACTION
 
 From row labeled:
 B x L
+B × L
+WIDTH x LENGTH
+SIZE
+FOOTING SIZE
 
-If cell contains:
+Extract:
+
+* width from B / width value
+* length from L / length value
+
+If the cell contains:
 REFER PLAN
+AS PER PLAN
+SEE PLAN
+--------
+
 Then:
-width = null
-length = null
+
+* width = null
+* length = null
 
 From row labeled:
 D
-depth = value
+DEPTH
+THK
+THICKNESS
 
-Ignore:
-T row
-Any other rows
+Extract:
 
-4) REINFORCEMENT:
+* depth = value
 
-Extract from:
+If unclear or unavailable:
+
+* depth = null
+
+5. REINFORCEMENT
+
+Extract only from reinforcement rows, including:
 
 STEEL // - B (SHORT SIDE) (BOTTOM FACE)
 STEEL // - L (LONG SIDE) (BOTTOM FACE)
 STEEL // - B (SHORT SIDE) (TOP FACE)
 STEEL // - L (LONG SIDE) (TOP FACE)
+BOTTOM STEEL
+TOP STEEL
+SHORT SIDE STEEL
+LONG SIDE STEEL
+MAIN BAR
+DISTRIBUTION BAR
+REINFORCEMENT
+
+These are vertical detail rows in the schedule. The bar-and-spacing values
+inside these rows must go into reinforcement.dia and reinforcement.spacing
+for the footing/header directly above that same column.
+
+For each cropped footing/header strip, extract all visible reinforcement
+details:
+
+* bar diameter exactly as written, including repeated occurrences when the same bar appears in multiple steel rows
+* spacing for each visible bar value
+* stirrup/tie diameter and stirrup/tie spacing if a stirrup, links, tie, or shear reinforcement row/note is visible
+* concrete mix if a MIX / CONCRETE GRADE / GRADE OF CONCRETE value is visible
+* grade of steel if a STEEL GRADE / REBAR GRADE / GRADE OF STEEL value is visible
+
+If stirrups/ties are visible:
+
+* stirrups.dia = visible stirrup/tie diameter values
+* stirrups.spacing = visible stirrup/tie spacing values
 
 If cell contains:
 16T-100 c/c
+16T @ 100 c/c
+T16 @ 100 C/C
+12T-150
 
 Extract:
-dia = "16T"
-spacing = "100 C/C"
+
+* dia = "16T", "T16", "12T", etc.
+* spacing = "100 C/C", "150 C/C", etc.
 
 Rules:
-- Keep dia exactly as written (16T, 12T etc.)
-- Do NOT convert format.
-- Convert spacing to uppercase format "100 C/C"
-- If "-", ignore.
-- Do NOT merge values from other columns.
-- Do NOT guess.
 
-5) footing_id:
-Use column header exactly (RAFT-1, RAFT-2, RAFT-3)
+* Keep dia exactly as written.
+* Do NOT convert dia format.
+* Convert spacing to uppercase format: "100 C/C"
+* If spacing is missing, include dia only if clearly visible.
+* If cell contains "-", blank, or unreadable text, ignore it.
+* Do NOT merge reinforcement values from other columns.
+* Do NOT guess.
 
-6) column_id = null
-7) nos = null
-8) mix = null
-9) steel_grade = null
+6. OPTIONAL FIELDS
+
+Extract only if explicitly available in the schedule:
+
+stirrups:
+From rows/notes labeled:
+STIRRUPS, TIES, LINKS, SHEAR REINFORCEMENT
+
+nos:
+From rows labeled:
+NOS, NO., QTY, QUANTITY
+
+mix:
+From rows labeled:
+MIX, CONCRETE GRADE, GRADE OF CONCRETE
+
+steel_grade:
+From rows labeled:
+STEEL GRADE, REBAR GRADE, GRADE OF STEEL
+
+If unavailable:
+
+* stirrups.dia = []
+* stirrups.spacing = []
+* nos = null
+* mix = null
+* steel_grade = null
+
+7. DEFAULT VALUES
+
+If no column reference is available:
+
+* column_id = null
+
+If no footing designation is available:
+
+* footing_id = null
+
+8. UNCERTAINTY RULE
+
+If unsure, unclear, hidden, distorted, or ambiguous:
+Return null instead of guessing.
+
+9. OUTPUT RULE
 
 Return ONLY JSON.
 No explanation.
+No markdown.
 No extra text.
-If unsure, return null instead of wrong value.

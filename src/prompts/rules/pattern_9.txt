@@ -31,12 +31,36 @@ Any other rows
 
 4) REINFORCEMENT:
 
-Extract from:
+Extract from these four rows under the SAME RAFT column and combine them
+into the reinforcement fields of add_footing:
 
-STEEL // - B (SHORT SIDE) (BOTTOM FACE)
-STEEL // - L (LONG SIDE) (BOTTOM FACE)
-STEEL // - B (SHORT SIDE) (TOP FACE)
-STEEL // - L (LONG SIDE) (TOP FACE)
+  STEEL // - B (SHORT SIDE) (BOTTOM FACE)  -> short_span_reinf
+  STEEL // - L (LONG SIDE) (BOTTOM FACE)   -> long_span_reinf
+  STEEL // - B (SHORT SIDE) (TOP FACE)     -> append to short_span_reinf
+  STEEL // - L (LONG SIDE) (TOP FACE)      -> append to long_span_reinf
+
+When two SHORT-side cells share a value, pass the value once. When they
+differ, pass both, comma-separated, e.g. "16T-100C/C, 12T-150C/C".
+Never leave the reinforcement fields empty just because the four rows
+visually look identical — pass the value through so it lands in
+reinforcement.dia and reinforcement.spacing.
+
+These are vertical detail rows in the schedule. They are not remarks and
+must not be ignored. For each RAFT column, every visible bar-and-spacing
+cell in these rows belongs to that RAFT's reinforcement details.
+
+For a cropped footing strip, extract all visible reinforcement details:
+- bar diameter exactly as written, including repeated occurrences when the
+  same bar appears in multiple steel rows
+- spacing for each visible bar value
+- stirrup/tie diameter and stirrup/tie spacing if a stirrup, links, tie, or
+  shear reinforcement row/note is visible
+- concrete mix if a MIX / CONCRETE GRADE / GRADE OF CONCRETE value is visible
+- grade of steel if a STEEL GRADE / REBAR GRADE / GRADE OF STEEL value is visible
+
+If stirrups/ties are visible, pass them through add_footing as stirrup_reinf
+or as ties_dia plus ties_spacing so they land in stirrups.dia and
+stirrups.spacing.
 
 If cell contains:
 16T-100 c/c
@@ -45,20 +69,27 @@ Extract:
 dia = "16T"
 spacing = "100 C/C"
 
+If Cell Contains :
+16T-100 + 12T-125 C/C 
+
+Extract:
+dia = ["16T", "12T"]
+spacing = ["100 C/C" , "125 C/C"]
+
 Rules:
 - Keep dia exactly as written (16T, 12T etc.)
 - Do NOT convert format.
 - Convert spacing to uppercase format "100 C/C"
-- If "-", ignore.
-- Do NOT merge values from other columns.
+- If "-", ignore that single cell only (still extract the others).
+- Do NOT merge values from other RAFT columns.
 - Do NOT guess.
 
 5) footing_id:
 Use column header exactly (RAFT-1, RAFT-2, RAFT-3)
 
 6) column_id = null
-7) nos = null
-8) mix = null
-9) steel_grade = null
+7) nos = null unless explicitly visible
+8) mix = extracted value if explicitly visible, otherwise null
+9) steel_grade = extracted value if explicitly visible, otherwise null
 
 If unsure, return null instead of wrong value.

@@ -79,6 +79,8 @@ def _with_tool_protocol(prompt_text):
         "Step 1: call think() with your full extraction plan.\n"
         "Step 2: call add_footing() once for EVERY footing group (left to right).\n"
         "  - Do NOT stop early. Every visible footing column group must get its own add_footing call.\n"
+        "  - If vertical steel/reinforcement rows are visible, include their exact bar and spacing text in "
+        "short_span_reinf/long_span_reinf or the matching bottom/top reinforcement fields.\n"
         "Optional: call zoom_region() + confirm_read() for any cell that is blurry or ambiguous.\n\n"
         f"{prompt_text}"
     )
@@ -202,8 +204,64 @@ FOOTING_TOOLS = [
                     "plan_width": {"type": ["number", "null"]},
                     "depth_top": {"type": ["number", "null"]},
                     "depth_bottom": {"type": ["number", "null"]},
-                    "short_span_reinf": {"type": ["string", "null"]},
-                    "long_span_reinf": {"type": ["string", "null"]},
+                    "short_span_reinf": {
+                        "type": ["string", "null"],
+                        "description": (
+                            "Short-side/B-direction reinforcement text from all matching rows under this footing, "
+                            "for example '16T-100C/C'. Include bottom and top values comma-separated if both exist."
+                        ),
+                    },
+                    "long_span_reinf": {
+                        "type": ["string", "null"],
+                        "description": (
+                            "Long-side/L-direction reinforcement text from all matching rows under this footing, "
+                            "for example '16T-100C/C'. Include bottom and top values comma-separated if both exist."
+                        ),
+                    },
+                    "bottom_short_reinf": {
+                        "type": ["string", "null"],
+                        "description": "STEEL // - B (SHORT SIDE) (BOTTOM FACE) cell text, if visible.",
+                    },
+                    "bottom_long_reinf": {
+                        "type": ["string", "null"],
+                        "description": "STEEL // - L (LONG SIDE) (BOTTOM FACE) cell text, if visible.",
+                    },
+                    "top_short_reinf": {
+                        "type": ["string", "null"],
+                        "description": "STEEL // - B (SHORT SIDE) (TOP FACE) cell text, if visible.",
+                    },
+                    "top_long_reinf": {
+                        "type": ["string", "null"],
+                        "description": "STEEL // - L (LONG SIDE) (TOP FACE) cell text, if visible.",
+                    },
+                    "reinforcement": {
+                        "type": ["array", "string", "null"],
+                        "items": {"type": "string"},
+                        "description": (
+                            "Any visible reinforcement/bar-spacing text for this footing column. "
+                            "Use this as a fallback if the row direction is unclear."
+                        ),
+                    },
+                    "stirrup_reinf": {
+                        "type": ["string", "null"],
+                        "description": (
+                            "Visible stirrup/tie/link/shear reinforcement text for this footing column, "
+                            "including diameter and spacing when present."
+                        ),
+                    },
+                    "stirrups": {
+                        "type": ["array", "string", "null"],
+                        "items": {"type": "string"},
+                        "description": "Any visible stirrup, tie, link, or shear reinforcement texts.",
+                    },
+                    "ties_dia": {
+                        "type": ["string", "null"],
+                        "description": "Tie/stirrup/link diameter, for example 'T8' or '8T'.",
+                    },
+                    "ties_spacing": {
+                        "type": ["string", "null"],
+                        "description": "Tie/stirrup/link spacing, for example '150 C/C'.",
+                    },
                     "nos": {"type": ["number", "null"]},
                     "mix": {"type": ["string", "null"]},
                     "concrete_mix": {"type": ["string", "null"]},
@@ -223,7 +281,7 @@ def extract_with_tools(image_path, prompt_text, max_iterations=300):
         project="footing",
         image_path=image_path,
         output_key="footings",
-        duplicate_key_fields=["column_id"],
+        duplicate_key_fields=["footing_id", "column_id"],
     )
     messages = [
         {

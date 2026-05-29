@@ -54,28 +54,58 @@ def _spacing(value):
     return None
 
 
-def extract_rebar_parts(*texts):
+def extract_rebar_parts(*texts, keep_repetition=False):
+    """
+    Parse rebar diameter and spacing from free-form schedule text.
+
+    Handles three diameter notations seen across footing patterns:
+        - T-first       e.g. "T16", "T 12"           (patterns 1, 3, 5, 7, 10)
+        - Number-first  e.g. "16T", "12T-100C/C"     (patterns 8, 9)
+        - Bare number near a unit/spacing context    (patterns 2, fallback)
+
+    Spacing is normalized to "<n> C/C" regardless of input separator
+    ("@100", "-100C/C", "100 c/c").
+
+    Number-first diameters keep their written orientation ("16T" stays "16T")
+    because pattern 8/9 rules explicitly require it. T-first inputs stay
+    T-first ("T16"). Both shapes can coexist in the output list.
+    """
+
     dia = []
     spacing = []
+
+    def add_value(target, value):
+        if keep_repetition or value not in target:
+            target.append(value)
+
     for text in texts:
         for item in _as_list(text):
             clean = str(item).upper().replace("PHI", "T").replace("Ø", "T")
-            for dm in re.finditer(r"\bT?\s*(\d{1,2})\b(?=\s*(?:@|C/C|MM|$))", clean):
-                value = f"T{dm.group(1)}"
-                if value not in dia:
-                    dia.append(value)
+
+            # Number-first diameter, e.g. "16T" or "12T-100C/C". Must run
+            # before the bare-number fallback so "16T" is not misread as the
+            # number 16 and dropped.
+            for dm in re.finditer(r"\b(\d{1,2})\s*T\b", clean):
+                add_value(dia, f"{dm.group(1)}T")
+
+            # T-first diameter, e.g. "T16", "T 12".
             for dm in re.finditer(r"\bT\s*(\d{1,2})\b", clean):
+                add_value(dia, f"T{dm.group(1)}")
+
+            # Bare number followed by a spacing/unit cue, e.g. "12 @ 100 C/C".
+            # Skip if a T-first or number-first value already covers it.
+            for dm in re.finditer(r"\b(\d{1,2})\b(?=\s*(?:@|C/C|MM|$))", clean):
                 value = f"T{dm.group(1)}"
-                if value not in dia:
-                    dia.append(value)
+                if f"{dm.group(1)}T" in dia or (not keep_repetition and value in dia):
+                    continue
+                add_value(dia, value)
+
+            # Spacing values, e.g. "@150", "-150C/C", "150 c/c".
             for sm in re.finditer(r"(?:@|-)?\s*(\d{2,4})\s*C\s*/?\s*C", clean):
-                value = f"{sm.group(1)} C/C"
-                if value not in spacing:
-                    spacing.append(value)
+                add_value(spacing, f"{sm.group(1)} C/C")
             for sm in re.finditer(r"@\s*(\d{2,4})", clean):
-                value = f"{sm.group(1)} C/C"
-                if value not in spacing:
-                    spacing.append(value)
+                add_value(spacing, f"{sm.group(1)} C/C")
+
     return {"dia": dia, "spacing": spacing}
 
 
@@ -144,11 +174,31 @@ def build_slab_record(args):
 
 
 def build_footing_record(args):
-    short_span = args.get("short_span_reinf")
-    long_span = args.get("long_span_reinf")
-    reinf = extract_rebar_parts(short_span, long_span)
+    reinf_texts = [
+        args.get("short_span_reinf"),
+        args.get("long_span_reinf"),
+        args.get("bottom_short_reinf"),
+        args.get("bottom_long_reinf"),
+        args.get("top_short_reinf"),
+        args.get("top_long_reinf"),
+        args.get("bottom_steel"),
+        args.get("top_steel"),
+        args.get("main_bar"),
+        args.get("distribution_bar"),
+        args.get("reinforcement"),
+    ]
+    stirrup_texts = [
+        args.get("stirrup_reinf"),
+        args.get("stirrups"),
+        args.get("ties_dia"),
+        args.get("ties_spacing"),
+        args.get("links"),
+        args.get("link_spacing"),
+    ]
+    reinf = extract_rebar_parts(*reinf_texts, keep_repetition=True)
+    stirrups = extract_rebar_parts(*stirrup_texts, keep_repetition=True)
     column_id = args.get("column_id", "")
-    return {
+    record = {
         "footing_id": args.get("footing_id") or column_id,
         "column_id": column_id,
         "size": {
@@ -163,6 +213,9 @@ def build_footing_record(args):
         "mix": args.get("mix") or args.get("concrete_mix"),
         "steel_grade": args.get("steel_grade"),
     }
+    if stirrups["dia"] or stirrups["spacing"]:
+        record["stirrups"] = stirrups
+    return record
 
 
 class ExtractionState:

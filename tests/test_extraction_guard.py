@@ -33,12 +33,12 @@ class ExtractionGuardTests(unittest.TestCase):
         self.assertFalse(ok)
         self.assertIn("think", message)
 
-    def test_reject_unconfirmed_source_region(self):
+    def test_accept_unconfirmed_source_region_when_zoom_is_optional(self):
         state = ExtractionState("column", "page_1.png", "columns", ["column_no", "column_name"])
         state.handle_think(minimal_think())
         ok, message = state.can_add_record({"source_region_ids": ["h1"]})
-        self.assertFalse(ok)
-        self.assertIn("confirmed", message)
+        self.assertTrue(ok)
+        self.assertIn("accepted", message)
 
     def test_accept_confirmed_source_region(self):
         state = ExtractionState("column", "page_1.png", "columns", ["column_no", "column_name"])
@@ -113,6 +113,34 @@ class ExtractionGuardTests(unittest.TestCase):
         self.assertEqual(record["size"]["depth"], 230)
         self.assertIn("T12", record["reinforcement"]["dia"])
         self.assertEqual(record["mix"], "M25")
+
+    def test_footing_vertical_reinforcement_aliases(self):
+        record = build_footing_record(
+            {
+                "footing_id": "RAFT-1",
+                "column_id": None,
+                "plan_length": None,
+                "plan_width": None,
+                "depth_bottom": 1000,
+                "bottom_short_reinf": "16T-100C/C",
+                "bottom_long_reinf": "16T-100C/C",
+                "top_short_reinf": "16T-100C/C",
+                "top_long_reinf": "16T-100C/C",
+                "ties_dia": "T8",
+                "ties_spacing": "150 C/C",
+                "mix": "M25",
+                "steel_grade": "FE500",
+            }
+        )
+        self.assertEqual(record["footing_id"], "RAFT-1")
+        self.assertIn("16T", record["reinforcement"]["dia"])
+        self.assertEqual(record["reinforcement"]["dia"].count("16T"), 4)
+        self.assertIn("100 C/C", record["reinforcement"]["spacing"])
+        self.assertEqual(record["reinforcement"]["spacing"].count("100 C/C"), 4)
+        self.assertEqual(record["stirrups"]["dia"], ["T8"])
+        self.assertEqual(record["stirrups"]["spacing"], ["150 C/C"])
+        self.assertEqual(record["mix"], "M25")
+        self.assertEqual(record["steel_grade"], "FE500")
 
 
 if __name__ == "__main__":

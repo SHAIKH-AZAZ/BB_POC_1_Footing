@@ -36,14 +36,32 @@ def remove_duplicates_preserve_order(lst):
     return cleaned
 
 
+def as_clean_list(value, uppercase=False):
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        value = [value]
+    cleaned = []
+    for item in value:
+        if item is None:
+            continue
+        text = str(item).strip()
+        if not text:
+            continue
+        cleaned.append(text.upper() if uppercase else text)
+    return cleaned
+
+
 def clean_footing(f):
 
     size = f.get("size", {})
     reinf = f.get("reinforcement", {})
+    stirrups = f.get("stirrups", {})
 
-    dia = remove_duplicates_preserve_order(reinf.get("dia", []))
-    spacing = [s.upper() for s in reinf.get("spacing", [])]
-    spacing = remove_duplicates_preserve_order(spacing)
+    dia = as_clean_list(reinf.get("dia", []))
+    spacing = as_clean_list(reinf.get("spacing", []), uppercase=True)
+    stirrup_dia = as_clean_list(stirrups.get("dia", []))
+    stirrup_spacing = as_clean_list(stirrups.get("spacing", []), uppercase=True)
 
     return {
         "footing_id": f.get("footing_id"),
@@ -57,9 +75,13 @@ def clean_footing(f):
             "dia": dia,
             "spacing": spacing
         },
-        "nos": None,
-        "mix": None,
-        "steel_grade": None
+        "stirrups": {
+            "dia": stirrup_dia,
+            "spacing": stirrup_spacing
+        },
+        "nos": f.get("nos"),
+        "mix": f.get("mix"),
+        "steel_grade": f.get("steel_grade")
     }
 
 

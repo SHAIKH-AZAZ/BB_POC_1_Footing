@@ -79,6 +79,35 @@ def extract_rebar_parts(*texts):
     return {"dia": dia, "spacing": spacing}
 
 
+def expand_column_group(text):
+    """
+    Expand grouped column marks like "AC1,2,11 AC48,49" into the explicit
+    list "AC1,AC2,AC11,AC48,AC49". Returns None when no prefix-number
+    pattern is found.
+    """
+
+    if text is None:
+        return None
+    if isinstance(text, dict):
+        text = " ".join(str(v) for v in text.values())
+    text = str(text).replace("\n", " ").replace(" ", "")
+    if not text:
+        return None
+
+    result = []
+    for prefix, numbers in re.findall(r"([A-Z]+)([0-9,\-]+)", text):
+        for num in numbers.split(","):
+            num = num.strip()
+            if not num:
+                continue
+            if num.isdigit():
+                result.append(f"{prefix}{num}")
+            elif re.fullmatch(r"\d+-\d+", num):
+                # Preserve compound IDs like "230-1".
+                result.append(f"{prefix}{num}")
+    return ",".join(result) if result else None
+
+
 def build_column_record(args):
     return {
         "column_no": args.get("column_no", ""),
@@ -137,11 +166,21 @@ def build_footing_record(args):
 
 
 class ExtractionState:
-    def __init__(self, project, image_path, output_key, duplicate_key_fields):
+    def __init__(
+        self,
+        project,
+        image_path,
+        output_key,
+        duplicate_key_fields,
+        pdf_extractor=None,
+        page_index=0,
+    ):
         self.project = project
         self.image_path = image_path
         self.output_key = output_key
         self.duplicate_key_fields = duplicate_key_fields
+        self.pdf_extractor = pdf_extractor
+        self.page_index = page_index
         self.think_seen = False
         self.think = None
         self.zoom_regions = {}
@@ -149,6 +188,7 @@ class ExtractionState:
         self.records = []
         self.record_sources = []
         self.warnings = []
+        self.pdf_reads = []  # audit trail for read_pdf_text calls
 
     def warn(self, message):
         if message not in self.warnings:
@@ -237,6 +277,49 @@ class ExtractionState:
         # source_region_ids are recorded in the trace for auditability but not required.
         return True, "Record accepted."
 
+    def handle_read_pdf_text(self, args):
+        """
+        Read text from the source PDF's text layer for an arbitrary [0,1]
+        bbox. Returns ``(text, message)`` where ``text`` is None when the
+        read is unavailable (no PDF bound, no text layer, or before think).
+        """
+
+        if not self.think_seen:
+            self.warn("read_pdf_text rejected before think")
+            return None, "Call think before read_pdf_text."
+
+        if self.pdf_extractor is None:
+            return None, (
+                "PDF text reading is not available for this run. "
+                "Use zoom_region + confirm_read instead."
+            )
+
+        try:
+            x1 = float(args.get("x1", 0.0))
+            y1 = float(args.get("y1", 0.0))
+            x2 = float(args.get("x2", 1.0))
+            y2 = float(args.get("y2", 1.0))
+        except (TypeError, ValueError):
+            return None, "x1/y1/x2/y2 must be numeric."
+
+        try:
+            text = self.pdf_extractor.extract_text(self.page_index, x1, y1, x2, y2)
+        except Exception as exc:
+            self.warn(f"read_pdf_text failed: {exc}")
+            return None, f"PDF text read failed: {exc}"
+
+        entry = {
+            "x1": x1,
+            "y1": y1,
+            "x2": x2,
+            "y2": y2,
+            "purpose": str(args.get("purpose") or "ambiguous_text"),
+            "reason": args.get("reason", ""),
+            "text": text,
+        }
+        self.pdf_reads.append(entry)
+        return text, "OK"
+
     def add_record(self, record, args):
         self.records.append(record)
         self.record_sources.append({
@@ -298,10 +381,13 @@ class ExtractionState:
         return {
             "project": self.project,
             "image_path": self.image_path,
+            "page_index": self.page_index,
+            "pdf_path": getattr(self.pdf_extractor, "pdf_path", None),
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "think": self.think,
             "zoom_regions": list(self.zoom_regions.values()),
             "confirmed_reads": list(self.confirmed_reads.values()),
+            "pdf_reads": list(self.pdf_reads),
             "records": self.records,
             "added_records": self.record_sources,
             "expected_count": self.expected_count(),

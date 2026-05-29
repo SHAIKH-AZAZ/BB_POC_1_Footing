@@ -7,7 +7,7 @@
       "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-10/page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-05-29T05:55:20.820890+00:00",
+      "generated_at": "2026-05-29T06:54:40.390780+00:00",
       "think": {
         "image_quality": "high",
         "table_bounds": {
@@ -51,73 +51,167 @@
           {
             "region_id": "header_footing_numbers",
             "purpose": "header",
-            "x1": 0,
-            "y1": 0,
+            "x1": 10,
+            "y1": 10,
             "x2": 100,
             "y2": 40,
-            "reason": "Confirm footing numbers header"
+            "reason": "Extract footing_id header"
           },
           {
             "region_id": "header_column_numbers",
             "purpose": "header",
-            "x1": 100,
-            "y1": 0,
+            "x1": 110,
+            "y1": 10,
             "x2": 200,
             "y2": 40,
-            "reason": "Confirm column numbers header"
+            "reason": "Extract column_id header"
           },
           {
             "region_id": "header_footing_dimension",
             "purpose": "header",
-            "x1": 300,
-            "y1": 0,
-            "x2": 500,
+            "x1": 210,
+            "y1": 10,
+            "x2": 400,
             "y2": 40,
-            "reason": "Confirm footing dimension header"
+            "reason": "Extract footing dimension headers L B D"
           },
           {
             "region_id": "header_footing_reinforcement",
             "purpose": "header",
-            "x1": 500,
-            "y1": 0,
-            "x2": 900,
+            "x1": 410,
+            "y1": 10,
+            "x2": 700,
             "y2": 40,
-            "reason": "Confirm footing reinforcement header"
+            "reason": "Extract reinforcement headers BOTTOM ALONG B, BOTTOM ALONG L, TOP ALONG B, TOP ALONG L"
           },
           {
             "region_id": "header_sfr",
             "purpose": "header",
-            "x1": 900,
-            "y1": 0,
-            "x2": 1000,
+            "x1": 710,
+            "y1": 10,
+            "x2": 760,
             "y2": 40,
-            "reason": "Confirm SFR header"
+            "reason": "Ignore SFR column"
           },
           {
             "region_id": "header_remarks",
             "purpose": "header",
-            "x1": 1000,
-            "y1": 0,
-            "x2": 1100,
+            "x1": 770,
+            "y1": 10,
+            "x2": 820,
             "y2": 40,
-            "reason": "Confirm remarks header"
+            "reason": "Ignore remarks column"
+          },
+          {
+            "region_id": "row_1",
+            "purpose": "row_label",
+            "x1": 10,
+            "y1": 50,
+            "x2": 100,
+            "y2": 80,
+            "reason": "Extract footing_id FP6"
+          },
+          {
+            "region_id": "row_1_column",
+            "purpose": "row_label",
+            "x1": 110,
+            "y1": 50,
+            "x2": 200,
+            "y2": 80,
+            "reason": "Extract column_id PC56"
+          },
+          {
+            "region_id": "row_1_size",
+            "purpose": "data_cell",
+            "x1": 210,
+            "y1": 50,
+            "x2": 400,
+            "y2": 80,
+            "reason": "Extract footing dimension L B D for FP6"
+          },
+          {
+            "region_id": "row_1_reinf_bottom_b",
+            "purpose": "data_cell",
+            "x1": 410,
+            "y1": 50,
+            "x2": 460,
+            "y2": 80,
+            "reason": "Extract bottom along B reinforcement for FP6"
+          },
+          {
+            "region_id": "row_1_reinf_bottom_l",
+            "purpose": "data_cell",
+            "x1": 460,
+            "y1": 50,
+            "x2": 510,
+            "y2": 80,
+            "reason": "Extract bottom along L reinforcement for FP6"
+          },
+          {
+            "region_id": "row_1_reinf_top_b",
+            "purpose": "data_cell",
+            "x1": 510,
+            "y1": 50,
+            "x2": 560,
+            "y2": 80,
+            "reason": "Extract top along B reinforcement for FP6"
+          },
+          {
+            "region_id": "row_1_reinf_top_l",
+            "purpose": "data_cell",
+            "x1": 560,
+            "y1": 50,
+            "x2": 610,
+            "y2": 80,
+            "reason": "Extract top along L reinforcement for FP6"
+          },
+          {
+            "region_id": "row_2",
+            "purpose": "row_label",
+            "x1": 10,
+            "y1": 81,
+            "x2": 100,
+            "y2": 110,
+            "reason": "Extract footing_id FP7"
+          },
+          {
+            "region_id": "row_2_column",
+            "purpose": "row_label",
+            "x1": 110,
+            "y1": 81,
+            "x2": 200,
+            "y2": 110,
+            "reason": "Extract column_id PC61"
+          },
+          {
+            "region_id": "row_2_size",
+            "purpose": "data_cell",
+            "x1": 210,
+            "y1": 81,
+            "x2": 400,
+            "y2": 110,
+            "reason": "Extract footing dimension L B D for FP7"
           }
         ],
         "normalization_rules": [
-          "Trim spaces",
-          "Uppercase reinforcement dia and spacing",
           "Remove duplicates in reinforcement",
-          "Ignore empty or dash cells",
-          "Ignore reinforcement after SFR column"
+          "Ignore empty or dash cells in reinforcement",
+          "Ignore SFR and remarks columns for reinforcement",
+          "Extract footing_id from FOOTING NUMBERS column",
+          "Extract column_id from COLUMN NUMBERS column",
+          "Extract length, width, depth from FOOTING DIMENSION L B D columns",
+          "Extract reinforcement dia and spacing from BOTTOM and TOP columns only between FOOTING DIMENSION and SFR columns",
+          "Ignore reinforcement after SFR column",
+          "Return null for nos, mix, steel_grade if not present"
         ],
         "extraction_order": [
           "FOOTING NUMBERS",
           "COLUMN NUMBERS",
           "FOOTING DIMENSION L B D",
-          "BOTTOM ALONG B",
-          "BOTTOM ALONG L",
-          "TOP ALONG B",
-          "TOP ALONG L"
+          "FOOTING REINFORCEMENT BOTTOM ALONG B",
+          "FOOTING REINFORCEMENT BOTTOM ALONG L",
+          "FOOTING REINFORCEMENT TOP ALONG B",
+          "FOOTING REINFORCEMENT TOP ALONG L"
         ]
       },
       "zoom_regions": [],
@@ -129,7 +223,7 @@
           "column_id": "PC56",
           "size": {
             "width": 3200,
-            "depth": 1525,
+            "depth": null,
             "length": 13250
           },
           "reinforcement": {
@@ -149,7 +243,7 @@
           "column_id": "PC61",
           "size": {
             "width": 3150,
-            "depth": 1500,
+            "depth": null,
             "length": 13200
           },
           "reinforcement": {
@@ -157,8 +251,7 @@
               "T16"
             ],
             "spacing": [
-              "100 C/C",
-              "110 C/C"
+              "100 C/C"
             ]
           },
           "nos": null,
@@ -170,7 +263,7 @@
           "column_id": "PC64",
           "size": {
             "width": 3100,
-            "depth": 1475,
+            "depth": null,
             "length": 13150
           },
           "reinforcement": {
@@ -178,8 +271,7 @@
               "T16"
             ],
             "spacing": [
-              "100 C/C",
-              "110 C/C"
+              "100 C/C"
             ]
           },
           "nos": null,
@@ -191,7 +283,7 @@
           "column_id": "PC67",
           "size": {
             "width": 3250,
-            "depth": 1550,
+            "depth": null,
             "length": 13300
           },
           "reinforcement": {
@@ -213,7 +305,7 @@
           "column_id": "PC53",
           "size": {
             "width": 2100,
-            "depth": 925,
+            "depth": null,
             "length": 3750
           },
           "reinforcement": {
@@ -234,7 +326,7 @@
           "column_id": "PC54",
           "size": {
             "width": 2050,
-            "depth": 925,
+            "depth": null,
             "length": 3700
           },
           "reinforcement": {
@@ -255,7 +347,7 @@
           "column_id": "PC55",
           "size": {
             "width": 2100,
-            "depth": 925,
+            "depth": null,
             "length": 3750
           },
           "reinforcement": {
@@ -275,7 +367,7 @@
           "column_id": "PC57",
           "size": {
             "width": 2300,
-            "depth": 1100,
+            "depth": null,
             "length": 4100
           },
           "reinforcement": {
@@ -297,7 +389,7 @@
           "column_id": "PC59",
           "size": {
             "width": 2300,
-            "depth": 1100,
+            "depth": null,
             "length": 4100
           },
           "reinforcement": {
@@ -319,7 +411,7 @@
           "column_id": "PC62",
           "size": {
             "width": 2250,
-            "depth": 1075,
+            "depth": null,
             "length": 4050
           },
           "reinforcement": {
@@ -342,7 +434,7 @@
           "column_id": "PC65",
           "size": {
             "width": 2150,
-            "depth": 1025,
+            "depth": null,
             "length": 3950
           },
           "reinforcement": {
@@ -364,15 +456,17 @@
           "column_id": "PC27",
           "size": {
             "width": 2200,
-            "depth": 1075,
+            "depth": null,
             "length": 8400
           },
           "reinforcement": {
             "dia": [
-              "T16"
+              "T16",
+              "T10"
             ],
             "spacing": [
               "140 C/C",
+              "125 C/C",
               "150 C/C"
             ]
           },
@@ -385,7 +479,7 @@
           "column_id": "GC43",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -406,7 +500,7 @@
           "column_id": "PC199",
           "size": {
             "width": 1450,
-            "depth": 750,
+            "depth": null,
             "length": 3150
           },
           "reinforcement": {
@@ -426,7 +520,7 @@
           "column_id": "PC198",
           "size": {
             "width": 1700,
-            "depth": 925,
+            "depth": null,
             "length": 3400
           },
           "reinforcement": {
@@ -446,7 +540,7 @@
           "column_id": "GC38",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -467,7 +561,7 @@
           "column_id": "GC19",
           "size": {
             "width": 1400,
-            "depth": 925,
+            "depth": null,
             "length": 1650
           },
           "reinforcement": {
@@ -487,7 +581,7 @@
           "column_id": "GC18",
           "size": {
             "width": 1300,
-            "depth": 925,
+            "depth": null,
             "length": 1550
           },
           "reinforcement": {
@@ -507,7 +601,7 @@
           "column_id": "GC37",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -528,7 +622,7 @@
           "column_id": "GC36",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -549,7 +643,7 @@
           "column_id": "GC35",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -570,7 +664,7 @@
           "column_id": "GC34",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -591,7 +685,7 @@
           "column_id": "PC159",
           "size": {
             "width": 2500,
-            "depth": 1100,
+            "depth": null,
             "length": 3600
           },
           "reinforcement": {
@@ -614,7 +708,7 @@
           "column_id": "GC33",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -635,7 +729,7 @@
           "column_id": "GC32",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -656,7 +750,7 @@
           "column_id": "GC31",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -677,7 +771,7 @@
           "column_id": "GC30",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -698,7 +792,7 @@
           "column_id": "PC150",
           "size": {
             "width": 2000,
-            "depth": 925,
+            "depth": null,
             "length": 3050
           },
           "reinforcement": {
@@ -720,7 +814,7 @@
           "column_id": "GC29",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -741,7 +835,7 @@
           "column_id": "GC28",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -762,7 +856,7 @@
           "column_id": "GC27",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -783,7 +877,7 @@
           "column_id": "GC26",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -804,7 +898,7 @@
           "column_id": "GC8",
           "size": {
             "width": 1350,
-            "depth": 925,
+            "depth": null,
             "length": 1600
           },
           "reinforcement": {
@@ -824,7 +918,7 @@
           "column_id": "GC25",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -845,7 +939,7 @@
           "column_id": "GC7",
           "size": {
             "width": 1350,
-            "depth": 925,
+            "depth": null,
             "length": 1600
           },
           "reinforcement": {
@@ -865,7 +959,7 @@
           "column_id": "GC24",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -886,7 +980,7 @@
           "column_id": "GC23",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -907,7 +1001,7 @@
           "column_id": "GC22",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -928,7 +1022,7 @@
           "column_id": "GC21",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -949,7 +1043,7 @@
           "column_id": "GC4",
           "size": {
             "width": 1350,
-            "depth": 925,
+            "depth": null,
             "length": 1600
           },
           "reinforcement": {
@@ -969,7 +1063,7 @@
           "column_id": "GC3",
           "size": {
             "width": 1350,
-            "depth": 925,
+            "depth": null,
             "length": 1600
           },
           "reinforcement": {
@@ -989,7 +1083,7 @@
           "column_id": "GC20",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -1010,7 +1104,7 @@
           "column_id": "PC126",
           "size": {
             "width": 1900,
-            "depth": 900,
+            "depth": null,
             "length": 2800
           },
           "reinforcement": {
@@ -1031,7 +1125,7 @@
           "column_id": "PC234",
           "size": {
             "width": 2250,
-            "depth": 925,
+            "depth": null,
             "length": 3550
           },
           "reinforcement": {
@@ -1051,7 +1145,7 @@
           "column_id": "PC125",
           "size": {
             "width": 2500,
-            "depth": 1000,
+            "depth": null,
             "length": 3250
           },
           "reinforcement": {
@@ -1073,7 +1167,7 @@
           "column_id": "PC228",
           "size": {
             "width": 3150,
-            "depth": 1075,
+            "depth": null,
             "length": 3550
           },
           "reinforcement": {
@@ -1096,7 +1190,7 @@
           "column_id": "PC216",
           "size": {
             "width": 2150,
-            "depth": 925,
+            "depth": null,
             "length": 2750
           },
           "reinforcement": {
@@ -1116,7 +1210,7 @@
           "column_id": "PC219",
           "size": {
             "width": 2600,
-            "depth": 925,
+            "depth": null,
             "length": 3200
           },
           "reinforcement": {
@@ -1124,8 +1218,7 @@
               "T16"
             ],
             "spacing": [
-              "100 C/C",
-              "175 C/C"
+              "100 C/C"
             ]
           },
           "nos": null,
@@ -1137,7 +1230,7 @@
           "column_id": "PC223",
           "size": {
             "width": 2700,
-            "depth": 1125,
+            "depth": null,
             "length": 3900
           },
           "reinforcement": {
@@ -1159,7 +1252,7 @@
           "column_id": "PC31",
           "size": {
             "width": 2550,
-            "depth": 1125,
+            "depth": null,
             "length": 3000
           },
           "reinforcement": {
@@ -1181,7 +1274,7 @@
           "column_id": "PC30",
           "size": {
             "width": 1850,
-            "depth": 900,
+            "depth": null,
             "length": 2750
           },
           "reinforcement": {
@@ -1201,7 +1294,7 @@
           "column_id": "GC40",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -1222,7 +1315,7 @@
           "column_id": "GC39",
           "size": {
             "width": 1100,
-            "depth": 750,
+            "depth": null,
             "length": 1950
           },
           "reinforcement": {
@@ -1243,7 +1336,7 @@
           "column_id": "PC192",
           "size": {
             "width": 1750,
-            "depth": 900,
+            "depth": null,
             "length": 3350
           },
           "reinforcement": {
@@ -1263,7 +1356,7 @@
           "column_id": "PC195",
           "size": {
             "width": 1650,
-            "depth": 900,
+            "depth": null,
             "length": 3250
           },
           "reinforcement": {
@@ -1283,7 +1376,7 @@
           "column_id": "PC230-1, PC230-2",
           "size": {
             "width": 2650,
-            "depth": 1200,
+            "depth": null,
             "length": 4550
           },
           "reinforcement": {
@@ -1305,7 +1398,7 @@
           "column_id": "PC213",
           "size": {
             "width": 3650,
-            "depth": 1675,
+            "depth": null,
             "length": 13100
           },
           "reinforcement": {
@@ -1313,8 +1406,7 @@
               "T20"
             ],
             "spacing": [
-              "140 C/C",
-              "150 C/C"
+              "140 C/C"
             ]
           },
           "nos": null,
@@ -1326,17 +1418,15 @@
           "column_id": "PC87",
           "size": {
             "width": 2100,
-            "depth": 1125,
+            "depth": null,
             "length": 7250
           },
           "reinforcement": {
             "dia": [
-              "T16",
-              "T10"
+              "T16"
             ],
             "spacing": [
-              "125 C/C",
-              "200 C/C"
+              "125 C/C"
             ]
           },
           "nos": null,
@@ -1348,17 +1438,15 @@
           "column_id": "PC168",
           "size": {
             "width": 2550,
-            "depth": 1125,
+            "depth": null,
             "length": 3650
           },
           "reinforcement": {
             "dia": [
-              "T16",
-              "T10"
+              "T16"
             ],
             "spacing": [
               "120 C/C",
-              "200 C/C",
               "115 C/C"
             ]
           },
@@ -1374,7 +1462,7 @@
             "column_id": "PC56",
             "size": {
               "width": 3200,
-              "depth": 1525,
+              "depth": null,
               "length": 13250
             },
             "reinforcement": {
@@ -1389,9 +1477,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row1"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1399,7 +1485,7 @@
             "column_id": "PC61",
             "size": {
               "width": 3150,
-              "depth": 1500,
+              "depth": null,
               "length": 13200
             },
             "reinforcement": {
@@ -1407,17 +1493,14 @@
                 "T16"
               ],
               "spacing": [
-                "100 C/C",
-                "110 C/C"
+                "100 C/C"
               ]
             },
             "nos": null,
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row2"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1425,7 +1508,7 @@
             "column_id": "PC64",
             "size": {
               "width": 3100,
-              "depth": 1475,
+              "depth": null,
               "length": 13150
             },
             "reinforcement": {
@@ -1433,17 +1516,14 @@
                 "T16"
               ],
               "spacing": [
-                "100 C/C",
-                "110 C/C"
+                "100 C/C"
               ]
             },
             "nos": null,
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row3"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1451,7 +1531,7 @@
             "column_id": "PC67",
             "size": {
               "width": 3250,
-              "depth": 1550,
+              "depth": null,
               "length": 13300
             },
             "reinforcement": {
@@ -1468,9 +1548,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row4"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1478,7 +1556,7 @@
             "column_id": "PC53",
             "size": {
               "width": 2100,
-              "depth": 925,
+              "depth": null,
               "length": 3750
             },
             "reinforcement": {
@@ -1494,9 +1572,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row5"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1504,7 +1580,7 @@
             "column_id": "PC54",
             "size": {
               "width": 2050,
-              "depth": 925,
+              "depth": null,
               "length": 3700
             },
             "reinforcement": {
@@ -1520,9 +1596,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row6"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1530,7 +1604,7 @@
             "column_id": "PC55",
             "size": {
               "width": 2100,
-              "depth": 925,
+              "depth": null,
               "length": 3750
             },
             "reinforcement": {
@@ -1545,9 +1619,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row7"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1555,7 +1627,7 @@
             "column_id": "PC57",
             "size": {
               "width": 2300,
-              "depth": 1100,
+              "depth": null,
               "length": 4100
             },
             "reinforcement": {
@@ -1572,9 +1644,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row8"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1582,7 +1652,7 @@
             "column_id": "PC59",
             "size": {
               "width": 2300,
-              "depth": 1100,
+              "depth": null,
               "length": 4100
             },
             "reinforcement": {
@@ -1599,9 +1669,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row9"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1609,7 +1677,7 @@
             "column_id": "PC62",
             "size": {
               "width": 2250,
-              "depth": 1075,
+              "depth": null,
               "length": 4050
             },
             "reinforcement": {
@@ -1627,9 +1695,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row10"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1637,7 +1703,7 @@
             "column_id": "PC65",
             "size": {
               "width": 2150,
-              "depth": 1025,
+              "depth": null,
               "length": 3950
             },
             "reinforcement": {
@@ -1654,9 +1720,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row11"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1664,15 +1728,17 @@
             "column_id": "PC27",
             "size": {
               "width": 2200,
-              "depth": 1075,
+              "depth": null,
               "length": 8400
             },
             "reinforcement": {
               "dia": [
-                "T16"
+                "T16",
+                "T10"
               ],
               "spacing": [
                 "140 C/C",
+                "125 C/C",
                 "150 C/C"
               ]
             },
@@ -1680,9 +1746,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row12"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1690,7 +1754,7 @@
             "column_id": "GC43",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -1706,9 +1770,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row13"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1716,7 +1778,7 @@
             "column_id": "PC199",
             "size": {
               "width": 1450,
-              "depth": 750,
+              "depth": null,
               "length": 3150
             },
             "reinforcement": {
@@ -1731,9 +1793,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row14"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1741,7 +1801,7 @@
             "column_id": "PC198",
             "size": {
               "width": 1700,
-              "depth": 925,
+              "depth": null,
               "length": 3400
             },
             "reinforcement": {
@@ -1756,9 +1816,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row15"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1766,7 +1824,7 @@
             "column_id": "GC38",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -1782,9 +1840,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row16"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1792,7 +1848,7 @@
             "column_id": "GC19",
             "size": {
               "width": 1400,
-              "depth": 925,
+              "depth": null,
               "length": 1650
             },
             "reinforcement": {
@@ -1807,9 +1863,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row17"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1817,7 +1871,7 @@
             "column_id": "GC18",
             "size": {
               "width": 1300,
-              "depth": 925,
+              "depth": null,
               "length": 1550
             },
             "reinforcement": {
@@ -1832,9 +1886,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row18"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1842,7 +1894,7 @@
             "column_id": "GC37",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -1858,9 +1910,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row19"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1868,7 +1918,7 @@
             "column_id": "GC36",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -1884,9 +1934,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row20"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1894,7 +1942,7 @@
             "column_id": "GC35",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -1910,9 +1958,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row21"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1920,7 +1966,7 @@
             "column_id": "GC34",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -1936,9 +1982,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row22"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1946,7 +1990,7 @@
             "column_id": "PC159",
             "size": {
               "width": 2500,
-              "depth": 1100,
+              "depth": null,
               "length": 3600
             },
             "reinforcement": {
@@ -1964,9 +2008,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row23"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -1974,7 +2016,7 @@
             "column_id": "GC33",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -1990,9 +2032,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row24"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2000,7 +2040,7 @@
             "column_id": "GC32",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2016,9 +2056,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row25"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2026,7 +2064,7 @@
             "column_id": "GC31",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2042,9 +2080,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row26"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2052,7 +2088,7 @@
             "column_id": "GC30",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2068,9 +2104,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row27"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2078,7 +2112,7 @@
             "column_id": "PC150",
             "size": {
               "width": 2000,
-              "depth": 925,
+              "depth": null,
               "length": 3050
             },
             "reinforcement": {
@@ -2095,9 +2129,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row28"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2105,7 +2137,7 @@
             "column_id": "GC29",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2121,9 +2153,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row29"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2131,7 +2161,7 @@
             "column_id": "GC28",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2147,9 +2177,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row30"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2157,7 +2185,7 @@
             "column_id": "GC27",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2173,9 +2201,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row31"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2183,7 +2209,7 @@
             "column_id": "GC26",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2199,9 +2225,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row32"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2209,7 +2233,7 @@
             "column_id": "GC8",
             "size": {
               "width": 1350,
-              "depth": 925,
+              "depth": null,
               "length": 1600
             },
             "reinforcement": {
@@ -2224,9 +2248,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row33"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2234,7 +2256,7 @@
             "column_id": "GC25",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2250,9 +2272,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row34"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2260,7 +2280,7 @@
             "column_id": "GC7",
             "size": {
               "width": 1350,
-              "depth": 925,
+              "depth": null,
               "length": 1600
             },
             "reinforcement": {
@@ -2275,9 +2295,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row35"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2285,7 +2303,7 @@
             "column_id": "GC24",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2301,9 +2319,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row36"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2311,7 +2327,7 @@
             "column_id": "GC23",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2327,9 +2343,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row37"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2337,7 +2351,7 @@
             "column_id": "GC22",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2353,9 +2367,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row38"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2363,7 +2375,7 @@
             "column_id": "GC21",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2379,9 +2391,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row39"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2389,7 +2399,7 @@
             "column_id": "GC4",
             "size": {
               "width": 1350,
-              "depth": 925,
+              "depth": null,
               "length": 1600
             },
             "reinforcement": {
@@ -2404,9 +2414,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row40"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2414,7 +2422,7 @@
             "column_id": "GC3",
             "size": {
               "width": 1350,
-              "depth": 925,
+              "depth": null,
               "length": 1600
             },
             "reinforcement": {
@@ -2429,9 +2437,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row41"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2439,7 +2445,7 @@
             "column_id": "GC20",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2455,9 +2461,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row42"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2465,7 +2469,7 @@
             "column_id": "PC126",
             "size": {
               "width": 1900,
-              "depth": 900,
+              "depth": null,
               "length": 2800
             },
             "reinforcement": {
@@ -2481,9 +2485,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row43"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2491,7 +2493,7 @@
             "column_id": "PC234",
             "size": {
               "width": 2250,
-              "depth": 925,
+              "depth": null,
               "length": 3550
             },
             "reinforcement": {
@@ -2506,9 +2508,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row44"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2516,7 +2516,7 @@
             "column_id": "PC125",
             "size": {
               "width": 2500,
-              "depth": 1000,
+              "depth": null,
               "length": 3250
             },
             "reinforcement": {
@@ -2533,9 +2533,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row45"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2543,7 +2541,7 @@
             "column_id": "PC228",
             "size": {
               "width": 3150,
-              "depth": 1075,
+              "depth": null,
               "length": 3550
             },
             "reinforcement": {
@@ -2561,9 +2559,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row46"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2571,7 +2567,7 @@
             "column_id": "PC216",
             "size": {
               "width": 2150,
-              "depth": 925,
+              "depth": null,
               "length": 2750
             },
             "reinforcement": {
@@ -2586,9 +2582,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row47"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2596,7 +2590,7 @@
             "column_id": "PC219",
             "size": {
               "width": 2600,
-              "depth": 925,
+              "depth": null,
               "length": 3200
             },
             "reinforcement": {
@@ -2604,17 +2598,14 @@
                 "T16"
               ],
               "spacing": [
-                "100 C/C",
-                "175 C/C"
+                "100 C/C"
               ]
             },
             "nos": null,
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row48"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2622,7 +2613,7 @@
             "column_id": "PC223",
             "size": {
               "width": 2700,
-              "depth": 1125,
+              "depth": null,
               "length": 3900
             },
             "reinforcement": {
@@ -2639,9 +2630,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row49"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2649,7 +2638,7 @@
             "column_id": "PC31",
             "size": {
               "width": 2550,
-              "depth": 1125,
+              "depth": null,
               "length": 3000
             },
             "reinforcement": {
@@ -2666,9 +2655,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row50"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2676,7 +2663,7 @@
             "column_id": "PC30",
             "size": {
               "width": 1850,
-              "depth": 900,
+              "depth": null,
               "length": 2750
             },
             "reinforcement": {
@@ -2691,9 +2678,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row51"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2701,7 +2686,7 @@
             "column_id": "GC40",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2717,9 +2702,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row52"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2727,7 +2710,7 @@
             "column_id": "GC39",
             "size": {
               "width": 1100,
-              "depth": 750,
+              "depth": null,
               "length": 1950
             },
             "reinforcement": {
@@ -2743,9 +2726,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row53"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2753,7 +2734,7 @@
             "column_id": "PC192",
             "size": {
               "width": 1750,
-              "depth": 900,
+              "depth": null,
               "length": 3350
             },
             "reinforcement": {
@@ -2768,9 +2749,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row54"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2778,7 +2757,7 @@
             "column_id": "PC195",
             "size": {
               "width": 1650,
-              "depth": 900,
+              "depth": null,
               "length": 3250
             },
             "reinforcement": {
@@ -2793,9 +2772,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row55"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2803,7 +2780,7 @@
             "column_id": "PC230-1, PC230-2",
             "size": {
               "width": 2650,
-              "depth": 1200,
+              "depth": null,
               "length": 4550
             },
             "reinforcement": {
@@ -2820,9 +2797,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row56"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2830,7 +2805,7 @@
             "column_id": "PC213",
             "size": {
               "width": 3650,
-              "depth": 1675,
+              "depth": null,
               "length": 13100
             },
             "reinforcement": {
@@ -2838,17 +2813,14 @@
                 "T20"
               ],
               "spacing": [
-                "140 C/C",
-                "150 C/C"
+                "140 C/C"
               ]
             },
             "nos": null,
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row57"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2856,26 +2828,22 @@
             "column_id": "PC87",
             "size": {
               "width": 2100,
-              "depth": 1125,
+              "depth": null,
               "length": 7250
             },
             "reinforcement": {
               "dia": [
-                "T16",
-                "T10"
+                "T16"
               ],
               "spacing": [
-                "125 C/C",
-                "200 C/C"
+                "125 C/C"
               ]
             },
             "nos": null,
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row58"
-          ]
+          "source_region_ids": []
         },
         {
           "record": {
@@ -2883,17 +2851,15 @@
             "column_id": "PC168",
             "size": {
               "width": 2550,
-              "depth": 1125,
+              "depth": null,
               "length": 3650
             },
             "reinforcement": {
               "dia": [
-                "T16",
-                "T10"
+                "T16"
               ],
               "spacing": [
                 "120 C/C",
-                "200 C/C",
                 "115 C/C"
               ]
             },
@@ -2901,9 +2867,7 @@
             "mix": null,
             "steel_grade": null
           },
-          "source_region_ids": [
-            "row59"
-          ]
+          "source_region_ids": []
         }
       ],
       "expected_count": 56,

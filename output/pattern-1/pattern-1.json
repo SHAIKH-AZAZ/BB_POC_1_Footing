@@ -1,7 +1,7 @@
 {
   "footings": [
     {
-      "footing_id": "GC1,GC3,GC7",
+      "footing_id": "CC1,CC3,CC7",
       "column_id": "GC1,GC3,GC7",
       "size": {
         "width": 1900,
@@ -12,16 +12,14 @@
         "dia": [
           "T12"
         ],
-        "spacing": [
-          "150 C/C"
-        ]
+        "spacing": []
       },
       "nos": null,
       "mix": "M25",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "GC2,GC9,GC10,GC13",
+      "footing_id": "CC2,CC9,CC10,CC13",
       "column_id": "GC2,GC9,GC10,GC13",
       "size": {
         "width": 2000,
@@ -32,16 +30,14 @@
         "dia": [
           "T12"
         ],
-        "spacing": [
-          "600 C/C"
-        ]
+        "spacing": []
       },
       "nos": null,
       "mix": "M25",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
+      "footing_id": "CC4,CC5,CC11,CC12,CC13,CC14,CC15",
       "column_id": "GC4,GC5,GC11,GC12,GC13,GC14,GC15",
       "size": {
         "width": 1600,
@@ -52,17 +48,14 @@
         "dia": [
           "T12"
         ],
-        "spacing": [
-          "1500 C/C",
-          "450 C/C"
-        ]
+        "spacing": []
       },
       "nos": null,
       "mix": "M25",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "GC6,GC8",
+      "footing_id": "CC6,CC8",
       "column_id": "GC6,GC8",
       "size": {
         "width": 1000,
@@ -73,29 +66,25 @@
         "dia": [
           "T12"
         ],
-        "spacing": [
-          "1500 C/C"
-        ]
+        "spacing": []
       },
       "nos": null,
       "mix": "M25",
       "steel_grade": "FE500"
     },
     {
-      "footing_id": "GC16,GC17",
+      "footing_id": "CC16,CC17",
       "column_id": "GC16,GC17",
       "size": {
         "width": 1600,
         "depth": 230,
-        "length": 1650
+        "length": 650
       },
       "reinforcement": {
         "dia": [
           "T12"
         ],
-        "spacing": [
-          "1500 C/C"
-        ]
+        "spacing": []
       },
       "nos": null,
       "mix": "M25",

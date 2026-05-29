@@ -1,0 +1,27 @@
+CRITICAL RULES:
+
+1. Extract only from the "SCHEDULE OF FOOTING" table.
+
+2. Extract:
+   - footing_id → from FOOTING ID column (F1, F2 etc.)
+   - length → from LENGTH (L)
+   - width → from BREADTH (B)
+   - depth → from DEPTH (D)
+   - nos → from NOS column
+
+3. Ignore:
+   - GRID REFERENCE
+   - Any other text
+   - Reinforcement
+   - Mix
+   - Steel grade
+
+4. reinforcement must always be:
+   {
+     "dia": [],
+     "spacing": []
+   }
+
+5. mix = null
+6. steel_grade = null
+7. column_id = null

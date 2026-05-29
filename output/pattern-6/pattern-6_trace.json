@@ -7,9 +7,9 @@
       "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-6/page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-05-29T05:56:51.936211+00:00",
+      "generated_at": "2026-05-29T06:56:43.217858+00:00",
       "think": {
-        "image_quality": "good",
+        "image_quality": "high",
         "table_bounds": {
           "x1": 0,
           "y1": 0,
@@ -19,24 +19,27 @@
         "column_groups": [
           "GROUP NO.",
           "FOOTING NO.",
-          "EXCAVATION SIZE [LxB]",
-          "STEP-1_[LxB]",
-          "STEP-2_[LxB]",
-          "'D1'",
-          "'D2'",
+          "STEP-1 (LxB)",
+          "STEP-2 (LxB)",
+          "D1",
+          "D2",
           "CON. MIX",
           "TOP-1",
           "TOP-2",
-          "BOTTOM",
-          "FOOTING [ L ]",
-          "TYP. OF FOOTING"
+          "BOTTOM"
         ],
         "row_structure": [
-          "COLUMN MARK",
-          "SIZE",
-          "D TO d",
-          "SHORT SPAN",
-          "LONG SPAN"
+          "GROUP NO.",
+          "FOOTING NO.",
+          "EXCAVATION SIZE",
+          "STEP-1 (LxB)",
+          "STEP-2 (LxB)",
+          "D1",
+          "D2",
+          "CON. MIX",
+          "TOP-1",
+          "TOP-2",
+          "BOTTOM"
         ],
         "global_notes": {},
         "expected_count": 14,
@@ -44,364 +47,112 @@
           {
             "region_id": "r1",
             "purpose": "header",
-            "target": "GROUP NO.",
-            "x1": 10,
-            "y1": 50,
-            "x2": 150,
-            "y2": 80,
-            "reason": "Extract column header"
+            "x1": 100,
+            "y1": 100,
+            "x2": 400,
+            "y2": 140,
+            "reason": "header clarity"
           },
           {
             "region_id": "r2",
-            "purpose": "header",
-            "target": "FOOTING NO.",
-            "x1": 160,
-            "y1": 50,
-            "x2": 300,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "row_label",
+            "x1": 100,
+            "y1": 150,
+            "x2": 200,
+            "y2": 180,
+            "reason": "footing id clarity"
           },
           {
             "region_id": "r3",
-            "purpose": "header",
-            "target": "EXCAVATION SIZE [LxB]",
-            "x1": 310,
-            "y1": 50,
-            "x2": 450,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "data_cell",
+            "x1": 300,
+            "y1": 150,
+            "x2": 400,
+            "y2": 180,
+            "reason": "step-1 size clarity"
           },
           {
             "region_id": "r4",
-            "purpose": "header",
-            "target": "STEP-1_[LxB]",
-            "x1": 460,
-            "y1": 50,
-            "x2": 600,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "data_cell",
+            "x1": 450,
+            "y1": 150,
+            "x2": 550,
+            "y2": 180,
+            "reason": "step-2 size clarity"
           },
           {
             "region_id": "r5",
-            "purpose": "header",
-            "target": "STEP-2_[LxB]",
-            "x1": 610,
-            "y1": 50,
-            "x2": 750,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "data_cell",
+            "x1": 600,
+            "y1": 150,
+            "x2": 650,
+            "y2": 180,
+            "reason": "depth d1 clarity"
           },
           {
             "region_id": "r6",
-            "purpose": "header",
-            "target": "'D1'",
-            "x1": 760,
-            "y1": 50,
-            "x2": 800,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "data_cell",
+            "x1": 700,
+            "y1": 150,
+            "x2": 750,
+            "y2": 180,
+            "reason": "depth d2 clarity"
           },
           {
             "region_id": "r7",
-            "purpose": "header",
-            "target": "'D2'",
-            "x1": 810,
-            "y1": 50,
+            "purpose": "data_cell",
+            "x1": 800,
+            "y1": 150,
             "x2": 850,
-            "y2": 80,
-            "reason": "Extract column header"
+            "y2": 180,
+            "reason": "concrete mix clarity"
           },
           {
             "region_id": "r8",
-            "purpose": "header",
-            "target": "CON. MIX",
-            "x1": 860,
-            "y1": 50,
-            "x2": 900,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "data_cell",
+            "x1": 900,
+            "y1": 150,
+            "x2": 1000,
+            "y2": 180,
+            "reason": "top-1 reinforcement clarity"
           },
           {
             "region_id": "r9",
-            "purpose": "header",
-            "target": "TOP-1",
-            "x1": 910,
-            "y1": 50,
-            "x2": 950,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "data_cell",
+            "x1": 1050,
+            "y1": 150,
+            "x2": 1150,
+            "y2": 180,
+            "reason": "top-2 reinforcement clarity"
           },
           {
             "region_id": "r10",
-            "purpose": "header",
-            "target": "TOP-2",
-            "x1": 960,
-            "y1": 50,
-            "x2": 1000,
-            "y2": 80,
-            "reason": "Extract column header"
-          },
-          {
-            "region_id": "r11",
-            "purpose": "header",
-            "target": "BOTTOM",
-            "x1": 1010,
-            "y1": 50,
-            "x2": 1050,
-            "y2": 80,
-            "reason": "Extract column header"
-          },
-          {
-            "region_id": "r12",
-            "purpose": "header",
-            "target": "FOOTING [ L ]",
-            "x1": 1060,
-            "y1": 50,
-            "x2": 1100,
-            "y2": 80,
-            "reason": "Extract column header"
-          },
-          {
-            "region_id": "r13",
-            "purpose": "header",
-            "target": "TYP. OF FOOTING",
-            "x1": 1110,
-            "y1": 50,
-            "x2": 1200,
-            "y2": 80,
-            "reason": "Extract column header"
+            "purpose": "data_cell",
+            "x1": 1200,
+            "y1": 150,
+            "x2": 1300,
+            "y2": 180,
+            "reason": "bottom reinforcement clarity"
           }
         ],
         "normalization_rules": [
           "Convert TOR to T in reinforcement"
         ],
         "extraction_order": [
-          "GROUP NO.",
           "FOOTING NO.",
-          "STEP-1_[LxB]",
-          "STEP-2_[LxB]",
-          "'D1'",
-          "'D2'",
+          "GROUP NO.",
+          "STEP-1 (LxB)",
+          "D1",
+          "STEP-2 (LxB)",
+          "D2",
           "CON. MIX",
           "TOP-1",
           "TOP-2",
           "BOTTOM"
         ]
       },
-      "zoom_regions": [
-        {
-          "region_id": "r14",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 90.0,
-          "x2": 300.0,
-          "y2": 120.0,
-          "reason": "FOOTING NO. F1,"
-        },
-        {
-          "region_id": "r15",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 120.0,
-          "x2": 300.0,
-          "y2": 150.0,
-          "reason": "FOOTING NO. AF17,AF22,AF29,"
-        },
-        {
-          "region_id": "r16",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 150.0,
-          "x2": 300.0,
-          "y2": 180.0,
-          "reason": "FOOTING NO. AF25,AF26,AF27,AF28,"
-        },
-        {
-          "region_id": "r17",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 180.0,
-          "x2": 300.0,
-          "y2": 210.0,
-          "reason": "FOOTING NO. AF5,AF8,"
-        },
-        {
-          "region_id": "r18",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 210.0,
-          "x2": 300.0,
-          "y2": 240.0,
-          "reason": "FOOTING NO. AF1,AF4,"
-        },
-        {
-          "region_id": "r19",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 240.0,
-          "x2": 300.0,
-          "y2": 270.0,
-          "reason": "FOOTING NO. AF2,A03,"
-        },
-        {
-          "region_id": "r20",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 270.0,
-          "x2": 300.0,
-          "y2": 300.0,
-          "reason": "FOOTING NO. AF20,"
-        },
-        {
-          "region_id": "r21",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 300.0,
-          "x2": 300.0,
-          "y2": 330.0,
-          "reason": "FOOTING NO. AF18,AF15,"
-        },
-        {
-          "region_id": "r22",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 330.0,
-          "x2": 300.0,
-          "y2": 360.0,
-          "reason": "FOOTING NO. AF9,AF12,"
-        },
-        {
-          "region_id": "r23",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 360.0,
-          "x2": 300.0,
-          "y2": 390.0,
-          "reason": "FOOTING NO. ARF1"
-        },
-        {
-          "region_id": "r24",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 390.0,
-          "x2": 300.0,
-          "y2": 420.0,
-          "reason": "FOOTING NO. ARF2"
-        },
-        {
-          "region_id": "r25",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 420.0,
-          "x2": 300.0,
-          "y2": 450.0,
-          "reason": "FOOTING NO. ARF3"
-        },
-        {
-          "region_id": "r26",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 450.0,
-          "x2": 300.0,
-          "y2": 480.0,
-          "reason": "FOOTING NO. ARF4"
-        },
-        {
-          "region_id": "r27",
-          "purpose": "data_cell",
-          "x1": 160.0,
-          "y1": 480.0,
-          "x2": 300.0,
-          "y2": 510.0,
-          "reason": "FOOTING NO. ARF5"
-        }
-      ],
-      "confirmed_reads": [
-        {
-          "region_id": "r14",
-          "text": "F1,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r15",
-          "text": "AF17,AF22,AF29,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r16",
-          "text": "AF25,AF26,AF27,AF28,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r17",
-          "text": "AF5,AF8,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r18",
-          "text": "AF1,AF4,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r19",
-          "text": "AF2,A03,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r20",
-          "text": "AF20,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r21",
-          "text": "AF18,AF15,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r22",
-          "text": "AF9,AF12,",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r23",
-          "text": "ARF1",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r24",
-          "text": "ARF2",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r25",
-          "text": "ARF3",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r26",
-          "text": "ARF4",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        },
-        {
-          "region_id": "r27",
-          "text": "ARF5",
-          "confidence": "high",
-          "applies_to": "FOOTING NO."
-        }
-      ],
+      "zoom_regions": [],
+      "confirmed_reads": [],
       "pdf_reads": [],
       "records": [
         {
@@ -630,12 +381,9 @@
             "length": null
           },
           "reinforcement": {
-            "dia": [
-              "T75"
-            ],
+            "dia": [],
             "spacing": [
-              "100 C/C",
-              "75 C/C"
+              "100 C/C"
             ]
           },
           "nos": null,
@@ -928,12 +676,9 @@
               "length": null
             },
             "reinforcement": {
-              "dia": [
-                "T75"
-              ],
+              "dia": [],
               "spacing": [
-                "100 C/C",
-                "75 C/C"
+                "100 C/C"
               ]
             },
             "nos": null,

@@ -6,12 +6,11 @@ from tqdm import tqdm
 from config import INPUT_DIR, OUTPUT_DIR
 from pdf_to_images import convert_pdf_to_images
 from vision_extractor import extract_from_image, extract_with_tools
+from prompt_builder import build_prompt
 
 
 def load_prompt():
-    path = os.path.join(os.path.dirname(__file__), "prompt_9.txt")
-    with open(path, "r", encoding="utf-8") as f:
-        return f.read()
+    return build_prompt(9)
 
 
 def safe_json_parse(text):

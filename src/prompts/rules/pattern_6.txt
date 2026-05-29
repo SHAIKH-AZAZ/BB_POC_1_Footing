@@ -1,0 +1,49 @@
+IMPORTANT EXTRACTION RULES:
+
+1. Completely IGNORE the "EXCAVATION SIZE" column.
+   Never use any values from it.
+
+2. footing_id:
+   Extract from "FOOTING NO."
+
+3. column_id:
+   Extract from "GROUP NO."
+
+4. SIZE EXTRACTION:
+
+   STEP-1:
+   Extract from "STEP-1 (L x B)"
+   Format is LENGTH x WIDTH.
+   - First value = LENGTH
+   - Second value = WIDTH
+   Extract depth from D1.
+
+   STEP-2:
+   Extract from "STEP-2 (L x B)"
+   Format is LENGTH x WIDTH.
+   - First value = LENGTH
+   - Second value = WIDTH
+   Extract depth from D2.
+
+   If any value is "-" then set null.
+
+5. MIX:
+   Extract from "CON. MIX"
+
+6. REINFORCEMENT:
+   Extract from:
+   - TOP-1
+   - TOP-2
+   - BOTTOM
+
+   Combine all reinforcement into single arrays.
+
+   Convert:
+   TOR → T
+
+   Example:
+   10TOR @150 C/C → dia: 10T
+   spacing: 150 C/C
+
+7. nos = null
+8. steel_grade = null

@@ -7,165 +7,33 @@
       "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-7/page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-05-29T05:59:35.391082+00:00",
+      "generated_at": "2026-05-29T06:58:30.586664+00:00",
       "think": {
         "image_quality": "high",
         "table_bounds": {
           "x1": 0,
           "y1": 0,
           "x2": 2048,
-          "y2": 1024
+          "y2": 1536
         },
         "column_groups": [
-          "F1",
-          "F3",
-          "F4",
-          "F5",
-          "F6",
-          "F7",
-          "F8",
-          "F9",
-          "F10",
-          "F11",
-          "F12",
-          "F13",
-          "F14",
-          "F15",
-          "F16",
-          "F17",
-          "F18",
-          "F19"
+          "F2"
         ],
         "row_structure": [
-          "P.C.C. (B' x L')",
-          "STEP-1 (B x L)",
-          "STEP-2 (B1 x L1)",
-          "STEP-1 (D--THK.)",
-          "STEP-2 (d--THK.)",
-          "STEP-1 BOTTOM STEEL // B",
-          "STEP-1 BOTTOM STEEL // L",
-          "STEP-1 TOP STEEL // B",
-          "STEP-1 TOP STEEL // L",
-          "STEP-2 BOTTOM STEEL // B1",
-          "STEP-2 BOTTOM STEEL // L1"
+          "OMITTED FOOTING NO."
         ],
-        "global_notes": {
-          "concrete_mix": "M:30"
-        },
-        "expected_count": 18,
-        "zoom_plan": [
-          {
-            "region_id": "header_F1",
-            "purpose": "header",
-            "target": "F1",
-            "x1": 150,
-            "y1": 50,
-            "x2": 200,
-            "y2": 80,
-            "reason": "Extract footing column header"
-          },
-          {
-            "region_id": "size_BxL_F1",
-            "purpose": "data_cell",
-            "target": "B x L for F1",
-            "x1": 150,
-            "y1": 120,
-            "x2": 220,
-            "y2": 150,
-            "reason": "Extract width and length for F1"
-          },
-          {
-            "region_id": "depth_D_F1",
-            "purpose": "data_cell",
-            "target": "D for F1",
-            "x1": 150,
-            "y1": 180,
-            "x2": 220,
-            "y2": 210,
-            "reason": "Extract depth for F1"
-          },
-          {
-            "region_id": "reinforce_STEP1_B_B_F1",
-            "purpose": "data_cell",
-            "target": "STEP-1 BOTTOM STEEL // B for F1",
-            "x1": 150,
-            "y1": 230,
-            "x2": 220,
-            "y2": 260,
-            "reason": "Extract reinforcement dia and spacing for F1"
-          },
-          {
-            "region_id": "reinforce_STEP1_L_B_F1",
-            "purpose": "data_cell",
-            "target": "STEP-1 BOTTOM STEEL // L for F1",
-            "x1": 150,
-            "y1": 260,
-            "x2": 220,
-            "y2": 290,
-            "reason": "Extract reinforcement dia and spacing for F1"
-          },
-          {
-            "region_id": "reinforce_STEP1_B_T_F1",
-            "purpose": "data_cell",
-            "target": "STEP-1 TOP STEEL // B for F1",
-            "x1": 150,
-            "y1": 290,
-            "x2": 220,
-            "y2": 320,
-            "reason": "Extract reinforcement dia and spacing for F1"
-          },
-          {
-            "region_id": "reinforce_STEP1_L_T_F1",
-            "purpose": "data_cell",
-            "target": "STEP-1 TOP STEEL // L for F1",
-            "x1": 150,
-            "y1": 320,
-            "x2": 220,
-            "y2": 350,
-            "reason": "Extract reinforcement dia and spacing for F1"
-          },
-          {
-            "region_id": "reinforce_STEP2_B1_B_F1",
-            "purpose": "data_cell",
-            "target": "STEP-2 BOTTOM STEEL // B1 for F1",
-            "x1": 150,
-            "y1": 350,
-            "x2": 220,
-            "y2": 380,
-            "reason": "Extract reinforcement dia and spacing for F1"
-          },
-          {
-            "region_id": "reinforce_STEP2_L1_B_F1",
-            "purpose": "data_cell",
-            "target": "STEP-2 BOTTOM STEEL // L1 for F1",
-            "x1": 150,
-            "y1": 380,
-            "x2": 220,
-            "y2": 410,
-            "reason": "Extract reinforcement dia and spacing for F1"
-          }
-        ],
-        "normalization_rules": [
-          "Convert spacing to uppercase format '100 C/C'",
-          "Keep dia exactly as written (12T, 16T, 10T etc.)",
-          "Do not use values from PCC row",
-          "Do not guess or approximate unclear values",
-          "Use exact column under footing header",
-          "Ignore rows labeled B' x L' (PCC)"
-        ],
-        "extraction_order": [
-          "header",
-          "size",
-          "depth",
-          "reinforcement"
-        ]
+        "global_notes": {},
+        "expected_count": 0,
+        "zoom_plan": [],
+        "normalization_rules": [],
+        "extraction_order": []
       },
       "zoom_regions": [],
       "confirmed_reads": [],
       "pdf_reads": [],
       "records": [
         {
-          "footing_id": "F1",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -177,11 +45,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F3",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -193,11 +61,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F4",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -209,11 +77,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F5",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -225,11 +93,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F6",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -241,11 +109,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F7",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -257,11 +125,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F8",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -273,11 +141,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F9",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -289,11 +157,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F10",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -305,11 +173,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F11",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -321,11 +189,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F12",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -337,11 +205,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F13",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -353,11 +221,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F14",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -369,11 +237,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F15",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -385,11 +253,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F16",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -401,11 +269,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F17",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -417,11 +285,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F18",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -433,11 +301,11 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         },
         {
-          "footing_id": "F19",
+          "footing_id": null,
           "column_id": null,
           "size": {
             "width": null,
@@ -449,14 +317,14 @@
             "spacing": []
           },
           "nos": null,
-          "mix": null,
+          "mix": "M-30",
           "steel_grade": null
         }
       ],
       "added_records": [
         {
           "record": {
-            "footing_id": "F1",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -468,14 +336,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F3",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -487,14 +355,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F4",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -506,14 +374,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F5",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -525,14 +393,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F6",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -544,14 +412,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F7",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -563,14 +431,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F8",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -582,14 +450,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F9",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -601,14 +469,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F10",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -620,14 +488,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F11",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -639,14 +507,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F12",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -658,14 +526,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F13",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -677,14 +545,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F14",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -696,14 +564,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F15",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -715,14 +583,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F16",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -734,14 +602,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F17",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -753,14 +621,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F18",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -772,14 +640,14 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         },
         {
           "record": {
-            "footing_id": "F19",
+            "footing_id": null,
             "column_id": null,
             "size": {
               "width": null,
@@ -791,15 +659,16 @@
               "spacing": []
             },
             "nos": null,
-            "mix": null,
+            "mix": "M-30",
             "steel_grade": null
           },
           "source_region_ids": []
         }
       ],
-      "expected_count": 18,
+      "expected_count": 0,
       "actual_count": 18,
       "warnings": [
+        "expected 0 record(s), collected 18",
         "duplicate record key detected: ('None',)"
       ]
     }
@@ -807,8 +676,9 @@
   "summary": {
     "page_count": 1,
     "record_count": 18,
-    "warning_count": 1,
+    "warning_count": 2,
     "warnings": [
+      "expected 0 record(s), collected 18",
       "duplicate record key detected: ('None',)"
     ]
   }

@@ -6,14 +6,14 @@ from tqdm import tqdm
 from config import INPUT_DIR, OUTPUT_DIR
 from pdf_to_images import convert_pdf_to_images
 from vision_extractor import extract_from_image, extract_with_tools
+from prompt_builder import build_prompt
 
 
 # ===========================
 # Load Prompt
 # ===========================
 def load_prompt():
-    with open(os.path.join(os.path.dirname(__file__), "prompt_6.txt"), "r") as f:
-        return f.read()
+    return build_prompt(6)
 
 
 # ===========================

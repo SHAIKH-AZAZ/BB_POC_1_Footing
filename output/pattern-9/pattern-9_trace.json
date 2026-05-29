@@ -7,14 +7,14 @@
       "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-9/page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-05-29T05:57:34.108807+00:00",
+      "generated_at": "2026-05-29T06:57:24.613361+00:00",
       "think": {
-        "image_quality": "good",
+        "image_quality": "high",
         "table_bounds": {
           "x1": 0,
           "y1": 0,
-          "x2": 2048,
-          "y2": 1536
+          "x2": 1200,
+          "y2": 1400
         },
         "column_groups": [
           "RAFT-1",
@@ -38,157 +38,190 @@
           {
             "region_id": "r1",
             "purpose": "data_cell",
+            "target": "RAFT-1 B x L",
             "x1": 400,
-            "y1": 300,
+            "y1": 200,
             "x2": 500,
-            "y2": 350,
-            "reason": "B x L row is REFER PLAN for all columns"
+            "y2": 250,
+            "reason": "Check B x L value for RAFT-1"
           },
           {
             "region_id": "r2",
             "purpose": "data_cell",
-            "x1": 400,
-            "y1": 350,
-            "x2": 500,
-            "y2": 400,
-            "reason": "D row depth 1000 for RAFT-1"
+            "target": "RAFT-2 B x L",
+            "x1": 600,
+            "y1": 200,
+            "x2": 700,
+            "y2": 250,
+            "reason": "Check B x L value for RAFT-2"
           },
           {
             "region_id": "r3",
             "purpose": "data_cell",
-            "x1": 700,
-            "y1": 350,
-            "x2": 800,
-            "y2": 400,
-            "reason": "D row depth 1000 for RAFT-2"
+            "target": "RAFT-3 B x L",
+            "x1": 800,
+            "y1": 200,
+            "x2": 900,
+            "y2": 250,
+            "reason": "Check B x L value for RAFT-3"
           },
           {
             "region_id": "r4",
             "purpose": "data_cell",
-            "x1": 1000,
-            "y1": 350,
-            "x2": 1100,
-            "y2": 400,
-            "reason": "D row depth 1000 for RAFT-3"
+            "target": "RAFT-1 D",
+            "x1": 400,
+            "y1": 250,
+            "x2": 500,
+            "y2": 300,
+            "reason": "Check D value for RAFT-1"
           },
           {
             "region_id": "r5",
             "purpose": "data_cell",
-            "x1": 400,
-            "y1": 450,
-            "x2": 500,
-            "y2": 500,
-            "reason": "STEEL // - B (SHORT SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-1"
+            "target": "RAFT-2 D",
+            "x1": 600,
+            "y1": 250,
+            "x2": 700,
+            "y2": 300,
+            "reason": "Check D value for RAFT-2"
           },
           {
             "region_id": "r6",
             "purpose": "data_cell",
-            "x1": 700,
-            "y1": 450,
-            "x2": 800,
-            "y2": 500,
-            "reason": "STEEL // - B (SHORT SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-2"
+            "target": "RAFT-3 D",
+            "x1": 800,
+            "y1": 250,
+            "x2": 900,
+            "y2": 300,
+            "reason": "Check D value for RAFT-3"
           },
           {
             "region_id": "r7",
             "purpose": "data_cell",
-            "x1": 1000,
-            "y1": 450,
-            "x2": 1100,
-            "y2": 500,
-            "reason": "STEEL // - B (SHORT SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-3"
+            "target": "RAFT-1 STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
+            "x1": 400,
+            "y1": 350,
+            "x2": 500,
+            "y2": 400,
+            "reason": "Check steel bottom short side for RAFT-1"
           },
           {
             "region_id": "r8",
             "purpose": "data_cell",
-            "x1": 400,
-            "y1": 500,
-            "x2": 500,
-            "y2": 550,
-            "reason": "STEEL // - L (LONG SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-1"
+            "target": "RAFT-2 STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
+            "x1": 600,
+            "y1": 350,
+            "x2": 700,
+            "y2": 400,
+            "reason": "Check steel bottom short side for RAFT-2"
           },
           {
             "region_id": "r9",
             "purpose": "data_cell",
-            "x1": 700,
-            "y1": 500,
-            "x2": 800,
-            "y2": 550,
-            "reason": "STEEL // - L (LONG SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-2"
+            "target": "RAFT-3 STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
+            "x1": 800,
+            "y1": 350,
+            "x2": 900,
+            "y2": 400,
+            "reason": "Check steel bottom short side for RAFT-3"
           },
           {
             "region_id": "r10",
             "purpose": "data_cell",
-            "x1": 1000,
-            "y1": 500,
-            "x2": 1100,
-            "y2": 550,
-            "reason": "STEEL // - L (LONG SIDE) (BOTTOM FACE) 16T-100C/C for RAFT-3"
+            "target": "RAFT-1 STEEL // - L (LONG SIDE) (BOTTOM FACE)",
+            "x1": 400,
+            "y1": 400,
+            "x2": 500,
+            "y2": 450,
+            "reason": "Check steel bottom long side for RAFT-1"
           },
           {
             "region_id": "r11",
             "purpose": "data_cell",
-            "x1": 400,
-            "y1": 550,
-            "x2": 500,
-            "y2": 600,
-            "reason": "STEEL // - B (SHORT SIDE) (TOP FACE) 16T-100C/C for RAFT-1"
+            "target": "RAFT-2 STEEL // - L (LONG SIDE) (BOTTOM FACE)",
+            "x1": 600,
+            "y1": 400,
+            "x2": 700,
+            "y2": 450,
+            "reason": "Check steel bottom long side for RAFT-2"
           },
           {
             "region_id": "r12",
             "purpose": "data_cell",
-            "x1": 700,
-            "y1": 550,
-            "x2": 800,
-            "y2": 600,
-            "reason": "STEEL // - B (SHORT SIDE) (TOP FACE) 16T-100C/C for RAFT-2"
+            "target": "RAFT-3 STEEL // - L (LONG SIDE) (BOTTOM FACE)",
+            "x1": 800,
+            "y1": 400,
+            "x2": 900,
+            "y2": 450,
+            "reason": "Check steel bottom long side for RAFT-3"
           },
           {
             "region_id": "r13",
             "purpose": "data_cell",
-            "x1": 1000,
-            "y1": 550,
-            "x2": 1100,
-            "y2": 600,
-            "reason": "STEEL // - B (SHORT SIDE) (TOP FACE) 16T-100C/C for RAFT-3"
+            "target": "RAFT-1 STEEL // - B (SHORT SIDE) (TOP FACE)",
+            "x1": 400,
+            "y1": 450,
+            "x2": 500,
+            "y2": 500,
+            "reason": "Check steel top short side for RAFT-1"
           },
           {
             "region_id": "r14",
             "purpose": "data_cell",
-            "x1": 400,
-            "y1": 600,
-            "x2": 500,
-            "y2": 650,
-            "reason": "STEEL // - L (LONG SIDE) (TOP FACE) 16T-100C/C for RAFT-1"
+            "target": "RAFT-2 STEEL // - B (SHORT SIDE) (TOP FACE)",
+            "x1": 600,
+            "y1": 450,
+            "x2": 700,
+            "y2": 500,
+            "reason": "Check steel top short side for RAFT-2"
           },
           {
             "region_id": "r15",
             "purpose": "data_cell",
-            "x1": 700,
-            "y1": 600,
-            "x2": 800,
-            "y2": 650,
-            "reason": "STEEL // - L (LONG SIDE) (TOP FACE) 16T-100C/C for RAFT-2"
+            "target": "RAFT-3 STEEL // - B (SHORT SIDE) (TOP FACE)",
+            "x1": 800,
+            "y1": 450,
+            "x2": 900,
+            "y2": 500,
+            "reason": "Check steel top short side for RAFT-3"
           },
           {
             "region_id": "r16",
             "purpose": "data_cell",
-            "x1": 1000,
-            "y1": 600,
-            "x2": 1100,
-            "y2": 650,
-            "reason": "STEEL // - L (LONG SIDE) (TOP FACE) 16T-100C/C for RAFT-3"
+            "target": "RAFT-1 STEEL // - L (LONG SIDE) (TOP FACE)",
+            "x1": 400,
+            "y1": 500,
+            "x2": 500,
+            "y2": 550,
+            "reason": "Check steel top long side for RAFT-1"
+          },
+          {
+            "region_id": "r17",
+            "purpose": "data_cell",
+            "target": "RAFT-2 STEEL // - L (LONG SIDE) (TOP FACE)",
+            "x1": 600,
+            "y1": 500,
+            "x2": 700,
+            "y2": 550,
+            "reason": "Check steel top long side for RAFT-2"
+          },
+          {
+            "region_id": "r18",
+            "purpose": "data_cell",
+            "target": "RAFT-3 STEEL // - L (LONG SIDE) (TOP FACE)",
+            "x1": 800,
+            "y1": 500,
+            "x2": 900,
+            "y2": 550,
+            "reason": "Check steel top long side for RAFT-3"
           }
         ],
         "normalization_rules": [
           "Convert spacing to uppercase format '100 C/C'",
-          "Ignore row B' x L' (PCC)",
-          "If B x L is 'REFER PLAN' then width and length are null",
-          "Extract depth from row D",
-          "Extract reinforcement from STEEL rows with format dia-spacing",
-          "Do not guess values",
-          "Use footing_id as column header",
-          "Set column_id, nos, mix, steel_grade to null"
+          "Ignore rows labeled 'B' x L' (PCC)'",
+          "If B x L cell contains 'REFER PLAN' then width and length are null",
+          "Extract depth from row labeled 'D'",
+          "Extract reinforcement from steel rows with format '16T-100 c/c'"
         ],
         "extraction_order": [
           "B x L",

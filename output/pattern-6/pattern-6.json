@@ -317,12 +317,9 @@
         }
       },
       "reinforcement": {
-        "dia": [
-          "T75"
-        ],
+        "dia": [],
         "spacing": [
-          "100 C/C",
-          "75 C/C"
+          "100 C/C"
         ]
       },
       "nos": null,

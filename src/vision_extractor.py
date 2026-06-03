@@ -75,9 +75,14 @@ _REGION_PURPOSE_ENUM = [
 def _with_tool_protocol(prompt_text):
     return (
         "ENFORCED TOOL PROTOCOL:\n"
-        "You MUST use tools — do NOT return raw JSON text.\n"
-        "Step 1: call think() with your full extraction plan.\n"
-        "Step 2: call add_footing() once for EVERY footing group (left to right).\n"
+        "You MUST use tools — do NOT return raw JSON text.\n\n"
+        "CRITICAL: The drawing contains many sections (floor columns, beam details, cross-sections, etc.). "
+        "IGNORE ALL OF THEM. Your ONLY target is the FOOTING DETAILS table "
+        "(may be labeled FOOTING, FOOTING SCHEDULE, ISOLATED FOOTING SCHEDULE, or similar). "
+        "If the COLUMN MARK row has values like 'C1,C18', 'C2,C9' — you found the right table. "
+        "If you see '4TH FLOOR COLUMN' or 'BASEMENT COLUMN' — you are reading the WRONG section.\n\n"
+        "Step 1: call think() — locate the FOOTING DETAILS table first, then plan extraction from it.\n"
+        "Step 2: call add_footing() once for EVERY footing group (left to right) from that table.\n"
         "  - Do NOT stop early. Every visible footing column group must get its own add_footing call.\n"
         "  - If vertical steel/reinforcement rows are visible, include their exact bar and spacing text in "
         "short_span_reinf/long_span_reinf or the matching bottom/top reinforcement fields.\n"
@@ -92,8 +97,11 @@ FOOTING_TOOLS = [
         "function": {
             "name": "think",
             "description": (
-                "Mandatory first call. Return structured observable footing schedule planning data, "
-                "including column mark groups, row structure, global notes, expected count, and zoom targets."
+                "Mandatory first call. First locate the FOOTING DETAILS table on the drawing sheet "
+                "(ignore all floor column sections, cross-sections, and other tables). "
+                "Then return structured planning data: column mark groups from the COLUMN MARK row "
+                "(e.g. C1,C18 / C2,C9 — NOT floor labels like '4TH FLOOR COLUMN'), "
+                "row structure, global notes, expected count, and zoom targets."
             ),
             "parameters": {
                 "type": "object",

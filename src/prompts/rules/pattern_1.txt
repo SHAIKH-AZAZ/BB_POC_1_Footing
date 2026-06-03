@@ -1,22 +1,125 @@
+========================================
+STEP 0 — WHAT TO IGNORE (READ THIS FIRST)
+========================================
+
+The input image is a FULL structural drawing sheet with MANY sections.
+You must IGNORE everything that is NOT the footing table.
+
+WRONG data sources (DO NOT read from these):
+- Floor-wise column sections such as "4TH FLOOR COLUMN", "3RD FLOOR COLUMN", "2ND FLOOR COLUMN", "1ST FLOOR COLUMN", "GROUND FLOOR COLUMN", "BASEMENT COLUMN" "P01 TO P02" , "TERRACE FLOOR LEVEL" , "BASEMENT LEVEL TO GROUND LEVEL" or any similar floor/storey/level labels — these are COLUMN sections, NOT footings.
+- Cross-section diagrams showing rebar inside columns
+- Column schedule tables, beam schedules, slab details
+- Bar bending schedules, plan views, elevation views, section cuts
+- Title blocks, notes, legends, revision tables
+- Pedestal details, PCC details
+
+If your think() output lists column_groups like "4TH FLOOR COLUMN", "GROUND FLOOR COLUMN", "BASEMENT COLUMN" , "BASEMENT LEVEL To FOUNDATION LEVEL" , "P01 TO P02" , "TERRACE FLOOR LEVEL" , "BASEMENT LEVEL TO GROUND LEVEL" or any similar floor/storey/level labels — YOU HAVE FOUND THE WRONG SECTION. Discard and re-scan.
+
+RIGHT data source (ONLY read from this):
+- The table labeled FOOTING DETAILS, FOOTING, FOOTING SCHEDULE, ISOLATED FOOTING SCHEDULE, or similar.
+- This table has rows like: Size, D TO d, Short Span, Long Span.
+- This table has a COLUMN MARK row with values like: C1,C18 | C2,C9 | C3,C17 | C4,C14 etc OR CAN BE ANY THINGS LABLES .
+- Scan the ENTIRE drawing to find this table — it may appear anywhere on the sheet.
+
+========================================
+STEP 1 — LOCATE THE FOOTING TABLE
+========================================
+
+Before extracting ANY data, FIND the footing table first.
+
+How to identify it:
+- Look for a section header containing the word "FOOTING" (e.g. FOOTING DETAILS).
+- The header area may show global values like MIX and SBC (e.g. "MIX : M200", "SBC = 35T/SQ.M").
+- Directly below the header are rows labeled: Size, D TO d, Short Span, Long Span.
+- Below those rows is the COLUMN MARK row with actual column IDs (C1, C2, C3...).
+
+How to confirm you found the RIGHT table:
+- The COLUMN MARK row has values like C1, C2, C3... NOT "4TH FLOOR COLUMN" or "BASEMENT COLUMN".
+- The Size row has values like "3200 X 4100" (footing plan dimensions).
+- The Short Span / Long Span rows have values like "φ 16 @ 130C/C".
+
+========================================
+STEP 2 — TOOL SEQUENCE
+========================================
+
 Use the tools in this exact sequence:
-1. think
-2. zoom_region
-3. confirm_read
-4. add_footing
+1. think — scan the ENTIRE drawing, locate the FOOTING DETAILS table, list its column_groups from the COLUMN MARK row (e.g. ["C1,C18", "C2,C9", "C3,C17"...]).
+2. zoom_region — zoom into the FOOTING DETAILS table area first. Then zoom into individual cells for unclear values.
+3. confirm_read — record exact text from each zoomed region before using it as evidence.
+4. add_footing — submit one call per column mark group, left to right.
 
 Rules:
-- think must be first and must return structured observable extraction planning data.
-- zoom_region must be used for column mark cells, unclear dimensions, reinforcement spacing, and global notes.
-- confirm_read must record exact text from each zoomed region before that region is used as source evidence.
-- add_footing must include source_region_ids that support the footing values.
-- Do not invent values. If a value is not visible, use null or [].
+- think must be first. In column_groups, list ONLY values from the COLUMN MARK row of the footing table.
+- zoom_region must FIRST target the FOOTING DETAILS table area. Then zoom into cells within that table only.
+- confirm_read must record exact text from each zoomed region.
+- add_footing must include source_region_ids. Do not invent values — use null if not visible.
 
-Footing-specific rules:
-- Column IDs must be copied exactly as written in the schedule.
-- Keep grouped IDs as one string when they share one footing specification.
-- Size uses plan_width and plan_length from the visible B x L or L x W cell.
-- For D TO d depth, use the smaller/bottom d value as size.depth.
-- Extract reinforcement diameter as T12, T16, etc.
-- Convert visible spacing values like 150 to "150 C/C".
-- Extract mix and steel grade only if visible in the table or global notes.
-- Process every visible footing/column group.
+========================================
+STEP 3 — READ COLUMN BY COLUMN
+========================================
+
+CRITICAL RULE: Read the footing table COLUMN BY COLUMN. Never row-wise.
+
+- Locate the COLUMN MARK row (e.g. C1,C18 | C2,C9 | C3,C17...). [Note Column mark can be any things labels like (C34  , C1A  , SW1 , LW1, AC1 , GC1 , BC1, CP1, NC1, SC1 (Steam column), BSW1, TA-C1, PC1, r2, TA-C1, TB-C1, TC-C1, P11A, P1, RW1, (SW1+SW1A) , SW-1, PC206-12 , PC197A-8 , TW33, W23a ) this ]
+- For each column mark, read UPWARD through the footing rows (Size, D TO d, Short Span, Long Span) in the same vertical column.
+- You MUST NOT shift values between columns.
+- If a column has no footing values, all properties must remain null.
+
+========================================
+STEP 4 — EXTRACTION RULES
+========================================
+
+SIZE:
+- From the "Size" row. Format like "3200 X 4100" → plan_width = 3200, plan_length = 4100.
+- Ignore PCC sizes completely.
+
+DEPTH:
+- From the "D TO d" row.
+- For "1100 TO 300" → depth_top = 1100, depth_bottom = 300.
+- For "750 SOLID" → depth_top = 750, depth_bottom = 750.
+
+REINFORCEMENT:
+- Two rows: "Short Span" and "Long Span".
+- Format like "φ 16 @ 130C/C" → short_span_reinf = "16T-130C/C", long_span_reinf = "16T-130C/C".
+- Copy the exact text from each row into the matching add_footing field.
+
+MIX:
+- Extract from the FOOTING DETAILS section header (e.g. "MIX : M200" → mix = "M200").
+
+STEEL GRADE:
+- Extract only if visible in the header or global notes (e.g. "SEEL:FE500" → steel_grade = "FE500").
+
+COLUMN IDS:
+- Copy exactly as written (e.g. "C1,C18" stays as one string, not split).
+
+========================================
+ROWS TO IGNORE
+========================================
+
+- PEDESTAL SIZE
+- CONC. MIX
+- HORI. STEEL
+- VERTI. STEEL
+- P.C.C SIZE
+These DO NOT belong to footing data.
+
+========================================
+REFER PLAN HANDLING
+========================================
+
+If a column cell contains: REFER RAFT FOOTING PLAN, REFER COMBINED FOOTING, REFER FOOTING PLAN, or DETAIL SECTION → return all values as null for that column.
+
+========================================
+VALIDATION — CHECK BEFORE EVERY add_footing
+========================================
+
+CHECK 1: Does the column_id contain words like "FLOOR", "STOREY", "LEVEL", "BASEMENT"?
+→ If YES: you are reading the WRONG section. STOP. Re-scan for the footing table.
+
+CHECK 2: Is the column_id an actual column mark (C1, C2, GC1, etc.)?
+→ If NO: you are NOT reading the footing table.
+
+CHECK 3: Does this column have real numeric footing values (size, depth, reinforcement)?
+→ If NO: return null for all properties.
+
+DO NOT GUESS. DO NOT COPY FROM NEIGHBOUR COLUMN.

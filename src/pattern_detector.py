@@ -81,6 +81,7 @@ PATTERN 3
 =================================================
 Header contains:
 
+FOOTING SCHEDULE
 TOP STEEL
 BOTTOM STEEL
 DETAIL OF FOOTING
@@ -93,6 +94,13 @@ LONG DIR
 DEPTH (D)
 SIZE
 150 THK.
+
+Key difference from Pattern 8:
+- Pattern 3 uses SHORT DIR / LONG DIR (not SHORT SIDE / LONG SIDE)
+- Pattern 3 has "DETAIL OF FOOTING" with DEPTH (D) and SIZE rows
+- Pattern 3 has "COLUMNS MARKED" row (with AC/BC prefixed column IDs)
+- Pattern 3 does NOT have "B x L", "t", or "STEEL // - B (SHORT SIDE) (BOTTOM FACE)"
+If you see SHORT DIR, LONG DIR, COLUMNS MARKED, DETAIL OF FOOTING → it is Pattern 3, NOT Pattern 8.
 
 =================================================
 PATTERN 4
@@ -187,6 +195,13 @@ STEEL // - L (LONG SIDE) (TOP FACE)
 REMARK
 
 Pattern 8 contains small 't' for thickness instead of capital 'T'.
+
+Key difference from Pattern 3:
+- Pattern 8 uses SHORT SIDE / LONG SIDE (not SHORT DIR / LONG DIR)
+- Pattern 8 has "B x L" and "B' x L' (PCC)" rows (not "SIZE" and "DETAIL OF FOOTING")
+- Pattern 8 has "STEEL // - B (SHORT SIDE)" format (not "TOP STEEL" / "BOTTOM STEEL")
+- Pattern 8 does NOT have "COLUMNS MARKED" or "DETAIL OF FOOTING"
+If you see SHORT DIR, LONG DIR, COLUMNS MARKED, DETAIL OF FOOTING → it is Pattern 3, NOT Pattern 8.
 
 =================================================
 PATTERN 9

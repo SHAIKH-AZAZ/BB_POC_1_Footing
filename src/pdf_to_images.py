@@ -93,10 +93,22 @@ def convert_pdf_to_images(pdf_path, output_folder, dpi=600, enhance=True,
     doc = fitz.open(pdf_path)
     image_paths = []
 
+    # Cap render resolution: giant CAD sheets at 600 DPI can produce
+    # billion-pixel images that blow up memory (16+ GiB). 150 MP is plenty
+    # for text recognition and keeps every downstream array small.
+    MAX_PIXELS = 150_000_000
+
     try:
         for page_number in range(len(doc)):
             page = doc[page_number]
-            pix = page.get_pixmap(dpi=dpi)
+
+            page_dpi = dpi
+            est_pixels = (page.rect.width / 72 * dpi) * (page.rect.height / 72 * dpi)
+            if est_pixels > MAX_PIXELS:
+                page_dpi = max(150, int(dpi * (MAX_PIXELS / est_pixels) ** 0.5))
+                print(f"  [!] Page {page_number+1} too large; reducing DPI {dpi} -> {page_dpi}.")
+
+            pix = page.get_pixmap(dpi=page_dpi)
 
             image_path = os.path.join(
                 output_folder,

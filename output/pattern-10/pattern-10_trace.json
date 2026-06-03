@@ -4,34 +4,80 @@
   "pages": {
     "page_1.png": {
       "project": "footing",
-      "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-10/page_1.png",
+      "image_path": "C:\\Users\\AZAZ\\Desktop\\POC _ Subh\\POC-1\\Footing\\output\\pattern-10\\page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-05-29T06:54:40.390780+00:00",
+      "generated_at": "2026-06-03T10:13:45.909762+00:00",
       "think": {
-        "image_quality": "high",
+        "image_quality": "good",
         "table_bounds": {
           "x1": 0,
           "y1": 0,
-          "x2": 1920,
-          "y2": 1080
+          "x2": 2480,
+          "y2": 3508
         },
         "column_groups": [
-          "FOOTING NUMBERS",
-          "COLUMN NUMBERS",
-          "FOOTING TYPE",
-          "L",
-          "B",
-          "D",
-          "BOTTOM ALONG B",
-          "BOTTOM ALONG L",
-          "TOP ALONG B",
-          "TOP ALONG L",
-          "SFR",
-          "REMARKS"
+          "FP6",
+          "FP7",
+          "FP8",
+          "FP9",
+          "FP71",
+          "FP72",
+          "FP73",
+          "FP74",
+          "FP75",
+          "FP76",
+          "FP77",
+          "FP4",
+          "FC64",
+          "FC158",
+          "FC147",
+          "FC195",
+          "FC52",
+          "FC70",
+          "FC188",
+          "FC196",
+          "FC186",
+          "FC184",
+          "FC189",
+          "FC182",
+          "FC180",
+          "FC178",
+          "FC176",
+          "FC185",
+          "FC172",
+          "FC170",
+          "FC91",
+          "FC84",
+          "FC59",
+          "FC82",
+          "FC58",
+          "FC80",
+          "FC75",
+          "FC14",
+          "FC169",
+          "FC55",
+          "FC54",
+          "FC159",
+          "FC212",
+          "FC134",
+          "FC12",
+          "FC40",
+          "FC29",
+          "FC153",
+          "FC133",
+          "FC11",
+          "FC121",
+          "FC74",
+          "FC192",
+          "FC69",
+          "FC112",
+          "FC10",
+          "FP68",
+          "FP22",
+          "FC183"
         ],
         "row_structure": [
-          "COLUMN MARK",
           "FOOTING NUMBERS",
           "COLUMN NUMBERS",
           "FOOTING TYPE",
@@ -46,172 +92,145 @@
           "REMARKS"
         ],
         "global_notes": {},
-        "expected_count": 56,
+        "expected_count": 62,
         "zoom_plan": [
           {
             "region_id": "header_footing_numbers",
             "purpose": "header",
+            "target": "FOOTING NUMBERS",
             "x1": 10,
             "y1": 10,
-            "x2": 100,
+            "x2": 150,
             "y2": 40,
-            "reason": "Extract footing_id header"
+            "reason": "header"
           },
           {
             "region_id": "header_column_numbers",
             "purpose": "header",
-            "x1": 110,
+            "target": "COLUMN NUMBERS",
+            "x1": 150,
             "y1": 10,
-            "x2": 200,
+            "x2": 300,
             "y2": 40,
-            "reason": "Extract column_id header"
+            "reason": "header"
           },
           {
-            "region_id": "header_footing_dimension",
+            "region_id": "header_footing_type",
             "purpose": "header",
-            "x1": 210,
+            "target": "FOOTING TYPE",
+            "x1": 300,
             "y1": 10,
             "x2": 400,
             "y2": 40,
-            "reason": "Extract footing dimension headers L B D"
+            "reason": "header"
           },
           {
-            "region_id": "header_footing_reinforcement",
+            "region_id": "header_L",
             "purpose": "header",
-            "x1": 410,
+            "target": "L",
+            "x1": 400,
+            "y1": 10,
+            "x2": 460,
+            "y2": 40,
+            "reason": "header"
+          },
+          {
+            "region_id": "header_B",
+            "purpose": "header",
+            "target": "B",
+            "x1": 460,
+            "y1": 10,
+            "x2": 520,
+            "y2": 40,
+            "reason": "header"
+          },
+          {
+            "region_id": "header_D",
+            "purpose": "header",
+            "target": "D",
+            "x1": 520,
+            "y1": 10,
+            "x2": 580,
+            "y2": 40,
+            "reason": "header"
+          },
+          {
+            "region_id": "header_bottom_along_B",
+            "purpose": "header",
+            "target": "BOTTOM ALONG B",
+            "x1": 580,
             "y1": 10,
             "x2": 700,
             "y2": 40,
-            "reason": "Extract reinforcement headers BOTTOM ALONG B, BOTTOM ALONG L, TOP ALONG B, TOP ALONG L"
+            "reason": "header"
+          },
+          {
+            "region_id": "header_bottom_along_L",
+            "purpose": "header",
+            "target": "BOTTOM ALONG L",
+            "x1": 700,
+            "y1": 10,
+            "x2": 820,
+            "y2": 40,
+            "reason": "header"
+          },
+          {
+            "region_id": "header_top_along_B",
+            "purpose": "header",
+            "target": "TOP ALONG B",
+            "x1": 820,
+            "y1": 10,
+            "x2": 940,
+            "y2": 40,
+            "reason": "header"
+          },
+          {
+            "region_id": "header_top_along_L",
+            "purpose": "header",
+            "target": "TOP ALONG L",
+            "x1": 940,
+            "y1": 10,
+            "x2": 1060,
+            "y2": 40,
+            "reason": "header"
           },
           {
             "region_id": "header_sfr",
             "purpose": "header",
-            "x1": 710,
+            "target": "SFR",
+            "x1": 1060,
             "y1": 10,
-            "x2": 760,
+            "x2": 1140,
             "y2": 40,
-            "reason": "Ignore SFR column"
+            "reason": "header"
           },
           {
             "region_id": "header_remarks",
             "purpose": "header",
-            "x1": 770,
+            "target": "REMARKS",
+            "x1": 1140,
             "y1": 10,
-            "x2": 820,
+            "x2": 1200,
             "y2": 40,
-            "reason": "Ignore remarks column"
-          },
-          {
-            "region_id": "row_1",
-            "purpose": "row_label",
-            "x1": 10,
-            "y1": 50,
-            "x2": 100,
-            "y2": 80,
-            "reason": "Extract footing_id FP6"
-          },
-          {
-            "region_id": "row_1_column",
-            "purpose": "row_label",
-            "x1": 110,
-            "y1": 50,
-            "x2": 200,
-            "y2": 80,
-            "reason": "Extract column_id PC56"
-          },
-          {
-            "region_id": "row_1_size",
-            "purpose": "data_cell",
-            "x1": 210,
-            "y1": 50,
-            "x2": 400,
-            "y2": 80,
-            "reason": "Extract footing dimension L B D for FP6"
-          },
-          {
-            "region_id": "row_1_reinf_bottom_b",
-            "purpose": "data_cell",
-            "x1": 410,
-            "y1": 50,
-            "x2": 460,
-            "y2": 80,
-            "reason": "Extract bottom along B reinforcement for FP6"
-          },
-          {
-            "region_id": "row_1_reinf_bottom_l",
-            "purpose": "data_cell",
-            "x1": 460,
-            "y1": 50,
-            "x2": 510,
-            "y2": 80,
-            "reason": "Extract bottom along L reinforcement for FP6"
-          },
-          {
-            "region_id": "row_1_reinf_top_b",
-            "purpose": "data_cell",
-            "x1": 510,
-            "y1": 50,
-            "x2": 560,
-            "y2": 80,
-            "reason": "Extract top along B reinforcement for FP6"
-          },
-          {
-            "region_id": "row_1_reinf_top_l",
-            "purpose": "data_cell",
-            "x1": 560,
-            "y1": 50,
-            "x2": 610,
-            "y2": 80,
-            "reason": "Extract top along L reinforcement for FP6"
-          },
-          {
-            "region_id": "row_2",
-            "purpose": "row_label",
-            "x1": 10,
-            "y1": 81,
-            "x2": 100,
-            "y2": 110,
-            "reason": "Extract footing_id FP7"
-          },
-          {
-            "region_id": "row_2_column",
-            "purpose": "row_label",
-            "x1": 110,
-            "y1": 81,
-            "x2": 200,
-            "y2": 110,
-            "reason": "Extract column_id PC61"
-          },
-          {
-            "region_id": "row_2_size",
-            "purpose": "data_cell",
-            "x1": 210,
-            "y1": 81,
-            "x2": 400,
-            "y2": 110,
-            "reason": "Extract footing dimension L B D for FP7"
+            "reason": "header"
           }
         ],
         "normalization_rules": [
           "Remove duplicates in reinforcement",
-          "Ignore empty or dash cells in reinforcement",
-          "Ignore SFR and remarks columns for reinforcement",
-          "Extract footing_id from FOOTING NUMBERS column",
-          "Extract column_id from COLUMN NUMBERS column",
-          "Extract length, width, depth from FOOTING DIMENSION L B D columns",
-          "Extract reinforcement dia and spacing from BOTTOM and TOP columns only between FOOTING DIMENSION and SFR columns",
-          "Ignore reinforcement after SFR column",
-          "Return null for nos, mix, steel_grade if not present"
+          "Ignore empty or dash cells",
+          "Ignore reinforcement in SFR column",
+          "Ignore reinforcement after SFR column"
         ],
         "extraction_order": [
           "FOOTING NUMBERS",
           "COLUMN NUMBERS",
-          "FOOTING DIMENSION L B D",
-          "FOOTING REINFORCEMENT BOTTOM ALONG B",
-          "FOOTING REINFORCEMENT BOTTOM ALONG L",
-          "FOOTING REINFORCEMENT TOP ALONG B",
-          "FOOTING REINFORCEMENT TOP ALONG L"
+          "L",
+          "B",
+          "D",
+          "BOTTOM ALONG B",
+          "BOTTOM ALONG L",
+          "TOP ALONG B",
+          "TOP ALONG L"
         ]
       },
       "zoom_regions": [],
@@ -223,14 +242,24 @@
           "column_id": "PC56",
           "size": {
             "width": 3200,
-            "depth": null,
+            "depth": 1525,
             "length": 13250
           },
           "reinforcement": {
             "dia": [
+              "T16",
+              "T16",
+              "T16",
               "T16"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -243,15 +272,25 @@
           "column_id": "PC61",
           "size": {
             "width": 3150,
-            "depth": null,
+            "depth": 1500,
             "length": 13200
           },
           "reinforcement": {
             "dia": [
+              "T16",
+              "T16",
+              "T16",
               "T16"
             ],
             "spacing": [
-              "100 C/C"
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "110 C/C",
+              "110 C/C",
+              "110 C/C",
+              "110 C/C"
             ]
           },
           "nos": null,
@@ -263,15 +302,25 @@
           "column_id": "PC64",
           "size": {
             "width": 3100,
-            "depth": null,
+            "depth": 1475,
             "length": 13150
           },
           "reinforcement": {
             "dia": [
+              "T16",
+              "T16",
+              "T16",
               "T16"
             ],
             "spacing": [
-              "100 C/C"
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "110 C/C",
+              "110 C/C",
+              "110 C/C",
+              "110 C/C"
             ]
           },
           "nos": null,
@@ -283,16 +332,24 @@
           "column_id": "PC67",
           "size": {
             "width": 3250,
-            "depth": null,
+            "depth": 1550,
             "length": 13300
           },
           "reinforcement": {
             "dia": [
               "T20",
+              "T16",
+              "T16",
               "T16"
             ],
             "spacing": [
               "150 C/C",
+              "150 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -305,15 +362,18 @@
           "column_id": "PC53",
           "size": {
             "width": 2100,
-            "depth": null,
+            "depth": 925,
             "length": 3750
           },
           "reinforcement": {
             "dia": [
+              "T16",
               "T16"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "150 C/C",
               "150 C/C"
             ]
           },
@@ -326,15 +386,18 @@
           "column_id": "PC54",
           "size": {
             "width": 2050,
-            "depth": null,
+            "depth": 925,
             "length": 3700
           },
           "reinforcement": {
             "dia": [
+              "T16",
               "T16"
             ],
             "spacing": [
               "150 C/C",
+              "150 C/C",
+              "175 C/C",
               "175 C/C"
             ]
           },
@@ -347,14 +410,18 @@
           "column_id": "PC55",
           "size": {
             "width": 2100,
-            "depth": null,
+            "depth": 925,
             "length": 3750
           },
           "reinforcement": {
             "dia": [
+              "T16",
               "T16"
             ],
             "spacing": [
+              "150 C/C",
+              "150 C/C",
+              "150 C/C",
               "150 C/C"
             ]
           },
@@ -367,16 +434,24 @@
           "column_id": "PC57",
           "size": {
             "width": 2300,
-            "depth": null,
+            "depth": 1100,
             "length": 4100
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
               "200 C/C"
             ]
           },
@@ -389,16 +464,24 @@
           "column_id": "PC59",
           "size": {
             "width": 2300,
-            "depth": null,
+            "depth": 1100,
             "length": 4100
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
               "200 C/C"
             ]
           },
@@ -411,18 +494,25 @@
           "column_id": "PC62",
           "size": {
             "width": 2250,
-            "depth": null,
+            "depth": 1075,
             "length": 4050
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "125 C/C",
+              "125 C/C",
+              "140 C/C",
+              "140 C/C",
               "200 C/C",
-              "140 C/C"
+              "200 C/C",
+              "200 C/C",
+              "200 C/C"
             ]
           },
           "nos": null,
@@ -434,16 +524,24 @@
           "column_id": "PC65",
           "size": {
             "width": 2150,
-            "depth": null,
+            "depth": 1025,
             "length": 3950
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
               "200 C/C"
             ]
           },
@@ -456,18 +554,25 @@
           "column_id": "PC27",
           "size": {
             "width": 2200,
-            "depth": null,
+            "depth": 1075,
             "length": 8400
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "150 C/C",
+              "150 C/C",
               "125 C/C",
-              "150 C/C"
+              "125 C/C",
+              "140 C/C",
+              "140 C/C"
             ]
           },
           "nos": null,
@@ -479,15 +584,18 @@
           "column_id": "GC43",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -500,14 +608,18 @@
           "column_id": "PC199",
           "size": {
             "width": 1450,
-            "depth": null,
+            "depth": 750,
             "length": 3150
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "125 C/C",
+              "125 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -520,14 +632,18 @@
           "column_id": "PC198",
           "size": {
             "width": 1700,
-            "depth": null,
+            "depth": 925,
             "length": 3400
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -540,15 +656,18 @@
           "column_id": "GC38",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -561,14 +680,18 @@
           "column_id": "GC19",
           "size": {
             "width": 1400,
-            "depth": null,
+            "depth": 925,
             "length": 1650
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -581,14 +704,18 @@
           "column_id": "GC18",
           "size": {
             "width": 1300,
-            "depth": null,
+            "depth": 925,
             "length": 1550
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -601,15 +728,18 @@
           "column_id": "GC37",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -622,15 +752,18 @@
           "column_id": "GC36",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -643,15 +776,18 @@
           "column_id": "GC35",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -664,15 +800,18 @@
           "column_id": "GC34",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -685,18 +824,25 @@
           "column_id": "PC159",
           "size": {
             "width": 2500,
-            "depth": null,
+            "depth": 1100,
             "length": 3600
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "115 C/C",
+              "115 C/C",
+              "125 C/C",
+              "125 C/C",
               "200 C/C",
-              "125 C/C"
+              "200 C/C",
+              "200 C/C",
+              "200 C/C"
             ]
           },
           "nos": null,
@@ -708,15 +854,18 @@
           "column_id": "GC33",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -729,15 +878,18 @@
           "column_id": "GC32",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -750,15 +902,18 @@
           "column_id": "GC31",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -771,15 +926,18 @@
           "column_id": "GC30",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -792,16 +950,24 @@
           "column_id": "PC150",
           "size": {
             "width": 2000,
-            "depth": null,
+            "depth": 925,
             "length": 3050
           },
           "reinforcement": {
             "dia": [
               "T12",
+              "T12",
+              "T16",
               "T16"
             ],
             "spacing": [
               "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "175 C/C",
+              "175 C/C",
+              "175 C/C",
               "175 C/C"
             ]
           },
@@ -814,15 +980,18 @@
           "column_id": "GC29",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -835,15 +1004,18 @@
           "column_id": "GC28",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "125 C/C",
+              "125 C/C",
+              "140 C/C",
               "140 C/C"
             ]
           },
@@ -856,15 +1028,18 @@
           "column_id": "GC27",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -877,15 +1052,18 @@
           "column_id": "GC26",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -898,14 +1076,18 @@
           "column_id": "GC8",
           "size": {
             "width": 1350,
-            "depth": null,
+            "depth": 925,
             "length": 1600
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -918,15 +1100,18 @@
           "column_id": "GC25",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -939,14 +1124,18 @@
           "column_id": "GC7",
           "size": {
             "width": 1350,
-            "depth": null,
+            "depth": 925,
             "length": 1600
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -959,15 +1148,18 @@
           "column_id": "GC24",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -980,15 +1172,18 @@
           "column_id": "GC23",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -1001,15 +1196,18 @@
           "column_id": "GC22",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -1022,15 +1220,18 @@
           "column_id": "GC21",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -1043,14 +1244,18 @@
           "column_id": "GC4",
           "size": {
             "width": 1350,
-            "depth": null,
+            "depth": 925,
             "length": 1600
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -1063,14 +1268,18 @@
           "column_id": "GC3",
           "size": {
             "width": 1350,
-            "depth": null,
+            "depth": 925,
             "length": 1600
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -1083,15 +1292,18 @@
           "column_id": "GC20",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -1104,15 +1316,18 @@
           "column_id": "PC126",
           "size": {
             "width": 1900,
-            "depth": null,
+            "depth": 900,
             "length": 2800
           },
           "reinforcement": {
             "dia": [
+              "T16",
               "T16"
             ],
             "spacing": [
               "150 C/C",
+              "150 C/C",
+              "175 C/C",
               "175 C/C"
             ]
           },
@@ -1125,14 +1340,18 @@
           "column_id": "PC234",
           "size": {
             "width": 2250,
-            "depth": null,
+            "depth": 925,
             "length": 3550
           },
           "reinforcement": {
             "dia": [
+              "T16",
               "T16"
             ],
             "spacing": [
+              "150 C/C",
+              "150 C/C",
+              "150 C/C",
               "150 C/C"
             ]
           },
@@ -1145,16 +1364,24 @@
           "column_id": "PC125",
           "size": {
             "width": 2500,
-            "depth": null,
+            "depth": 1000,
             "length": 3250
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "115 C/C",
+              "115 C/C",
+              "115 C/C",
+              "115 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
               "200 C/C"
             ]
           },
@@ -1167,18 +1394,25 @@
           "column_id": "PC228",
           "size": {
             "width": 3150,
-            "depth": null,
+            "depth": 1075,
             "length": 3550
           },
           "reinforcement": {
             "dia": [
               "T20",
+              "T20",
+              "T10",
               "T10"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "150 C/C",
+              "150 C/C",
               "200 C/C",
-              "150 C/C"
+              "200 C/C",
+              "200 C/C",
+              "200 C/C"
             ]
           },
           "nos": null,
@@ -1190,14 +1424,18 @@
           "column_id": "PC216",
           "size": {
             "width": 2150,
-            "depth": null,
+            "depth": 925,
             "length": 2750
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -1210,15 +1448,25 @@
           "column_id": "PC219",
           "size": {
             "width": 2600,
-            "depth": null,
+            "depth": 925,
             "length": 3200
           },
           "reinforcement": {
             "dia": [
+              "T16",
+              "T16",
+              "T16",
               "T16"
             ],
             "spacing": [
-              "100 C/C"
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
+              "175 C/C",
+              "175 C/C",
+              "175 C/C",
+              "175 C/C"
             ]
           },
           "nos": null,
@@ -1230,16 +1478,24 @@
           "column_id": "PC223",
           "size": {
             "width": 2700,
-            "depth": null,
+            "depth": 1125,
             "length": 3900
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "125 C/C",
+              "125 C/C",
+              "125 C/C",
+              "125 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
               "200 C/C"
             ]
           },
@@ -1252,16 +1508,24 @@
           "column_id": "PC31",
           "size": {
             "width": 2550,
-            "depth": null,
+            "depth": 1125,
             "length": 3000
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "150 C/C",
+              "150 C/C",
+              "150 C/C",
+              "150 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
               "200 C/C"
             ]
           },
@@ -1274,14 +1538,18 @@
           "column_id": "PC30",
           "size": {
             "width": 1850,
-            "depth": null,
+            "depth": 900,
             "length": 2750
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -1294,15 +1562,18 @@
           "column_id": "GC40",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -1315,15 +1586,18 @@
           "column_id": "GC39",
           "size": {
             "width": 1100,
-            "depth": null,
+            "depth": 750,
             "length": 1950
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
               "140 C/C",
+              "140 C/C",
+              "125 C/C",
               "125 C/C"
             ]
           },
@@ -1336,14 +1610,18 @@
           "column_id": "PC192",
           "size": {
             "width": 1750,
-            "depth": null,
+            "depth": 900,
             "length": 3350
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "100 C/C",
+              "100 C/C",
+              "100 C/C",
               "100 C/C"
             ]
           },
@@ -1356,14 +1634,18 @@
           "column_id": "PC195",
           "size": {
             "width": 1650,
-            "depth": null,
+            "depth": 900,
             "length": 3250
           },
           "reinforcement": {
             "dia": [
+              "T12",
               "T12"
             ],
             "spacing": [
+              "115 C/C",
+              "115 C/C",
+              "115 C/C",
               "115 C/C"
             ]
           },
@@ -1376,16 +1658,24 @@
           "column_id": "PC230-1, PC230-2",
           "size": {
             "width": 2650,
-            "depth": null,
+            "depth": 1200,
             "length": 4550
           },
           "reinforcement": {
             "dia": [
               "T16",
+              "T16",
+              "T10",
               "T10"
             ],
             "spacing": [
               "115 C/C",
+              "115 C/C",
+              "115 C/C",
+              "115 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
               "200 C/C"
             ]
           },
@@ -1398,15 +1688,25 @@
           "column_id": "PC213",
           "size": {
             "width": 3650,
-            "depth": null,
+            "depth": 1675,
             "length": 13100
           },
           "reinforcement": {
             "dia": [
+              "T20",
+              "T20",
+              "T20",
               "T20"
             ],
             "spacing": [
-              "140 C/C"
+              "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "140 C/C",
+              "150 C/C",
+              "150 C/C",
+              "150 C/C",
+              "150 C/C"
             ]
           },
           "nos": null,
@@ -1418,15 +1718,25 @@
           "column_id": "PC87",
           "size": {
             "width": 2100,
-            "depth": null,
+            "depth": 1125,
             "length": 7250
           },
           "reinforcement": {
             "dia": [
-              "T16"
+              "T16",
+              "T16",
+              "T10",
+              "T10"
             ],
             "spacing": [
-              "125 C/C"
+              "125 C/C",
+              "125 C/C",
+              "125 C/C",
+              "125 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C"
             ]
           },
           "nos": null,
@@ -1438,16 +1748,25 @@
           "column_id": "PC168",
           "size": {
             "width": 2550,
-            "depth": null,
+            "depth": 1125,
             "length": 3650
           },
           "reinforcement": {
             "dia": [
-              "T16"
+              "T16",
+              "T16",
+              "T10",
+              "T10"
             ],
             "spacing": [
               "120 C/C",
-              "115 C/C"
+              "120 C/C",
+              "115 C/C",
+              "115 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C",
+              "200 C/C"
             ]
           },
           "nos": null,
@@ -1462,14 +1781,24 @@
             "column_id": "PC56",
             "size": {
               "width": 3200,
-              "depth": null,
+              "depth": 1525,
               "length": 13250
             },
             "reinforcement": {
               "dia": [
+                "T16",
+                "T16",
+                "T16",
                 "T16"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -1485,15 +1814,25 @@
             "column_id": "PC61",
             "size": {
               "width": 3150,
-              "depth": null,
+              "depth": 1500,
               "length": 13200
             },
             "reinforcement": {
               "dia": [
+                "T16",
+                "T16",
+                "T16",
                 "T16"
               ],
               "spacing": [
-                "100 C/C"
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "110 C/C",
+                "110 C/C",
+                "110 C/C",
+                "110 C/C"
               ]
             },
             "nos": null,
@@ -1508,15 +1847,25 @@
             "column_id": "PC64",
             "size": {
               "width": 3100,
-              "depth": null,
+              "depth": 1475,
               "length": 13150
             },
             "reinforcement": {
               "dia": [
+                "T16",
+                "T16",
+                "T16",
                 "T16"
               ],
               "spacing": [
-                "100 C/C"
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "110 C/C",
+                "110 C/C",
+                "110 C/C",
+                "110 C/C"
               ]
             },
             "nos": null,
@@ -1531,16 +1880,24 @@
             "column_id": "PC67",
             "size": {
               "width": 3250,
-              "depth": null,
+              "depth": 1550,
               "length": 13300
             },
             "reinforcement": {
               "dia": [
                 "T20",
+                "T16",
+                "T16",
                 "T16"
               ],
               "spacing": [
                 "150 C/C",
+                "150 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -1556,15 +1913,18 @@
             "column_id": "PC53",
             "size": {
               "width": 2100,
-              "depth": null,
+              "depth": 925,
               "length": 3750
             },
             "reinforcement": {
               "dia": [
+                "T16",
                 "T16"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "150 C/C",
                 "150 C/C"
               ]
             },
@@ -1580,15 +1940,18 @@
             "column_id": "PC54",
             "size": {
               "width": 2050,
-              "depth": null,
+              "depth": 925,
               "length": 3700
             },
             "reinforcement": {
               "dia": [
+                "T16",
                 "T16"
               ],
               "spacing": [
                 "150 C/C",
+                "150 C/C",
+                "175 C/C",
                 "175 C/C"
               ]
             },
@@ -1604,14 +1967,18 @@
             "column_id": "PC55",
             "size": {
               "width": 2100,
-              "depth": null,
+              "depth": 925,
               "length": 3750
             },
             "reinforcement": {
               "dia": [
+                "T16",
                 "T16"
               ],
               "spacing": [
+                "150 C/C",
+                "150 C/C",
+                "150 C/C",
                 "150 C/C"
               ]
             },
@@ -1627,16 +1994,24 @@
             "column_id": "PC57",
             "size": {
               "width": 2300,
-              "depth": null,
+              "depth": 1100,
               "length": 4100
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
                 "200 C/C"
               ]
             },
@@ -1652,16 +2027,24 @@
             "column_id": "PC59",
             "size": {
               "width": 2300,
-              "depth": null,
+              "depth": 1100,
               "length": 4100
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
                 "200 C/C"
               ]
             },
@@ -1677,18 +2060,25 @@
             "column_id": "PC62",
             "size": {
               "width": 2250,
-              "depth": null,
+              "depth": 1075,
               "length": 4050
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "125 C/C",
+                "125 C/C",
+                "140 C/C",
+                "140 C/C",
                 "200 C/C",
-                "140 C/C"
+                "200 C/C",
+                "200 C/C",
+                "200 C/C"
               ]
             },
             "nos": null,
@@ -1703,16 +2093,24 @@
             "column_id": "PC65",
             "size": {
               "width": 2150,
-              "depth": null,
+              "depth": 1025,
               "length": 3950
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
                 "200 C/C"
               ]
             },
@@ -1728,18 +2126,25 @@
             "column_id": "PC27",
             "size": {
               "width": 2200,
-              "depth": null,
+              "depth": 1075,
               "length": 8400
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "150 C/C",
+                "150 C/C",
                 "125 C/C",
-                "150 C/C"
+                "125 C/C",
+                "140 C/C",
+                "140 C/C"
               ]
             },
             "nos": null,
@@ -1754,15 +2159,18 @@
             "column_id": "GC43",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -1778,14 +2186,18 @@
             "column_id": "PC199",
             "size": {
               "width": 1450,
-              "depth": null,
+              "depth": 750,
               "length": 3150
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "125 C/C",
+                "125 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -1801,14 +2213,18 @@
             "column_id": "PC198",
             "size": {
               "width": 1700,
-              "depth": null,
+              "depth": 925,
               "length": 3400
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -1824,15 +2240,18 @@
             "column_id": "GC38",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -1848,14 +2267,18 @@
             "column_id": "GC19",
             "size": {
               "width": 1400,
-              "depth": null,
+              "depth": 925,
               "length": 1650
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -1871,14 +2294,18 @@
             "column_id": "GC18",
             "size": {
               "width": 1300,
-              "depth": null,
+              "depth": 925,
               "length": 1550
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -1894,15 +2321,18 @@
             "column_id": "GC37",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -1918,15 +2348,18 @@
             "column_id": "GC36",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -1942,15 +2375,18 @@
             "column_id": "GC35",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -1966,15 +2402,18 @@
             "column_id": "GC34",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -1990,18 +2429,25 @@
             "column_id": "PC159",
             "size": {
               "width": 2500,
-              "depth": null,
+              "depth": 1100,
               "length": 3600
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "115 C/C",
+                "115 C/C",
+                "125 C/C",
+                "125 C/C",
                 "200 C/C",
-                "125 C/C"
+                "200 C/C",
+                "200 C/C",
+                "200 C/C"
               ]
             },
             "nos": null,
@@ -2016,15 +2462,18 @@
             "column_id": "GC33",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2040,15 +2489,18 @@
             "column_id": "GC32",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2064,15 +2516,18 @@
             "column_id": "GC31",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2088,15 +2543,18 @@
             "column_id": "GC30",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2112,16 +2570,24 @@
             "column_id": "PC150",
             "size": {
               "width": 2000,
-              "depth": null,
+              "depth": 925,
               "length": 3050
             },
             "reinforcement": {
               "dia": [
                 "T12",
+                "T12",
+                "T16",
                 "T16"
               ],
               "spacing": [
                 "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "175 C/C",
+                "175 C/C",
+                "175 C/C",
                 "175 C/C"
               ]
             },
@@ -2137,15 +2603,18 @@
             "column_id": "GC29",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2161,15 +2630,18 @@
             "column_id": "GC28",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "125 C/C",
+                "125 C/C",
+                "140 C/C",
                 "140 C/C"
               ]
             },
@@ -2185,15 +2657,18 @@
             "column_id": "GC27",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2209,15 +2684,18 @@
             "column_id": "GC26",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2233,14 +2711,18 @@
             "column_id": "GC8",
             "size": {
               "width": 1350,
-              "depth": null,
+              "depth": 925,
               "length": 1600
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -2256,15 +2738,18 @@
             "column_id": "GC25",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2280,14 +2765,18 @@
             "column_id": "GC7",
             "size": {
               "width": 1350,
-              "depth": null,
+              "depth": 925,
               "length": 1600
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -2303,15 +2792,18 @@
             "column_id": "GC24",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2327,15 +2819,18 @@
             "column_id": "GC23",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2351,15 +2846,18 @@
             "column_id": "GC22",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2375,15 +2873,18 @@
             "column_id": "GC21",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2399,14 +2900,18 @@
             "column_id": "GC4",
             "size": {
               "width": 1350,
-              "depth": null,
+              "depth": 925,
               "length": 1600
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -2422,14 +2927,18 @@
             "column_id": "GC3",
             "size": {
               "width": 1350,
-              "depth": null,
+              "depth": 925,
               "length": 1600
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -2445,15 +2954,18 @@
             "column_id": "GC20",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2469,15 +2981,18 @@
             "column_id": "PC126",
             "size": {
               "width": 1900,
-              "depth": null,
+              "depth": 900,
               "length": 2800
             },
             "reinforcement": {
               "dia": [
+                "T16",
                 "T16"
               ],
               "spacing": [
                 "150 C/C",
+                "150 C/C",
+                "175 C/C",
                 "175 C/C"
               ]
             },
@@ -2493,14 +3008,18 @@
             "column_id": "PC234",
             "size": {
               "width": 2250,
-              "depth": null,
+              "depth": 925,
               "length": 3550
             },
             "reinforcement": {
               "dia": [
+                "T16",
                 "T16"
               ],
               "spacing": [
+                "150 C/C",
+                "150 C/C",
+                "150 C/C",
                 "150 C/C"
               ]
             },
@@ -2516,16 +3035,24 @@
             "column_id": "PC125",
             "size": {
               "width": 2500,
-              "depth": null,
+              "depth": 1000,
               "length": 3250
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "115 C/C",
+                "115 C/C",
+                "115 C/C",
+                "115 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
                 "200 C/C"
               ]
             },
@@ -2541,18 +3068,25 @@
             "column_id": "PC228",
             "size": {
               "width": 3150,
-              "depth": null,
+              "depth": 1075,
               "length": 3550
             },
             "reinforcement": {
               "dia": [
                 "T20",
+                "T20",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "150 C/C",
+                "150 C/C",
                 "200 C/C",
-                "150 C/C"
+                "200 C/C",
+                "200 C/C",
+                "200 C/C"
               ]
             },
             "nos": null,
@@ -2567,14 +3101,18 @@
             "column_id": "PC216",
             "size": {
               "width": 2150,
-              "depth": null,
+              "depth": 925,
               "length": 2750
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -2590,15 +3128,25 @@
             "column_id": "PC219",
             "size": {
               "width": 2600,
-              "depth": null,
+              "depth": 925,
               "length": 3200
             },
             "reinforcement": {
               "dia": [
+                "T16",
+                "T16",
+                "T16",
                 "T16"
               ],
               "spacing": [
-                "100 C/C"
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
+                "175 C/C",
+                "175 C/C",
+                "175 C/C",
+                "175 C/C"
               ]
             },
             "nos": null,
@@ -2613,16 +3161,24 @@
             "column_id": "PC223",
             "size": {
               "width": 2700,
-              "depth": null,
+              "depth": 1125,
               "length": 3900
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "125 C/C",
+                "125 C/C",
+                "125 C/C",
+                "125 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
                 "200 C/C"
               ]
             },
@@ -2638,16 +3194,24 @@
             "column_id": "PC31",
             "size": {
               "width": 2550,
-              "depth": null,
+              "depth": 1125,
               "length": 3000
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "150 C/C",
+                "150 C/C",
+                "150 C/C",
+                "150 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
                 "200 C/C"
               ]
             },
@@ -2663,14 +3227,18 @@
             "column_id": "PC30",
             "size": {
               "width": 1850,
-              "depth": null,
+              "depth": 900,
               "length": 2750
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -2686,15 +3254,18 @@
             "column_id": "GC40",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2710,15 +3281,18 @@
             "column_id": "GC39",
             "size": {
               "width": 1100,
-              "depth": null,
+              "depth": 750,
               "length": 1950
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
                 "140 C/C",
+                "140 C/C",
+                "125 C/C",
                 "125 C/C"
               ]
             },
@@ -2734,14 +3308,18 @@
             "column_id": "PC192",
             "size": {
               "width": 1750,
-              "depth": null,
+              "depth": 900,
               "length": 3350
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "100 C/C",
+                "100 C/C",
+                "100 C/C",
                 "100 C/C"
               ]
             },
@@ -2757,14 +3335,18 @@
             "column_id": "PC195",
             "size": {
               "width": 1650,
-              "depth": null,
+              "depth": 900,
               "length": 3250
             },
             "reinforcement": {
               "dia": [
+                "T12",
                 "T12"
               ],
               "spacing": [
+                "115 C/C",
+                "115 C/C",
+                "115 C/C",
                 "115 C/C"
               ]
             },
@@ -2780,16 +3362,24 @@
             "column_id": "PC230-1, PC230-2",
             "size": {
               "width": 2650,
-              "depth": null,
+              "depth": 1200,
               "length": 4550
             },
             "reinforcement": {
               "dia": [
                 "T16",
+                "T16",
+                "T10",
                 "T10"
               ],
               "spacing": [
                 "115 C/C",
+                "115 C/C",
+                "115 C/C",
+                "115 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
                 "200 C/C"
               ]
             },
@@ -2805,15 +3395,25 @@
             "column_id": "PC213",
             "size": {
               "width": 3650,
-              "depth": null,
+              "depth": 1675,
               "length": 13100
             },
             "reinforcement": {
               "dia": [
+                "T20",
+                "T20",
+                "T20",
                 "T20"
               ],
               "spacing": [
-                "140 C/C"
+                "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "140 C/C",
+                "150 C/C",
+                "150 C/C",
+                "150 C/C",
+                "150 C/C"
               ]
             },
             "nos": null,
@@ -2828,15 +3428,25 @@
             "column_id": "PC87",
             "size": {
               "width": 2100,
-              "depth": null,
+              "depth": 1125,
               "length": 7250
             },
             "reinforcement": {
               "dia": [
-                "T16"
+                "T16",
+                "T16",
+                "T10",
+                "T10"
               ],
               "spacing": [
-                "125 C/C"
+                "125 C/C",
+                "125 C/C",
+                "125 C/C",
+                "125 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C"
               ]
             },
             "nos": null,
@@ -2851,16 +3461,25 @@
             "column_id": "PC168",
             "size": {
               "width": 2550,
-              "depth": null,
+              "depth": 1125,
               "length": 3650
             },
             "reinforcement": {
               "dia": [
-                "T16"
+                "T16",
+                "T16",
+                "T10",
+                "T10"
               ],
               "spacing": [
                 "120 C/C",
-                "115 C/C"
+                "120 C/C",
+                "115 C/C",
+                "115 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C",
+                "200 C/C"
               ]
             },
             "nos": null,
@@ -2870,10 +3489,10 @@
           "source_region_ids": []
         }
       ],
-      "expected_count": 56,
+      "expected_count": 62,
       "actual_count": 59,
       "warnings": [
-        "expected 56 record(s), collected 59"
+        "expected 62 record(s), collected 59"
       ]
     }
   },
@@ -2882,7 +3501,7 @@
     "record_count": 59,
     "warning_count": 1,
     "warnings": [
-      "expected 56 record(s), collected 59"
+      "expected 62 record(s), collected 59"
     ]
   }
 }

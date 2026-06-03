@@ -214,6 +214,15 @@ FOOTING_TOOLS = [
                 "properties": {
                     "footing_id": {"type": ["string", "null"]},
                     "column_id": {"type": "string"},
+                    "footing_cell_text": {
+                        "type": ["string", "null"],
+                        "description": (
+                            "The EXACT raw text you read in THIS column's footing block "
+                            "(the FOOTING SIZE / P.C.C. SIZE / DEPTH / REINF / FOOTING MIX rows for this column only). "
+                            "Copy it verbatim, including any 'REFER RAFT FOOTING PLAN' note. "
+                            "This is used to verify the column actually has footing data."
+                        ),
+                    },
                     "plan_length": {"type": ["number", "null"]},
                     "plan_width": {"type": ["number", "null"]},
                     "depth_top": {"type": ["number", "null"]},

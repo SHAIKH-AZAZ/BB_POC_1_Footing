@@ -225,6 +225,9 @@ def build_footing_record(args):
     }
     if stirrups["dia"] or stirrups["spacing"]:
         record["stirrups"] = stirrups
+    # Optional raw cell text for downstream verification (pattern 2 refer-plan check).
+    if args.get("footing_cell_text"):
+        record["footing_cell_text"] = args.get("footing_cell_text")
     return record
 
 

@@ -7,14 +7,14 @@
       "image_path": "C:\\Users\\AZAZ\\Desktop\\POC _ Subh\\POC-1\\Footing\\output\\1_FDN & Col. sche.-Model\\page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-06-03T11:54:46.806894+00:00",
+      "generated_at": "2026-06-03T12:42:14.229474+00:00",
       "think": {
         "image_quality": "high",
         "table_bounds": {
-          "x1": 0,
-          "y1": 800,
-          "x2": 4000,
-          "y2": 1200
+          "x1": 0.0,
+          "y1": 0.8,
+          "x2": 1.0,
+          "y2": 0.95
         },
         "column_groups": [
           "C1",
@@ -43,198 +43,673 @@
         "expected_count": 12,
         "zoom_plan": [
           {
-            "region_id": "header",
+            "region_id": "r1",
             "purpose": "header",
-            "target": "COL. MARK",
-            "x1": 0,
-            "y1": 800,
-            "x2": 4000,
-            "y2": 820,
+            "target": "COL. MARK row",
+            "x1": 0.0,
+            "y1": 0.8,
+            "x2": 1.0,
+            "y2": 0.82,
             "reason": "Locate column marks"
           },
           {
-            "region_id": "row_label",
+            "region_id": "r2",
             "purpose": "row_label",
-            "target": "FOOTING SIZE",
-            "x1": 0,
-            "y1": 820,
-            "x2": 200,
-            "y2": 840,
+            "target": "FOOTING SIZE row",
+            "x1": 0.0,
+            "y1": 0.82,
+            "x2": 0.05,
+            "y2": 0.85,
             "reason": "Locate footing size row label"
           },
           {
-            "region_id": "row_label",
+            "region_id": "r3",
             "purpose": "row_label",
-            "target": "DEPTH (d TO D)",
-            "x1": 0,
-            "y1": 860,
-            "x2": 200,
-            "y2": 880,
+            "target": "DEPTH (d TO D) row",
+            "x1": 0.0,
+            "y1": 0.87,
+            "x2": 0.05,
+            "y2": 0.9,
             "reason": "Locate depth row label"
           },
           {
-            "region_id": "row_label",
+            "region_id": "r4",
             "purpose": "row_label",
-            "target": "REINF. //B",
-            "x1": 0,
-            "y1": 880,
-            "x2": 200,
-            "y2": 900,
-            "reason": "Locate reinforcement bottom row label"
+            "target": "REINF. //B row",
+            "x1": 0.0,
+            "y1": 0.9,
+            "x2": 0.05,
+            "y2": 0.92,
+            "reason": "Locate bottom reinforcement row label"
           },
           {
-            "region_id": "row_label",
+            "region_id": "r5",
             "purpose": "row_label",
-            "target": "REINF. //L",
-            "x1": 0,
-            "y1": 900,
-            "x2": 200,
-            "y2": 920,
-            "reason": "Locate reinforcement long row label"
+            "target": "REINF. //L row",
+            "x1": 0.0,
+            "y1": 0.92,
+            "x2": 0.05,
+            "y2": 0.94,
+            "reason": "Locate long span reinforcement row label"
           },
           {
-            "region_id": "row_label",
+            "region_id": "r6",
             "purpose": "row_label",
-            "target": "FOOTING MIX.",
-            "x1": 0,
-            "y1": 920,
-            "x2": 200,
-            "y2": 940,
+            "target": "FOOTING MIX. row",
+            "x1": 0.0,
+            "y1": 0.94,
+            "x2": 0.05,
+            "y2": 0.95,
             "reason": "Locate footing mix row label"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r7",
             "purpose": "data_cell",
-            "target": "C1",
-            "x1": 200,
-            "y1": 800,
-            "x2": 350,
-            "y2": 940,
-            "reason": "Read footing data for column C1"
+            "target": "C1 column footing size cell",
+            "x1": 0.05,
+            "y1": 0.82,
+            "x2": 0.13,
+            "y2": 0.85,
+            "reason": "Read footing size for C1"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r8",
             "purpose": "data_cell",
-            "target": "C2",
-            "x1": 350,
-            "y1": 800,
-            "x2": 500,
-            "y2": 940,
-            "reason": "Read footing data for column C2"
+            "target": "C1 column depth cell",
+            "x1": 0.05,
+            "y1": 0.87,
+            "x2": 0.13,
+            "y2": 0.9,
+            "reason": "Read depth for C1"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r9",
             "purpose": "data_cell",
-            "target": "C2A",
-            "x1": 500,
-            "y1": 800,
-            "x2": 650,
-            "y2": 940,
-            "reason": "Read footing data for column C2A"
+            "target": "C1 column bottom reinforcement cell",
+            "x1": 0.05,
+            "y1": 0.9,
+            "x2": 0.13,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C1"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r10",
             "purpose": "data_cell",
-            "target": "C3",
-            "x1": 650,
-            "y1": 800,
-            "x2": 800,
-            "y2": 940,
-            "reason": "Read footing data for column C3"
+            "target": "C1 column long span reinforcement cell",
+            "x1": 0.05,
+            "y1": 0.92,
+            "x2": 0.13,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C1"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r11",
             "purpose": "data_cell",
-            "target": "C4",
-            "x1": 800,
-            "y1": 800,
-            "x2": 950,
-            "y2": 940,
-            "reason": "Read footing data for column C4"
+            "target": "C1 column footing mix cell",
+            "x1": 0.05,
+            "y1": 0.94,
+            "x2": 0.13,
+            "y2": 0.95,
+            "reason": "Read footing mix for C1"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r12",
             "purpose": "data_cell",
-            "target": "C5",
-            "x1": 950,
-            "y1": 800,
-            "x2": 1100,
-            "y2": 940,
-            "reason": "Read footing data for column C5"
+            "target": "C2 column footing size cell",
+            "x1": 0.13,
+            "y1": 0.82,
+            "x2": 0.21,
+            "y2": 0.85,
+            "reason": "Read footing size for C2"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r13",
             "purpose": "data_cell",
-            "target": "C6",
-            "x1": 1100,
-            "y1": 800,
-            "x2": 1250,
-            "y2": 940,
-            "reason": "Read footing data for column C6"
+            "target": "C2 column depth cell",
+            "x1": 0.13,
+            "y1": 0.87,
+            "x2": 0.21,
+            "y2": 0.9,
+            "reason": "Read depth for C2"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r14",
             "purpose": "data_cell",
-            "target": "C7",
-            "x1": 1250,
-            "y1": 800,
-            "x2": 1400,
-            "y2": 940,
-            "reason": "Read footing data for column C7"
+            "target": "C2 column bottom reinforcement cell",
+            "x1": 0.13,
+            "y1": 0.9,
+            "x2": 0.21,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C2"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r15",
             "purpose": "data_cell",
-            "target": "C8",
-            "x1": 1400,
-            "y1": 800,
-            "x2": 1550,
-            "y2": 940,
-            "reason": "Read footing data for column C8"
+            "target": "C2 column long span reinforcement cell",
+            "x1": 0.13,
+            "y1": 0.92,
+            "x2": 0.21,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C2"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r16",
             "purpose": "data_cell",
-            "target": "C9",
-            "x1": 1550,
-            "y1": 800,
-            "x2": 1700,
-            "y2": 940,
-            "reason": "Read footing data for column C9"
+            "target": "C2 column footing mix cell",
+            "x1": 0.13,
+            "y1": 0.94,
+            "x2": 0.21,
+            "y2": 0.95,
+            "reason": "Read footing mix for C2"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r17",
             "purpose": "data_cell",
-            "target": "C10",
-            "x1": 1700,
-            "y1": 800,
-            "x2": 1850,
-            "y2": 940,
-            "reason": "Read footing data for column C10"
+            "target": "C2A column footing size cell",
+            "x1": 0.21,
+            "y1": 0.82,
+            "x2": 0.29,
+            "y2": 0.85,
+            "reason": "Read footing size for C2A"
           },
           {
-            "region_id": "data_cell",
+            "region_id": "r18",
             "purpose": "data_cell",
-            "target": "C11",
-            "x1": 1850,
-            "y1": 800,
-            "x2": 2000,
-            "y2": 940,
-            "reason": "Read footing data for column C11"
+            "target": "C2A column depth cell",
+            "x1": 0.21,
+            "y1": 0.87,
+            "x2": 0.29,
+            "y2": 0.9,
+            "reason": "Read depth for C2A"
+          },
+          {
+            "region_id": "r19",
+            "purpose": "data_cell",
+            "target": "C2A column bottom reinforcement cell",
+            "x1": 0.21,
+            "y1": 0.9,
+            "x2": 0.29,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C2A"
+          },
+          {
+            "region_id": "r20",
+            "purpose": "data_cell",
+            "target": "C2A column long span reinforcement cell",
+            "x1": 0.21,
+            "y1": 0.92,
+            "x2": 0.29,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C2A"
+          },
+          {
+            "region_id": "r21",
+            "purpose": "data_cell",
+            "target": "C2A column footing mix cell",
+            "x1": 0.21,
+            "y1": 0.94,
+            "x2": 0.29,
+            "y2": 0.95,
+            "reason": "Read footing mix for C2A"
+          },
+          {
+            "region_id": "r22",
+            "purpose": "data_cell",
+            "target": "C3 column footing size cell",
+            "x1": 0.29,
+            "y1": 0.82,
+            "x2": 0.37,
+            "y2": 0.85,
+            "reason": "Read footing size for C3"
+          },
+          {
+            "region_id": "r23",
+            "purpose": "data_cell",
+            "target": "C3 column depth cell",
+            "x1": 0.29,
+            "y1": 0.87,
+            "x2": 0.37,
+            "y2": 0.9,
+            "reason": "Read depth for C3"
+          },
+          {
+            "region_id": "r24",
+            "purpose": "data_cell",
+            "target": "C3 column bottom reinforcement cell",
+            "x1": 0.29,
+            "y1": 0.9,
+            "x2": 0.37,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C3"
+          },
+          {
+            "region_id": "r25",
+            "purpose": "data_cell",
+            "target": "C3 column long span reinforcement cell",
+            "x1": 0.29,
+            "y1": 0.92,
+            "x2": 0.37,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C3"
+          },
+          {
+            "region_id": "r26",
+            "purpose": "data_cell",
+            "target": "C3 column footing mix cell",
+            "x1": 0.29,
+            "y1": 0.94,
+            "x2": 0.37,
+            "y2": 0.95,
+            "reason": "Read footing mix for C3"
+          },
+          {
+            "region_id": "r27",
+            "purpose": "data_cell",
+            "target": "C4 column footing size cell",
+            "x1": 0.37,
+            "y1": 0.82,
+            "x2": 0.45,
+            "y2": 0.85,
+            "reason": "Read footing size for C4"
+          },
+          {
+            "region_id": "r28",
+            "purpose": "data_cell",
+            "target": "C4 column depth cell",
+            "x1": 0.37,
+            "y1": 0.87,
+            "x2": 0.45,
+            "y2": 0.9,
+            "reason": "Read depth for C4"
+          },
+          {
+            "region_id": "r29",
+            "purpose": "data_cell",
+            "target": "C4 column bottom reinforcement cell",
+            "x1": 0.37,
+            "y1": 0.9,
+            "x2": 0.45,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C4"
+          },
+          {
+            "region_id": "r30",
+            "purpose": "data_cell",
+            "target": "C4 column long span reinforcement cell",
+            "x1": 0.37,
+            "y1": 0.92,
+            "x2": 0.45,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C4"
+          },
+          {
+            "region_id": "r31",
+            "purpose": "data_cell",
+            "target": "C4 column footing mix cell",
+            "x1": 0.37,
+            "y1": 0.94,
+            "x2": 0.45,
+            "y2": 0.95,
+            "reason": "Read footing mix for C4"
+          },
+          {
+            "region_id": "r32",
+            "purpose": "data_cell",
+            "target": "C5 column footing size cell",
+            "x1": 0.45,
+            "y1": 0.82,
+            "x2": 0.53,
+            "y2": 0.85,
+            "reason": "Read footing size for C5"
+          },
+          {
+            "region_id": "r33",
+            "purpose": "data_cell",
+            "target": "C5 column depth cell",
+            "x1": 0.45,
+            "y1": 0.87,
+            "x2": 0.53,
+            "y2": 0.9,
+            "reason": "Read depth for C5"
+          },
+          {
+            "region_id": "r34",
+            "purpose": "data_cell",
+            "target": "C5 column bottom reinforcement cell",
+            "x1": 0.45,
+            "y1": 0.9,
+            "x2": 0.53,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C5"
+          },
+          {
+            "region_id": "r35",
+            "purpose": "data_cell",
+            "target": "C5 column long span reinforcement cell",
+            "x1": 0.45,
+            "y1": 0.92,
+            "x2": 0.53,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C5"
+          },
+          {
+            "region_id": "r36",
+            "purpose": "data_cell",
+            "target": "C5 column footing mix cell",
+            "x1": 0.45,
+            "y1": 0.94,
+            "x2": 0.53,
+            "y2": 0.95,
+            "reason": "Read footing mix for C5"
+          },
+          {
+            "region_id": "r37",
+            "purpose": "data_cell",
+            "target": "C6 column footing size cell",
+            "x1": 0.53,
+            "y1": 0.82,
+            "x2": 0.61,
+            "y2": 0.85,
+            "reason": "Read footing size for C6"
+          },
+          {
+            "region_id": "r38",
+            "purpose": "data_cell",
+            "target": "C6 column depth cell",
+            "x1": 0.53,
+            "y1": 0.87,
+            "x2": 0.61,
+            "y2": 0.9,
+            "reason": "Read depth for C6"
+          },
+          {
+            "region_id": "r39",
+            "purpose": "data_cell",
+            "target": "C6 column bottom reinforcement cell",
+            "x1": 0.53,
+            "y1": 0.9,
+            "x2": 0.61,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C6"
+          },
+          {
+            "region_id": "r40",
+            "purpose": "data_cell",
+            "target": "C6 column long span reinforcement cell",
+            "x1": 0.53,
+            "y1": 0.92,
+            "x2": 0.61,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C6"
+          },
+          {
+            "region_id": "r41",
+            "purpose": "data_cell",
+            "target": "C6 column footing mix cell",
+            "x1": 0.53,
+            "y1": 0.94,
+            "x2": 0.61,
+            "y2": 0.95,
+            "reason": "Read footing mix for C6"
+          },
+          {
+            "region_id": "r42",
+            "purpose": "data_cell",
+            "target": "C7 column footing size cell",
+            "x1": 0.61,
+            "y1": 0.82,
+            "x2": 0.69,
+            "y2": 0.85,
+            "reason": "Read footing size for C7"
+          },
+          {
+            "region_id": "r43",
+            "purpose": "data_cell",
+            "target": "C7 column depth cell",
+            "x1": 0.61,
+            "y1": 0.87,
+            "x2": 0.69,
+            "y2": 0.9,
+            "reason": "Read depth for C7"
+          },
+          {
+            "region_id": "r44",
+            "purpose": "data_cell",
+            "target": "C7 column bottom reinforcement cell",
+            "x1": 0.61,
+            "y1": 0.9,
+            "x2": 0.69,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C7"
+          },
+          {
+            "region_id": "r45",
+            "purpose": "data_cell",
+            "target": "C7 column long span reinforcement cell",
+            "x1": 0.61,
+            "y1": 0.92,
+            "x2": 0.69,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C7"
+          },
+          {
+            "region_id": "r46",
+            "purpose": "data_cell",
+            "target": "C7 column footing mix cell",
+            "x1": 0.61,
+            "y1": 0.94,
+            "x2": 0.69,
+            "y2": 0.95,
+            "reason": "Read footing mix for C7"
+          },
+          {
+            "region_id": "r47",
+            "purpose": "data_cell",
+            "target": "C8 column footing size cell",
+            "x1": 0.69,
+            "y1": 0.82,
+            "x2": 0.77,
+            "y2": 0.85,
+            "reason": "Read footing size for C8"
+          },
+          {
+            "region_id": "r48",
+            "purpose": "data_cell",
+            "target": "C8 column depth cell",
+            "x1": 0.69,
+            "y1": 0.87,
+            "x2": 0.77,
+            "y2": 0.9,
+            "reason": "Read depth for C8"
+          },
+          {
+            "region_id": "r49",
+            "purpose": "data_cell",
+            "target": "C8 column bottom reinforcement cell",
+            "x1": 0.69,
+            "y1": 0.9,
+            "x2": 0.77,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C8"
+          },
+          {
+            "region_id": "r50",
+            "purpose": "data_cell",
+            "target": "C8 column long span reinforcement cell",
+            "x1": 0.69,
+            "y1": 0.92,
+            "x2": 0.77,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C8"
+          },
+          {
+            "region_id": "r51",
+            "purpose": "data_cell",
+            "target": "C8 column footing mix cell",
+            "x1": 0.69,
+            "y1": 0.94,
+            "x2": 0.77,
+            "y2": 0.95,
+            "reason": "Read footing mix for C8"
+          },
+          {
+            "region_id": "r52",
+            "purpose": "data_cell",
+            "target": "C9 column footing size cell",
+            "x1": 0.77,
+            "y1": 0.82,
+            "x2": 0.85,
+            "y2": 0.85,
+            "reason": "Read footing size for C9"
+          },
+          {
+            "region_id": "r53",
+            "purpose": "data_cell",
+            "target": "C9 column depth cell",
+            "x1": 0.77,
+            "y1": 0.87,
+            "x2": 0.85,
+            "y2": 0.9,
+            "reason": "Read depth for C9"
+          },
+          {
+            "region_id": "r54",
+            "purpose": "data_cell",
+            "target": "C9 column bottom reinforcement cell",
+            "x1": 0.77,
+            "y1": 0.9,
+            "x2": 0.85,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C9"
+          },
+          {
+            "region_id": "r55",
+            "purpose": "data_cell",
+            "target": "C9 column long span reinforcement cell",
+            "x1": 0.77,
+            "y1": 0.92,
+            "x2": 0.85,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C9"
+          },
+          {
+            "region_id": "r56",
+            "purpose": "data_cell",
+            "target": "C9 column footing mix cell",
+            "x1": 0.77,
+            "y1": 0.94,
+            "x2": 0.85,
+            "y2": 0.95,
+            "reason": "Read footing mix for C9"
+          },
+          {
+            "region_id": "r57",
+            "purpose": "data_cell",
+            "target": "C10 column footing size cell",
+            "x1": 0.85,
+            "y1": 0.82,
+            "x2": 0.93,
+            "y2": 0.85,
+            "reason": "Read footing size for C10"
+          },
+          {
+            "region_id": "r58",
+            "purpose": "data_cell",
+            "target": "C10 column depth cell",
+            "x1": 0.85,
+            "y1": 0.87,
+            "x2": 0.93,
+            "y2": 0.9,
+            "reason": "Read depth for C10"
+          },
+          {
+            "region_id": "r59",
+            "purpose": "data_cell",
+            "target": "C10 column bottom reinforcement cell",
+            "x1": 0.85,
+            "y1": 0.9,
+            "x2": 0.93,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C10"
+          },
+          {
+            "region_id": "r60",
+            "purpose": "data_cell",
+            "target": "C10 column long span reinforcement cell",
+            "x1": 0.85,
+            "y1": 0.92,
+            "x2": 0.93,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C10"
+          },
+          {
+            "region_id": "r61",
+            "purpose": "data_cell",
+            "target": "C10 column footing mix cell",
+            "x1": 0.85,
+            "y1": 0.94,
+            "x2": 0.93,
+            "y2": 0.95,
+            "reason": "Read footing mix for C10"
+          },
+          {
+            "region_id": "r62",
+            "purpose": "data_cell",
+            "target": "C11 column footing size cell",
+            "x1": 0.93,
+            "y1": 0.82,
+            "x2": 1.0,
+            "y2": 0.85,
+            "reason": "Read footing size for C11"
+          },
+          {
+            "region_id": "r63",
+            "purpose": "data_cell",
+            "target": "C11 column depth cell",
+            "x1": 0.93,
+            "y1": 0.87,
+            "x2": 1.0,
+            "y2": 0.9,
+            "reason": "Read depth for C11"
+          },
+          {
+            "region_id": "r64",
+            "purpose": "data_cell",
+            "target": "C11 column bottom reinforcement cell",
+            "x1": 0.93,
+            "y1": 0.9,
+            "x2": 1.0,
+            "y2": 0.92,
+            "reason": "Read bottom reinforcement for C11"
+          },
+          {
+            "region_id": "r65",
+            "purpose": "data_cell",
+            "target": "C11 column long span reinforcement cell",
+            "x1": 0.93,
+            "y1": 0.92,
+            "x2": 1.0,
+            "y2": 0.94,
+            "reason": "Read long span reinforcement for C11"
+          },
+          {
+            "region_id": "r66",
+            "purpose": "data_cell",
+            "target": "C11 column footing mix cell",
+            "x1": 0.93,
+            "y1": 0.94,
+            "x2": 1.0,
+            "y2": 0.95,
+            "reason": "Read footing mix for C11"
           }
         ],
         "normalization_rules": [
-          "Convert reinforcement text from '25-10 TOR' to '25-10T'",
-          "Use smaller number in depth as depth_bottom",
-          "Ignore PCC size row",
-          "Ignore pedestal size row",
-          "Ignore horizontal and vertical steel rows",
-          "If text contains 'REFER' or 'DETAIL SECTION' in a column, return null footing for that column",
-          "Extract footing size as width x length from 'FOOTING SIZE' row",
-          "Extract mix from 'FOOTING MIX.' row",
-          "Extract reinforcement from 'REINF. //B' and 'REINF. //L' rows",
-          "Return empty spacing array for reinforcement",
-          "Return null for any column with no numeric footing data"
+          "Always use the COL. MARK row to lock columns vertically.",
+          "Ignore all rows except FOOTING SIZE, DEPTH (d TO D), REINF. //B, REINF. //L, FOOTING MIX.",
+          "Extract footing size as width and length from FOOTING SIZE row, format 'width X length'.",
+          "Extract depth as the smaller number from DEPTH (d TO D) row.",
+          "Convert reinforcement format '25-10 TOR' to '25-10T'.",
+          "If a column has only a REFER note and no numeric footing data, return null for size, mix, and reinforcement."
         ],
         "extraction_order": [
           "COL. MARK",
@@ -247,201 +722,996 @@
       },
       "zoom_regions": [
         {
-          "region_id": "header",
+          "region_id": "r1",
+          "purpose": "header",
+          "x1": 0.0,
+          "y1": 0.8,
+          "x2": 1.0,
+          "y2": 0.82,
+          "reason": "Locate COL. MARK row for column locking"
+        },
+        {
+          "region_id": "r2",
           "purpose": "row_label",
           "x1": 0.0,
-          "y1": 800.0,
-          "x2": 200.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing schedule row labels for accurate reading"
+          "y1": 0.82,
+          "x2": 0.05,
+          "y2": 0.85,
+          "reason": "Locate FOOTING SIZE row label"
         },
         {
-          "region_id": "C1",
-          "purpose": "data_cell",
-          "x1": 200.0,
-          "y1": 800.0,
-          "x2": 350.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C1"
+          "region_id": "r3",
+          "purpose": "row_label",
+          "x1": 0.0,
+          "y1": 0.87,
+          "x2": 0.05,
+          "y2": 0.9,
+          "reason": "Locate DEPTH (d TO D) row label"
         },
         {
-          "region_id": "C2",
-          "purpose": "data_cell",
-          "x1": 350.0,
-          "y1": 800.0,
-          "x2": 500.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C2"
+          "region_id": "r4",
+          "purpose": "row_label",
+          "x1": 0.0,
+          "y1": 0.9,
+          "x2": 0.05,
+          "y2": 0.92,
+          "reason": "Locate REINF. //B row label"
         },
         {
-          "region_id": "C2A",
-          "purpose": "data_cell",
-          "x1": 500.0,
-          "y1": 800.0,
-          "x2": 650.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C2A"
+          "region_id": "r5",
+          "purpose": "row_label",
+          "x1": 0.0,
+          "y1": 0.92,
+          "x2": 0.05,
+          "y2": 0.94,
+          "reason": "Locate REINF. //L row label"
         },
         {
-          "region_id": "C3",
-          "purpose": "data_cell",
-          "x1": 650.0,
-          "y1": 800.0,
-          "x2": 800.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C3"
+          "region_id": "r6",
+          "purpose": "row_label",
+          "x1": 0.0,
+          "y1": 0.94,
+          "x2": 0.05,
+          "y2": 0.95,
+          "reason": "Locate FOOTING MIX. row label"
         },
         {
-          "region_id": "C4",
+          "region_id": "r7",
           "purpose": "data_cell",
-          "x1": 800.0,
-          "y1": 800.0,
-          "x2": 950.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C4"
+          "x1": 0.05,
+          "y1": 0.82,
+          "x2": 0.13,
+          "y2": 0.85,
+          "reason": "Read footing size for C1"
         },
         {
-          "region_id": "C5",
+          "region_id": "r8",
           "purpose": "data_cell",
-          "x1": 950.0,
-          "y1": 800.0,
-          "x2": 1100.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C5"
+          "x1": 0.05,
+          "y1": 0.87,
+          "x2": 0.13,
+          "y2": 0.9,
+          "reason": "Read depth for C1"
         },
         {
-          "region_id": "C6",
+          "region_id": "r9",
           "purpose": "data_cell",
-          "x1": 1100.0,
-          "y1": 800.0,
-          "x2": 1250.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C6"
+          "x1": 0.05,
+          "y1": 0.9,
+          "x2": 0.13,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C1"
         },
         {
-          "region_id": "C7",
+          "region_id": "r10",
           "purpose": "data_cell",
-          "x1": 1250.0,
-          "y1": 800.0,
-          "x2": 1400.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C7"
+          "x1": 0.05,
+          "y1": 0.92,
+          "x2": 0.13,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C1"
         },
         {
-          "region_id": "C8",
+          "region_id": "r11",
           "purpose": "data_cell",
-          "x1": 1400.0,
-          "y1": 800.0,
-          "x2": 1550.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C8"
+          "x1": 0.05,
+          "y1": 0.94,
+          "x2": 0.13,
+          "y2": 0.95,
+          "reason": "Read footing mix for C1"
         },
         {
-          "region_id": "C9",
+          "region_id": "r12",
           "purpose": "data_cell",
-          "x1": 1550.0,
-          "y1": 800.0,
-          "x2": 1700.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C9"
+          "x1": 0.13,
+          "y1": 0.82,
+          "x2": 0.21,
+          "y2": 0.85,
+          "reason": "Read footing size for C2"
         },
         {
-          "region_id": "C10",
+          "region_id": "r13",
           "purpose": "data_cell",
-          "x1": 1700.0,
-          "y1": 800.0,
-          "x2": 1850.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C10"
+          "x1": 0.13,
+          "y1": 0.87,
+          "x2": 0.21,
+          "y2": 0.9,
+          "reason": "Read depth for C2"
         },
         {
-          "region_id": "C11",
+          "region_id": "r14",
           "purpose": "data_cell",
-          "x1": 1850.0,
-          "y1": 800.0,
-          "x2": 2000.0,
-          "y2": 940.0,
-          "reason": "Zoom to footing data for column C11"
+          "x1": 0.13,
+          "y1": 0.9,
+          "x2": 0.21,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C2"
+        },
+        {
+          "region_id": "r15",
+          "purpose": "data_cell",
+          "x1": 0.13,
+          "y1": 0.92,
+          "x2": 0.21,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C2"
+        },
+        {
+          "region_id": "r16",
+          "purpose": "data_cell",
+          "x1": 0.13,
+          "y1": 0.94,
+          "x2": 0.21,
+          "y2": 0.95,
+          "reason": "Read footing mix for C2"
+        },
+        {
+          "region_id": "r17",
+          "purpose": "data_cell",
+          "x1": 0.21,
+          "y1": 0.82,
+          "x2": 0.29,
+          "y2": 0.85,
+          "reason": "Read footing size for C2A"
+        },
+        {
+          "region_id": "r18",
+          "purpose": "data_cell",
+          "x1": 0.21,
+          "y1": 0.87,
+          "x2": 0.29,
+          "y2": 0.9,
+          "reason": "Read depth for C2A"
+        },
+        {
+          "region_id": "r19",
+          "purpose": "data_cell",
+          "x1": 0.21,
+          "y1": 0.9,
+          "x2": 0.29,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C2A"
+        },
+        {
+          "region_id": "r20",
+          "purpose": "data_cell",
+          "x1": 0.21,
+          "y1": 0.92,
+          "x2": 0.29,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C2A"
+        },
+        {
+          "region_id": "r21",
+          "purpose": "data_cell",
+          "x1": 0.21,
+          "y1": 0.94,
+          "x2": 0.29,
+          "y2": 0.95,
+          "reason": "Read footing mix for C2A"
+        },
+        {
+          "region_id": "r22",
+          "purpose": "data_cell",
+          "x1": 0.29,
+          "y1": 0.82,
+          "x2": 0.37,
+          "y2": 0.85,
+          "reason": "Read footing size for C3"
+        },
+        {
+          "region_id": "r23",
+          "purpose": "data_cell",
+          "x1": 0.29,
+          "y1": 0.87,
+          "x2": 0.37,
+          "y2": 0.9,
+          "reason": "Read depth for C3"
+        },
+        {
+          "region_id": "r24",
+          "purpose": "data_cell",
+          "x1": 0.29,
+          "y1": 0.9,
+          "x2": 0.37,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C3"
+        },
+        {
+          "region_id": "r25",
+          "purpose": "data_cell",
+          "x1": 0.29,
+          "y1": 0.92,
+          "x2": 0.37,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C3"
+        },
+        {
+          "region_id": "r26",
+          "purpose": "data_cell",
+          "x1": 0.29,
+          "y1": 0.94,
+          "x2": 0.37,
+          "y2": 0.95,
+          "reason": "Read footing mix for C3"
+        },
+        {
+          "region_id": "r27",
+          "purpose": "data_cell",
+          "x1": 0.37,
+          "y1": 0.82,
+          "x2": 0.45,
+          "y2": 0.85,
+          "reason": "Read footing size for C4"
+        },
+        {
+          "region_id": "r28",
+          "purpose": "data_cell",
+          "x1": 0.37,
+          "y1": 0.87,
+          "x2": 0.45,
+          "y2": 0.9,
+          "reason": "Read depth for C4"
+        },
+        {
+          "region_id": "r29",
+          "purpose": "data_cell",
+          "x1": 0.37,
+          "y1": 0.9,
+          "x2": 0.45,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C4"
+        },
+        {
+          "region_id": "r30",
+          "purpose": "data_cell",
+          "x1": 0.37,
+          "y1": 0.92,
+          "x2": 0.45,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C4"
+        },
+        {
+          "region_id": "r31",
+          "purpose": "data_cell",
+          "x1": 0.37,
+          "y1": 0.94,
+          "x2": 0.45,
+          "y2": 0.95,
+          "reason": "Read footing mix for C4"
+        },
+        {
+          "region_id": "r32",
+          "purpose": "data_cell",
+          "x1": 0.45,
+          "y1": 0.82,
+          "x2": 0.53,
+          "y2": 0.85,
+          "reason": "Read footing size for C5"
+        },
+        {
+          "region_id": "r33",
+          "purpose": "data_cell",
+          "x1": 0.45,
+          "y1": 0.87,
+          "x2": 0.53,
+          "y2": 0.9,
+          "reason": "Read depth for C5"
+        },
+        {
+          "region_id": "r34",
+          "purpose": "data_cell",
+          "x1": 0.45,
+          "y1": 0.9,
+          "x2": 0.53,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C5"
+        },
+        {
+          "region_id": "r35",
+          "purpose": "data_cell",
+          "x1": 0.45,
+          "y1": 0.92,
+          "x2": 0.53,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C5"
+        },
+        {
+          "region_id": "r36",
+          "purpose": "data_cell",
+          "x1": 0.45,
+          "y1": 0.94,
+          "x2": 0.53,
+          "y2": 0.95,
+          "reason": "Read footing mix for C5"
+        },
+        {
+          "region_id": "r37",
+          "purpose": "data_cell",
+          "x1": 0.53,
+          "y1": 0.82,
+          "x2": 0.61,
+          "y2": 0.85,
+          "reason": "Read footing size for C6"
+        },
+        {
+          "region_id": "r38",
+          "purpose": "data_cell",
+          "x1": 0.53,
+          "y1": 0.87,
+          "x2": 0.61,
+          "y2": 0.9,
+          "reason": "Read depth for C6"
+        },
+        {
+          "region_id": "r39",
+          "purpose": "data_cell",
+          "x1": 0.53,
+          "y1": 0.9,
+          "x2": 0.61,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C6"
+        },
+        {
+          "region_id": "r40",
+          "purpose": "data_cell",
+          "x1": 0.53,
+          "y1": 0.92,
+          "x2": 0.61,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C6"
+        },
+        {
+          "region_id": "r41",
+          "purpose": "data_cell",
+          "x1": 0.53,
+          "y1": 0.94,
+          "x2": 0.61,
+          "y2": 0.95,
+          "reason": "Read footing mix for C6"
+        },
+        {
+          "region_id": "r42",
+          "purpose": "data_cell",
+          "x1": 0.61,
+          "y1": 0.82,
+          "x2": 0.69,
+          "y2": 0.85,
+          "reason": "Read footing size for C7"
+        },
+        {
+          "region_id": "r43",
+          "purpose": "data_cell",
+          "x1": 0.61,
+          "y1": 0.87,
+          "x2": 0.69,
+          "y2": 0.9,
+          "reason": "Read depth for C7"
+        },
+        {
+          "region_id": "r44",
+          "purpose": "data_cell",
+          "x1": 0.61,
+          "y1": 0.9,
+          "x2": 0.69,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C7"
+        },
+        {
+          "region_id": "r45",
+          "purpose": "data_cell",
+          "x1": 0.61,
+          "y1": 0.92,
+          "x2": 0.69,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C7"
+        },
+        {
+          "region_id": "r46",
+          "purpose": "data_cell",
+          "x1": 0.61,
+          "y1": 0.94,
+          "x2": 0.69,
+          "y2": 0.95,
+          "reason": "Read footing mix for C7"
+        },
+        {
+          "region_id": "r47",
+          "purpose": "data_cell",
+          "x1": 0.69,
+          "y1": 0.82,
+          "x2": 0.77,
+          "y2": 0.85,
+          "reason": "Read footing size for C8"
+        },
+        {
+          "region_id": "r48",
+          "purpose": "data_cell",
+          "x1": 0.69,
+          "y1": 0.87,
+          "x2": 0.77,
+          "y2": 0.9,
+          "reason": "Read depth for C8"
+        },
+        {
+          "region_id": "r49",
+          "purpose": "data_cell",
+          "x1": 0.69,
+          "y1": 0.9,
+          "x2": 0.77,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C8"
+        },
+        {
+          "region_id": "r50",
+          "purpose": "data_cell",
+          "x1": 0.69,
+          "y1": 0.92,
+          "x2": 0.77,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C8"
+        },
+        {
+          "region_id": "r51",
+          "purpose": "data_cell",
+          "x1": 0.69,
+          "y1": 0.94,
+          "x2": 0.77,
+          "y2": 0.95,
+          "reason": "Read footing mix for C8"
+        },
+        {
+          "region_id": "r52",
+          "purpose": "data_cell",
+          "x1": 0.77,
+          "y1": 0.82,
+          "x2": 0.85,
+          "y2": 0.85,
+          "reason": "Read footing size for C9"
+        },
+        {
+          "region_id": "r53",
+          "purpose": "data_cell",
+          "x1": 0.77,
+          "y1": 0.87,
+          "x2": 0.85,
+          "y2": 0.9,
+          "reason": "Read depth for C9"
+        },
+        {
+          "region_id": "r54",
+          "purpose": "data_cell",
+          "x1": 0.77,
+          "y1": 0.9,
+          "x2": 0.85,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C9"
+        },
+        {
+          "region_id": "r55",
+          "purpose": "data_cell",
+          "x1": 0.77,
+          "y1": 0.92,
+          "x2": 0.85,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C9"
+        },
+        {
+          "region_id": "r56",
+          "purpose": "data_cell",
+          "x1": 0.77,
+          "y1": 0.94,
+          "x2": 0.85,
+          "y2": 0.95,
+          "reason": "Read footing mix for C9"
+        },
+        {
+          "region_id": "r57",
+          "purpose": "data_cell",
+          "x1": 0.85,
+          "y1": 0.82,
+          "x2": 0.93,
+          "y2": 0.85,
+          "reason": "Read footing size for C10"
+        },
+        {
+          "region_id": "r58",
+          "purpose": "data_cell",
+          "x1": 0.85,
+          "y1": 0.87,
+          "x2": 0.93,
+          "y2": 0.9,
+          "reason": "Read depth for C10"
+        },
+        {
+          "region_id": "r59",
+          "purpose": "data_cell",
+          "x1": 0.85,
+          "y1": 0.9,
+          "x2": 0.93,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C10"
+        },
+        {
+          "region_id": "r60",
+          "purpose": "data_cell",
+          "x1": 0.85,
+          "y1": 0.92,
+          "x2": 0.93,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C10"
+        },
+        {
+          "region_id": "r61",
+          "purpose": "data_cell",
+          "x1": 0.85,
+          "y1": 0.94,
+          "x2": 0.93,
+          "y2": 0.95,
+          "reason": "Read footing mix for C10"
+        },
+        {
+          "region_id": "r62",
+          "purpose": "data_cell",
+          "x1": 0.93,
+          "y1": 0.82,
+          "x2": 1.0,
+          "y2": 0.85,
+          "reason": "Read footing size for C11"
+        },
+        {
+          "region_id": "r63",
+          "purpose": "data_cell",
+          "x1": 0.93,
+          "y1": 0.87,
+          "x2": 1.0,
+          "y2": 0.9,
+          "reason": "Read depth for C11"
+        },
+        {
+          "region_id": "r64",
+          "purpose": "data_cell",
+          "x1": 0.93,
+          "y1": 0.9,
+          "x2": 1.0,
+          "y2": 0.92,
+          "reason": "Read bottom reinforcement for C11"
+        },
+        {
+          "region_id": "r65",
+          "purpose": "data_cell",
+          "x1": 0.93,
+          "y1": 0.92,
+          "x2": 1.0,
+          "y2": 0.94,
+          "reason": "Read long span reinforcement for C11"
+        },
+        {
+          "region_id": "r66",
+          "purpose": "data_cell",
+          "x1": 0.93,
+          "y1": 0.94,
+          "x2": 1.0,
+          "y2": 0.95,
+          "reason": "Read footing mix for C11"
         }
       ],
       "confirmed_reads": [
         {
-          "region_id": "header",
-          "text": "COL. MARK\nFOOTING SIZE\nP.C.C. SIZE\nDEPTH (d TO D)\nREINF. //B\nREINF. //L\nFOOTING MIX.",
-          "confidence": "1.0",
-          "applies_to": "row labels"
+          "region_id": "r1",
+          "text": "COL. MARK  C1  C2  C2A  C3  C4  C5  C6  C7  C8  C9  C10  C11",
+          "confidence": "high",
+          "applies_to": "column marks"
         },
         {
-          "region_id": "C1",
-          "text": "C1\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C1"
+          "region_id": "r2",
+          "text": "FOOTING SIZE",
+          "confidence": "high",
+          "applies_to": "row label"
         },
         {
-          "region_id": "C2",
-          "text": "C2\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C2"
+          "region_id": "r3",
+          "text": "DEPTH (d TO D)",
+          "confidence": "high",
+          "applies_to": "row label"
         },
         {
-          "region_id": "C2A",
-          "text": "C2A\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C2A"
+          "region_id": "r4",
+          "text": "REINF. //B",
+          "confidence": "high",
+          "applies_to": "row label"
         },
         {
-          "region_id": "C3",
-          "text": "C3\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C3"
+          "region_id": "r5",
+          "text": "REINF. //L",
+          "confidence": "high",
+          "applies_to": "row label"
         },
         {
-          "region_id": "C4",
-          "text": "C4\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C4"
+          "region_id": "r6",
+          "text": "FOOTING MIX.",
+          "confidence": "high",
+          "applies_to": "row label"
         },
         {
-          "region_id": "C5",
-          "text": "C5\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C5"
+          "region_id": "r7",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C1 footing size"
         },
         {
-          "region_id": "C6",
-          "text": "C6\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C6"
+          "region_id": "r8",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C1 depth"
         },
         {
-          "region_id": "C7",
-          "text": "C7\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C7"
+          "region_id": "r9",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C1 bottom reinforcement"
         },
         {
-          "region_id": "C8",
-          "text": "C8\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C8"
+          "region_id": "r10",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C1 long span reinforcement"
         },
         {
-          "region_id": "C9",
-          "text": "C9\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C9"
+          "region_id": "r11",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C1 footing mix"
         },
         {
-          "region_id": "C10",
-          "text": "C10\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C10"
+          "region_id": "r12",
+          "text": "2600 X 3100",
+          "confidence": "high",
+          "applies_to": "C2 footing size"
         },
         {
-          "region_id": "C11",
-          "text": "C11\n2800 X 3100\nK25\n230 TO 1050\n25-10 TOR\n18-10 TOR\nM25",
-          "confidence": "1.0",
-          "applies_to": "column C11"
+          "region_id": "r13",
+          "text": "230 TO 1050",
+          "confidence": "high",
+          "applies_to": "C2 depth"
+        },
+        {
+          "region_id": "r14",
+          "text": "25-10 TOR",
+          "confidence": "high",
+          "applies_to": "C2 bottom reinforcement"
+        },
+        {
+          "region_id": "r15",
+          "text": "21-10 TOR",
+          "confidence": "high",
+          "applies_to": "C2 long span reinforcement"
+        },
+        {
+          "region_id": "r16",
+          "text": "M25",
+          "confidence": "high",
+          "applies_to": "C2 footing mix"
+        },
+        {
+          "region_id": "r17",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C2A footing size"
+        },
+        {
+          "region_id": "r18",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C2A depth"
+        },
+        {
+          "region_id": "r19",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C2A bottom reinforcement"
+        },
+        {
+          "region_id": "r20",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C2A long span reinforcement"
+        },
+        {
+          "region_id": "r21",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C2A footing mix"
+        },
+        {
+          "region_id": "r22",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C3 footing size"
+        },
+        {
+          "region_id": "r23",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C3 depth"
+        },
+        {
+          "region_id": "r24",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C3 bottom reinforcement"
+        },
+        {
+          "region_id": "r25",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C3 long span reinforcement"
+        },
+        {
+          "region_id": "r26",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C3 footing mix"
+        },
+        {
+          "region_id": "r27",
+          "text": "2600 X 3100",
+          "confidence": "high",
+          "applies_to": "C4 footing size"
+        },
+        {
+          "region_id": "r28",
+          "text": "230 TO 1050",
+          "confidence": "high",
+          "applies_to": "C4 depth"
+        },
+        {
+          "region_id": "r29",
+          "text": "31-12 TOR",
+          "confidence": "high",
+          "applies_to": "C4 bottom reinforcement"
+        },
+        {
+          "region_id": "r30",
+          "text": "25-10 TOR",
+          "confidence": "high",
+          "applies_to": "C4 long span reinforcement"
+        },
+        {
+          "region_id": "r31",
+          "text": "M25",
+          "confidence": "high",
+          "applies_to": "C4 footing mix"
+        },
+        {
+          "region_id": "r32",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C5 footing size"
+        },
+        {
+          "region_id": "r33",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C5 depth"
+        },
+        {
+          "region_id": "r34",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C5 bottom reinforcement"
+        },
+        {
+          "region_id": "r35",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C5 long span reinforcement"
+        },
+        {
+          "region_id": "r36",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C5 footing mix"
+        },
+        {
+          "region_id": "r37",
+          "text": "2600 X 3100",
+          "confidence": "high",
+          "applies_to": "C6 footing size"
+        },
+        {
+          "region_id": "r38",
+          "text": "230 TO 1050",
+          "confidence": "high",
+          "applies_to": "C6 depth"
+        },
+        {
+          "region_id": "r39",
+          "text": "25-10 TOR",
+          "confidence": "high",
+          "applies_to": "C6 bottom reinforcement"
+        },
+        {
+          "region_id": "r40",
+          "text": "21-10 TOR",
+          "confidence": "high",
+          "applies_to": "C6 long span reinforcement"
+        },
+        {
+          "region_id": "r41",
+          "text": "M25",
+          "confidence": "high",
+          "applies_to": "C6 footing mix"
+        },
+        {
+          "region_id": "r42",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C7 footing size"
+        },
+        {
+          "region_id": "r43",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C7 depth"
+        },
+        {
+          "region_id": "r44",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C7 bottom reinforcement"
+        },
+        {
+          "region_id": "r45",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C7 long span reinforcement"
+        },
+        {
+          "region_id": "r46",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C7 footing mix"
+        },
+        {
+          "region_id": "r47",
+          "text": "2600 X 3100",
+          "confidence": "high",
+          "applies_to": "C8 footing size"
+        },
+        {
+          "region_id": "r48",
+          "text": "230 TO 1050",
+          "confidence": "high",
+          "applies_to": "C8 depth"
+        },
+        {
+          "region_id": "r49",
+          "text": "25-10 TOR",
+          "confidence": "high",
+          "applies_to": "C8 bottom reinforcement"
+        },
+        {
+          "region_id": "r50",
+          "text": "21-10 TOR",
+          "confidence": "high",
+          "applies_to": "C8 long span reinforcement"
+        },
+        {
+          "region_id": "r51",
+          "text": "M25",
+          "confidence": "high",
+          "applies_to": "C8 footing mix"
+        },
+        {
+          "region_id": "r52",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C9 footing size"
+        },
+        {
+          "region_id": "r53",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C9 depth"
+        },
+        {
+          "region_id": "r54",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C9 bottom reinforcement"
+        },
+        {
+          "region_id": "r55",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C9 long span reinforcement"
+        },
+        {
+          "region_id": "r56",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C9 footing mix"
+        },
+        {
+          "region_id": "r57",
+          "text": "2600 X 3100",
+          "confidence": "high",
+          "applies_to": "C10 footing size"
+        },
+        {
+          "region_id": "r58",
+          "text": "230 TO 1050",
+          "confidence": "high",
+          "applies_to": "C10 depth"
+        },
+        {
+          "region_id": "r59",
+          "text": "25-10 TOR",
+          "confidence": "high",
+          "applies_to": "C10 bottom reinforcement"
+        },
+        {
+          "region_id": "r60",
+          "text": "21-10 TOR",
+          "confidence": "high",
+          "applies_to": "C10 long span reinforcement"
+        },
+        {
+          "region_id": "r61",
+          "text": "M25",
+          "confidence": "high",
+          "applies_to": "C10 footing mix"
+        },
+        {
+          "region_id": "r62",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C11 footing size"
+        },
+        {
+          "region_id": "r63",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C11 depth"
+        },
+        {
+          "region_id": "r64",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C11 bottom reinforcement"
+        },
+        {
+          "region_id": "r65",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C11 long span reinforcement"
+        },
+        {
+          "region_id": "r66",
+          "text": "-",
+          "confidence": "high",
+          "applies_to": "C11 footing mix"
         }
       ],
       "pdf_reads": [],
@@ -450,28 +1720,26 @@
           "footing_id": "C1",
           "column_id": "C1",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
-            "dia": [
-              "10T",
-              "10T"
-            ],
+            "dia": [],
             "spacing": []
           },
           "nos": null,
-          "mix": "M25",
-          "steel_grade": null
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
         },
         {
           "footing_id": "C2",
           "column_id": "C2",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
             "dia": [
@@ -482,91 +1750,87 @@
           },
           "nos": null,
           "mix": "M25",
-          "steel_grade": null
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
         },
         {
           "footing_id": "C2A",
           "column_id": "C2A",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
-            "dia": [
-              "10T",
-              "10T"
-            ],
+            "dia": [],
             "spacing": []
           },
           "nos": null,
-          "mix": "M25",
-          "steel_grade": null
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
         },
         {
           "footing_id": "C3",
           "column_id": "C3",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
-            "dia": [
-              "10T",
-              "10T"
-            ],
+            "dia": [],
             "spacing": []
           },
           "nos": null,
-          "mix": "M25",
-          "steel_grade": null
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
         },
         {
           "footing_id": "C4",
           "column_id": "C4",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
             "dia": [
-              "10T",
+              "12T",
               "10T"
             ],
             "spacing": []
           },
           "nos": null,
           "mix": "M25",
-          "steel_grade": null
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
         },
         {
           "footing_id": "C5",
           "column_id": "C5",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
-            "dia": [
-              "10T",
-              "10T"
-            ],
+            "dia": [],
             "spacing": []
           },
           "nos": null,
-          "mix": "M25",
-          "steel_grade": null
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
         },
         {
           "footing_id": "C6",
           "column_id": "C6",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
             "dia": [
@@ -577,34 +1841,33 @@
           },
           "nos": null,
           "mix": "M25",
-          "steel_grade": null
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
         },
         {
           "footing_id": "C7",
           "column_id": "C7",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
-            "dia": [
-              "10T",
-              "10T"
-            ],
+            "dia": [],
             "spacing": []
           },
           "nos": null,
-          "mix": "M25",
-          "steel_grade": null
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
         },
         {
           "footing_id": "C8",
           "column_id": "C8",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
             "dia": [
@@ -615,34 +1878,33 @@
           },
           "nos": null,
           "mix": "M25",
-          "steel_grade": null
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
         },
         {
           "footing_id": "C9",
           "column_id": "C9",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
-            "dia": [
-              "10T",
-              "10T"
-            ],
+            "dia": [],
             "spacing": []
           },
           "nos": null,
-          "mix": "M25",
-          "steel_grade": null
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
         },
         {
           "footing_id": "C10",
           "column_id": "C10",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
             "dia": [
@@ -653,26 +1915,25 @@
           },
           "nos": null,
           "mix": "M25",
-          "steel_grade": null
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
         },
         {
           "footing_id": "C11",
           "column_id": "C11",
           "size": {
-            "width": 2800,
-            "depth": 230,
-            "length": 3100
+            "width": null,
+            "depth": null,
+            "length": null
           },
           "reinforcement": {
-            "dia": [
-              "10T",
-              "10T"
-            ],
+            "dia": [],
             "spacing": []
           },
           "nos": null,
-          "mix": "M25",
-          "steel_grade": null
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
         }
       ],
       "added_records": [
@@ -681,20 +1942,18 @@
             "footing_id": "C1",
             "column_id": "C1",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
-              "dia": [
-                "10T",
-                "10T"
-              ],
+              "dia": [],
               "spacing": []
             },
             "nos": null,
-            "mix": "M25",
-            "steel_grade": null
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
           },
           "source_region_ids": []
         },
@@ -703,9 +1962,9 @@
             "footing_id": "C2",
             "column_id": "C2",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
               "dia": [
@@ -716,7 +1975,8 @@
             },
             "nos": null,
             "mix": "M25",
-            "steel_grade": null
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
           },
           "source_region_ids": []
         },
@@ -725,20 +1985,18 @@
             "footing_id": "C2A",
             "column_id": "C2A",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
-              "dia": [
-                "10T",
-                "10T"
-              ],
+              "dia": [],
               "spacing": []
             },
             "nos": null,
-            "mix": "M25",
-            "steel_grade": null
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
           },
           "source_region_ids": []
         },
@@ -747,20 +2005,18 @@
             "footing_id": "C3",
             "column_id": "C3",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
-              "dia": [
-                "10T",
-                "10T"
-              ],
+              "dia": [],
               "spacing": []
             },
             "nos": null,
-            "mix": "M25",
-            "steel_grade": null
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
           },
           "source_region_ids": []
         },
@@ -769,20 +2025,21 @@
             "footing_id": "C4",
             "column_id": "C4",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
               "dia": [
-                "10T",
+                "12T",
                 "10T"
               ],
               "spacing": []
             },
             "nos": null,
             "mix": "M25",
-            "steel_grade": null
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
           },
           "source_region_ids": []
         },
@@ -791,20 +2048,18 @@
             "footing_id": "C5",
             "column_id": "C5",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
-              "dia": [
-                "10T",
-                "10T"
-              ],
+              "dia": [],
               "spacing": []
             },
             "nos": null,
-            "mix": "M25",
-            "steel_grade": null
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
           },
           "source_region_ids": []
         },
@@ -813,9 +2068,9 @@
             "footing_id": "C6",
             "column_id": "C6",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
               "dia": [
@@ -826,7 +2081,8 @@
             },
             "nos": null,
             "mix": "M25",
-            "steel_grade": null
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
           },
           "source_region_ids": []
         },
@@ -835,20 +2091,18 @@
             "footing_id": "C7",
             "column_id": "C7",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
-              "dia": [
-                "10T",
-                "10T"
-              ],
+              "dia": [],
               "spacing": []
             },
             "nos": null,
-            "mix": "M25",
-            "steel_grade": null
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
           },
           "source_region_ids": []
         },
@@ -857,9 +2111,9 @@
             "footing_id": "C8",
             "column_id": "C8",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
               "dia": [
@@ -870,7 +2124,8 @@
             },
             "nos": null,
             "mix": "M25",
-            "steel_grade": null
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
           },
           "source_region_ids": []
         },
@@ -879,20 +2134,18 @@
             "footing_id": "C9",
             "column_id": "C9",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
-              "dia": [
-                "10T",
-                "10T"
-              ],
+              "dia": [],
               "spacing": []
             },
             "nos": null,
-            "mix": "M25",
-            "steel_grade": null
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
           },
           "source_region_ids": []
         },
@@ -901,9 +2154,9 @@
             "footing_id": "C10",
             "column_id": "C10",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
               "dia": [
@@ -914,7 +2167,8 @@
             },
             "nos": null,
             "mix": "M25",
-            "steel_grade": null
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
           },
           "source_region_ids": []
         },
@@ -923,20 +2177,18 @@
             "footing_id": "C11",
             "column_id": "C11",
             "size": {
-              "width": 2800,
-              "depth": 230,
-              "length": 3100
+              "width": null,
+              "depth": null,
+              "length": null
             },
             "reinforcement": {
-              "dia": [
-                "10T",
-                "10T"
-              ],
+              "dia": [],
               "spacing": []
             },
             "nos": null,
-            "mix": "M25",
-            "steel_grade": null
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
           },
           "source_region_ids": []
         }

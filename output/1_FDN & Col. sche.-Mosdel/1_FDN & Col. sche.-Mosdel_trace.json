@@ -1,0 +1,2975 @@
+{
+  "project": "footing",
+  "pdf_stem": "1_FDN & Col. sche.-Mosdel",
+  "pages": {
+    "page_1.png": {
+      "project": "footing",
+      "image_path": "C:\\Users\\AZAZ\\Desktop\\POC _ Subh\\POC-1\\Footing\\output\\1_FDN & Col. sche.-Mosdel\\page_1.png",
+      "page_index": 0,
+      "pdf_path": null,
+      "generated_at": "2026-06-03T13:11:21.782660+00:00",
+      "think": {
+        "image_quality": "high",
+        "table_bounds": {
+          "x1": 0.0,
+          "y1": 0.85,
+          "x2": 1.0,
+          "y2": 0.98
+        },
+        "column_groups": [
+          "C12",
+          "C13",
+          "C14",
+          "C15",
+          "C16",
+          "C17",
+          "C18",
+          "C19",
+          "C20",
+          "C21",
+          "C22",
+          "C23",
+          "C24",
+          "C25",
+          "C26",
+          "C27",
+          "C28",
+          "C29",
+          "C30",
+          "C31",
+          "C32",
+          "C33",
+          "C34",
+          "C35",
+          "C36",
+          "C37",
+          "C38",
+          "C39",
+          "C40",
+          "C41",
+          "C42",
+          "C43",
+          "C44",
+          "C45",
+          "C46",
+          "C47",
+          "C48",
+          "C49",
+          "C50",
+          "C51",
+          "C52",
+          "C53",
+          "C54",
+          "C55",
+          "C56",
+          "C57",
+          "C58",
+          "C59",
+          "C60",
+          "C61",
+          "C62",
+          "C63",
+          "C64",
+          "C65",
+          "C66",
+          "C67",
+          "C68",
+          "C69",
+          "C70",
+          "C71",
+          "C72",
+          "C73",
+          "C74",
+          "C75",
+          "C76",
+          "C77",
+          "C78",
+          "C79",
+          "C80",
+          "C81",
+          "C82",
+          "C83",
+          "C84",
+          "C85",
+          "C86",
+          "C87",
+          "C88",
+          "C89",
+          "C90",
+          "C91",
+          "C92",
+          "C93",
+          "C94",
+          "C95",
+          "C96",
+          "C97",
+          "C98",
+          "C99",
+          "C100",
+          "C101",
+          "C102",
+          "C103",
+          "C104",
+          "C105",
+          "C106",
+          "C107",
+          "C108",
+          "C109",
+          "C110",
+          "C111",
+          "C112",
+          "C113",
+          "C114",
+          "C115",
+          "C116",
+          "C117",
+          "C118",
+          "C119",
+          "C120",
+          "C121",
+          "C122",
+          "C123",
+          "C124",
+          "C125",
+          "C126",
+          "C127",
+          "C128",
+          "C129",
+          "C130",
+          "C131",
+          "C132",
+          "C133",
+          "C134",
+          "C135",
+          "C136",
+          "C137",
+          "C138",
+          "C139",
+          "C140",
+          "C141",
+          "C142",
+          "C143",
+          "C144",
+          "C145",
+          "C146",
+          "C147",
+          "C148",
+          "C149",
+          "C150",
+          "C151",
+          "C152",
+          "C153",
+          "C154",
+          "C155",
+          "C156",
+          "C157",
+          "C158",
+          "C159",
+          "C160",
+          "C161",
+          "C162",
+          "C163",
+          "C164",
+          "C165",
+          "C166",
+          "C167",
+          "C168",
+          "C169",
+          "C170",
+          "C171",
+          "C172",
+          "C173",
+          "C174",
+          "C175",
+          "C176",
+          "C177",
+          "C178",
+          "C179",
+          "C180",
+          "C181",
+          "C182",
+          "C183",
+          "C184",
+          "C185",
+          "C186",
+          "C187",
+          "C188",
+          "C189",
+          "C190",
+          "C191",
+          "C192",
+          "C193",
+          "C194",
+          "C195",
+          "C196",
+          "C197",
+          "C198",
+          "C199",
+          "C200"
+        ],
+        "row_structure": [
+          "COL. MARK",
+          "FOOTING SIZE",
+          "P.C.C. SIZE",
+          "DEPTH (d TO D)",
+          "REINF. //B",
+          "REINF. //L",
+          "FOOTING MIX."
+        ],
+        "global_notes": {},
+        "expected_count": 200,
+        "zoom_plan": [
+          {
+            "region_id": "r1",
+            "purpose": "header",
+            "target": "COL. MARK",
+            "x1": 0.0,
+            "y1": 0.85,
+            "x2": 1.0,
+            "y2": 0.86,
+            "reason": "Locate column marks"
+          },
+          {
+            "region_id": "r2",
+            "purpose": "row_label",
+            "target": "FOOTING SIZE",
+            "x1": 0.0,
+            "y1": 0.86,
+            "x2": 0.05,
+            "y2": 0.87,
+            "reason": "Locate footing size row label"
+          },
+          {
+            "region_id": "r3",
+            "purpose": "row_label",
+            "target": "P.C.C. SIZE",
+            "x1": 0.0,
+            "y1": 0.87,
+            "x2": 0.05,
+            "y2": 0.88,
+            "reason": "Locate PCC size row label"
+          },
+          {
+            "region_id": "r4",
+            "purpose": "row_label",
+            "target": "DEPTH (d TO D)",
+            "x1": 0.0,
+            "y1": 0.88,
+            "x2": 0.05,
+            "y2": 0.89,
+            "reason": "Locate depth row label"
+          },
+          {
+            "region_id": "r5",
+            "purpose": "row_label",
+            "target": "REINF. //B",
+            "x1": 0.0,
+            "y1": 0.89,
+            "x2": 0.05,
+            "y2": 0.9,
+            "reason": "Locate reinforcement bottom row label"
+          },
+          {
+            "region_id": "r6",
+            "purpose": "row_label",
+            "target": "REINF. //L",
+            "x1": 0.0,
+            "y1": 0.9,
+            "x2": 0.05,
+            "y2": 0.91,
+            "reason": "Locate reinforcement long row label"
+          },
+          {
+            "region_id": "r7",
+            "purpose": "row_label",
+            "target": "FOOTING MIX.",
+            "x1": 0.0,
+            "y1": 0.91,
+            "x2": 0.05,
+            "y2": 0.92,
+            "reason": "Locate footing mix row label"
+          }
+        ],
+        "normalization_rules": [
+          "Extract column data vertically, one column at a time.",
+          "Ignore rows labeled P.C.C. SIZE.",
+          "Extract footing size from FOOTING SIZE row as width and length.",
+          "Extract depth from DEPTH (d TO D) row as smaller value for depth_bottom and larger for depth_top.",
+          "Extract reinforcement from REINF. //B and REINF. //L rows, convert 'TOR' to 'T', spacing is empty array.",
+          "Extract footing mix from FOOTING MIX. row if numeric data present.",
+          "If column has only REFER or DETAIL notes and no numeric data, return null footing."
+        ],
+        "extraction_order": [
+          "COL. MARK",
+          "FOOTING SIZE",
+          "DEPTH (d TO D)",
+          "REINF. //B",
+          "REINF. //L",
+          "FOOTING MIX."
+        ]
+      },
+      "zoom_regions": [
+        {
+          "region_id": "rC12",
+          "purpose": "data_cell",
+          "x1": 0.05,
+          "y1": 0.86,
+          "x2": 0.07,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C12"
+        },
+        {
+          "region_id": "rC13",
+          "purpose": "data_cell",
+          "x1": 0.07,
+          "y1": 0.86,
+          "x2": 0.09,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C13"
+        },
+        {
+          "region_id": "rC14",
+          "purpose": "data_cell",
+          "x1": 0.09,
+          "y1": 0.86,
+          "x2": 0.11,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C14"
+        },
+        {
+          "region_id": "rC15",
+          "purpose": "data_cell",
+          "x1": 0.11,
+          "y1": 0.86,
+          "x2": 0.13,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C15"
+        },
+        {
+          "region_id": "rC16",
+          "purpose": "data_cell",
+          "x1": 0.13,
+          "y1": 0.86,
+          "x2": 0.15,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C16"
+        },
+        {
+          "region_id": "rC17",
+          "purpose": "data_cell",
+          "x1": 0.15,
+          "y1": 0.86,
+          "x2": 0.17,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C17"
+        },
+        {
+          "region_id": "rC18",
+          "purpose": "data_cell",
+          "x1": 0.17,
+          "y1": 0.86,
+          "x2": 0.19,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C18"
+        },
+        {
+          "region_id": "rC19",
+          "purpose": "data_cell",
+          "x1": 0.19,
+          "y1": 0.86,
+          "x2": 0.21,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C19"
+        },
+        {
+          "region_id": "rC20",
+          "purpose": "data_cell",
+          "x1": 0.21,
+          "y1": 0.86,
+          "x2": 0.23,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C20"
+        },
+        {
+          "region_id": "rC21",
+          "purpose": "data_cell",
+          "x1": 0.23,
+          "y1": 0.86,
+          "x2": 0.25,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C21"
+        },
+        {
+          "region_id": "rC22",
+          "purpose": "data_cell",
+          "x1": 0.25,
+          "y1": 0.86,
+          "x2": 0.27,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C22"
+        },
+        {
+          "region_id": "rC23",
+          "purpose": "data_cell",
+          "x1": 0.27,
+          "y1": 0.86,
+          "x2": 0.29,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C23"
+        },
+        {
+          "region_id": "rC24",
+          "purpose": "data_cell",
+          "x1": 0.29,
+          "y1": 0.86,
+          "x2": 0.31,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C24"
+        },
+        {
+          "region_id": "rC25",
+          "purpose": "data_cell",
+          "x1": 0.31,
+          "y1": 0.86,
+          "x2": 0.33,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C25"
+        },
+        {
+          "region_id": "rC26",
+          "purpose": "data_cell",
+          "x1": 0.33,
+          "y1": 0.86,
+          "x2": 0.35,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C26"
+        },
+        {
+          "region_id": "rC27",
+          "purpose": "data_cell",
+          "x1": 0.35,
+          "y1": 0.86,
+          "x2": 0.37,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C27"
+        },
+        {
+          "region_id": "rC28",
+          "purpose": "data_cell",
+          "x1": 0.37,
+          "y1": 0.86,
+          "x2": 0.39,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C28"
+        },
+        {
+          "region_id": "rC29",
+          "purpose": "data_cell",
+          "x1": 0.39,
+          "y1": 0.86,
+          "x2": 0.41,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C29"
+        },
+        {
+          "region_id": "rC30",
+          "purpose": "data_cell",
+          "x1": 0.41,
+          "y1": 0.86,
+          "x2": 0.43,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C30"
+        },
+        {
+          "region_id": "rC31",
+          "purpose": "data_cell",
+          "x1": 0.43,
+          "y1": 0.86,
+          "x2": 0.45,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C31"
+        },
+        {
+          "region_id": "rC32",
+          "purpose": "data_cell",
+          "x1": 0.45,
+          "y1": 0.86,
+          "x2": 0.47,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C32"
+        },
+        {
+          "region_id": "rC33",
+          "purpose": "data_cell",
+          "x1": 0.47,
+          "y1": 0.86,
+          "x2": 0.49,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C33"
+        },
+        {
+          "region_id": "rC34",
+          "purpose": "data_cell",
+          "x1": 0.49,
+          "y1": 0.86,
+          "x2": 0.51,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C34"
+        },
+        {
+          "region_id": "rC35",
+          "purpose": "data_cell",
+          "x1": 0.51,
+          "y1": 0.86,
+          "x2": 0.53,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C35"
+        },
+        {
+          "region_id": "rC36",
+          "purpose": "data_cell",
+          "x1": 0.53,
+          "y1": 0.86,
+          "x2": 0.55,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C36"
+        },
+        {
+          "region_id": "rC37",
+          "purpose": "data_cell",
+          "x1": 0.55,
+          "y1": 0.86,
+          "x2": 0.57,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C37"
+        },
+        {
+          "region_id": "rC38",
+          "purpose": "data_cell",
+          "x1": 0.57,
+          "y1": 0.86,
+          "x2": 0.59,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C38"
+        },
+        {
+          "region_id": "rC39",
+          "purpose": "data_cell",
+          "x1": 0.59,
+          "y1": 0.86,
+          "x2": 0.61,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C39"
+        },
+        {
+          "region_id": "rC40",
+          "purpose": "data_cell",
+          "x1": 0.61,
+          "y1": 0.86,
+          "x2": 0.63,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C40"
+        },
+        {
+          "region_id": "rC41",
+          "purpose": "data_cell",
+          "x1": 0.63,
+          "y1": 0.86,
+          "x2": 0.65,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C41"
+        },
+        {
+          "region_id": "rC42",
+          "purpose": "data_cell",
+          "x1": 0.65,
+          "y1": 0.86,
+          "x2": 0.67,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C42"
+        },
+        {
+          "region_id": "rC43",
+          "purpose": "data_cell",
+          "x1": 0.67,
+          "y1": 0.86,
+          "x2": 0.69,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C43"
+        },
+        {
+          "region_id": "rC44",
+          "purpose": "data_cell",
+          "x1": 0.69,
+          "y1": 0.86,
+          "x2": 0.71,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C44"
+        },
+        {
+          "region_id": "rC45",
+          "purpose": "data_cell",
+          "x1": 0.71,
+          "y1": 0.86,
+          "x2": 0.73,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C45"
+        },
+        {
+          "region_id": "rC46",
+          "purpose": "data_cell",
+          "x1": 0.73,
+          "y1": 0.86,
+          "x2": 0.75,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C46"
+        },
+        {
+          "region_id": "rC47",
+          "purpose": "data_cell",
+          "x1": 0.75,
+          "y1": 0.86,
+          "x2": 0.77,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C47"
+        },
+        {
+          "region_id": "rC48",
+          "purpose": "data_cell",
+          "x1": 0.77,
+          "y1": 0.86,
+          "x2": 0.79,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C48"
+        },
+        {
+          "region_id": "rC49",
+          "purpose": "data_cell",
+          "x1": 0.79,
+          "y1": 0.86,
+          "x2": 0.81,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C49"
+        },
+        {
+          "region_id": "rC50",
+          "purpose": "data_cell",
+          "x1": 0.81,
+          "y1": 0.86,
+          "x2": 0.83,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C50"
+        },
+        {
+          "region_id": "rC51",
+          "purpose": "data_cell",
+          "x1": 0.83,
+          "y1": 0.86,
+          "x2": 0.85,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C51"
+        },
+        {
+          "region_id": "rC52",
+          "purpose": "data_cell",
+          "x1": 0.85,
+          "y1": 0.86,
+          "x2": 0.87,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C52"
+        },
+        {
+          "region_id": "rC53",
+          "purpose": "data_cell",
+          "x1": 0.87,
+          "y1": 0.86,
+          "x2": 0.89,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C53"
+        },
+        {
+          "region_id": "rC54",
+          "purpose": "data_cell",
+          "x1": 0.89,
+          "y1": 0.86,
+          "x2": 0.91,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C54"
+        },
+        {
+          "region_id": "rC55",
+          "purpose": "data_cell",
+          "x1": 0.91,
+          "y1": 0.86,
+          "x2": 0.93,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C55"
+        },
+        {
+          "region_id": "rC56",
+          "purpose": "data_cell",
+          "x1": 0.93,
+          "y1": 0.86,
+          "x2": 0.95,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C56"
+        },
+        {
+          "region_id": "rC57",
+          "purpose": "data_cell",
+          "x1": 0.95,
+          "y1": 0.86,
+          "x2": 0.97,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C57"
+        },
+        {
+          "region_id": "rC58",
+          "purpose": "data_cell",
+          "x1": 0.97,
+          "y1": 0.86,
+          "x2": 0.99,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C58"
+        },
+        {
+          "region_id": "rC59",
+          "purpose": "data_cell",
+          "x1": 0.99,
+          "y1": 0.86,
+          "x2": 1.0,
+          "y2": 0.92,
+          "reason": "Zoom footing data for column C59"
+        }
+      ],
+      "confirmed_reads": [
+        {
+          "region_id": "rC12",
+          "text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C12"
+        },
+        {
+          "region_id": "rC13",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C13"
+        },
+        {
+          "region_id": "rC14",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C14"
+        },
+        {
+          "region_id": "rC15",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C15"
+        },
+        {
+          "region_id": "rC16",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C16"
+        },
+        {
+          "region_id": "rC17",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C17"
+        },
+        {
+          "region_id": "rC18",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C18"
+        },
+        {
+          "region_id": "rC19",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C19"
+        },
+        {
+          "region_id": "rC20",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C20"
+        },
+        {
+          "region_id": "rC21",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C21"
+        },
+        {
+          "region_id": "rC22",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C22"
+        },
+        {
+          "region_id": "rC23",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C23"
+        },
+        {
+          "region_id": "rC24",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C24"
+        },
+        {
+          "region_id": "rC25",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C25"
+        },
+        {
+          "region_id": "rC26",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C26"
+        },
+        {
+          "region_id": "rC27",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C27"
+        },
+        {
+          "region_id": "rC28",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C28"
+        },
+        {
+          "region_id": "rC29",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C29"
+        },
+        {
+          "region_id": "rC30",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C30"
+        },
+        {
+          "region_id": "rC31",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C31"
+        },
+        {
+          "region_id": "rC32",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C32"
+        },
+        {
+          "region_id": "rC33",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C33"
+        },
+        {
+          "region_id": "rC34",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C34"
+        },
+        {
+          "region_id": "rC35",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C35"
+        },
+        {
+          "region_id": "rC36",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C36"
+        },
+        {
+          "region_id": "rC37",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C37"
+        },
+        {
+          "region_id": "rC38",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C38"
+        },
+        {
+          "region_id": "rC39",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C39"
+        },
+        {
+          "region_id": "rC40",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C40"
+        },
+        {
+          "region_id": "rC41",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C41"
+        },
+        {
+          "region_id": "rC42",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C42"
+        },
+        {
+          "region_id": "rC43",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C43"
+        },
+        {
+          "region_id": "rC44",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C44"
+        },
+        {
+          "region_id": "rC45",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C45"
+        },
+        {
+          "region_id": "rC46",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C46"
+        },
+        {
+          "region_id": "rC47",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C47"
+        },
+        {
+          "region_id": "rC48",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C48"
+        },
+        {
+          "region_id": "rC49",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C49"
+        },
+        {
+          "region_id": "rC50",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C50"
+        },
+        {
+          "region_id": "rC51",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C51"
+        },
+        {
+          "region_id": "rC52",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C52"
+        },
+        {
+          "region_id": "rC53",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C53"
+        },
+        {
+          "region_id": "rC54",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C54"
+        },
+        {
+          "region_id": "rC55",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C55"
+        },
+        {
+          "region_id": "rC56",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C56"
+        },
+        {
+          "region_id": "rC57",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C57"
+        },
+        {
+          "region_id": "rC58",
+          "text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25",
+          "confidence": "high",
+          "applies_to": "C58"
+        },
+        {
+          "region_id": "rC59",
+          "text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION",
+          "confidence": "high",
+          "applies_to": "C59"
+        }
+      ],
+      "pdf_reads": [],
+      "records": [
+        {
+          "footing_id": "C12",
+          "column_id": "C12",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "10T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
+        },
+        {
+          "footing_id": "C13",
+          "column_id": "C13",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C14",
+          "column_id": "C14",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C15",
+          "column_id": "C15",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C16",
+          "column_id": "C16",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C17",
+          "column_id": "C17",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C18",
+          "column_id": "C18",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C19",
+          "column_id": "C19",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C20",
+          "column_id": "C20",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C21",
+          "column_id": "C21",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C22",
+          "column_id": "C22",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C23",
+          "column_id": "C23",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C24",
+          "column_id": "C24",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C25",
+          "column_id": "C25",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C26",
+          "column_id": "C26",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C27",
+          "column_id": "C27",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C28",
+          "column_id": "C28",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C29",
+          "column_id": "C29",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C30",
+          "column_id": "C30",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C31",
+          "column_id": "C31",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C32",
+          "column_id": "C32",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C33",
+          "column_id": "C33",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C34",
+          "column_id": "C34",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C35",
+          "column_id": "C35",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C36",
+          "column_id": "C36",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C37",
+          "column_id": "C37",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C38",
+          "column_id": "C38",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C39",
+          "column_id": "C39",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C40",
+          "column_id": "C40",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C41",
+          "column_id": "C41",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C42",
+          "column_id": "C42",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C43",
+          "column_id": "C43",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C44",
+          "column_id": "C44",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C45",
+          "column_id": "C45",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C46",
+          "column_id": "C46",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C47",
+          "column_id": "C47",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C48",
+          "column_id": "C48",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C49",
+          "column_id": "C49",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C50",
+          "column_id": "C50",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C51",
+          "column_id": "C51",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C52",
+          "column_id": "C52",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C53",
+          "column_id": "C53",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C54",
+          "column_id": "C54",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C55",
+          "column_id": "C55",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C56",
+          "column_id": "C56",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C57",
+          "column_id": "C57",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        },
+        {
+          "footing_id": "C58",
+          "column_id": "C58",
+          "size": {
+            "width": 2600,
+            "depth": 230,
+            "length": 3100
+          },
+          "reinforcement": {
+            "dia": [
+              "12T",
+              "10T"
+            ],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": "M25",
+          "steel_grade": null,
+          "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+        },
+        {
+          "footing_id": "C59",
+          "column_id": "C59",
+          "size": {
+            "width": null,
+            "depth": null,
+            "length": null
+          },
+          "reinforcement": {
+            "dia": [],
+            "spacing": []
+          },
+          "nos": null,
+          "mix": null,
+          "steel_grade": null,
+          "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+        }
+      ],
+      "added_records": [
+        {
+          "record": {
+            "footing_id": "C12",
+            "column_id": "C12",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "10T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  25-10 TOR  21-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C13",
+            "column_id": "C13",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C14",
+            "column_id": "C14",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C15",
+            "column_id": "C15",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C16",
+            "column_id": "C16",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C17",
+            "column_id": "C17",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C18",
+            "column_id": "C18",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C19",
+            "column_id": "C19",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C20",
+            "column_id": "C20",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C21",
+            "column_id": "C21",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C22",
+            "column_id": "C22",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C23",
+            "column_id": "C23",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C24",
+            "column_id": "C24",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C25",
+            "column_id": "C25",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C26",
+            "column_id": "C26",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C27",
+            "column_id": "C27",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C28",
+            "column_id": "C28",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C29",
+            "column_id": "C29",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C30",
+            "column_id": "C30",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C31",
+            "column_id": "C31",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C32",
+            "column_id": "C32",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C33",
+            "column_id": "C33",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C34",
+            "column_id": "C34",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C35",
+            "column_id": "C35",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C36",
+            "column_id": "C36",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C37",
+            "column_id": "C37",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C38",
+            "column_id": "C38",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C39",
+            "column_id": "C39",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C40",
+            "column_id": "C40",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C41",
+            "column_id": "C41",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C42",
+            "column_id": "C42",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C43",
+            "column_id": "C43",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C44",
+            "column_id": "C44",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C45",
+            "column_id": "C45",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C46",
+            "column_id": "C46",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C47",
+            "column_id": "C47",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C48",
+            "column_id": "C48",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C49",
+            "column_id": "C49",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C50",
+            "column_id": "C50",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C51",
+            "column_id": "C51",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C52",
+            "column_id": "C52",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C53",
+            "column_id": "C53",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C54",
+            "column_id": "C54",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C55",
+            "column_id": "C55",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C56",
+            "column_id": "C56",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C57",
+            "column_id": "C57",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C58",
+            "column_id": "C58",
+            "size": {
+              "width": 2600,
+              "depth": 230,
+              "length": 3100
+            },
+            "reinforcement": {
+              "dia": [
+                "12T",
+                "10T"
+              ],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": "M25",
+            "steel_grade": null,
+            "footing_cell_text": "2600 X 3100  230 TO 1050  31-12 TOR  25-10 TOR  M25"
+          },
+          "source_region_ids": []
+        },
+        {
+          "record": {
+            "footing_id": "C59",
+            "column_id": "C59",
+            "size": {
+              "width": null,
+              "depth": null,
+              "length": null
+            },
+            "reinforcement": {
+              "dia": [],
+              "spacing": []
+            },
+            "nos": null,
+            "mix": null,
+            "steel_grade": null,
+            "footing_cell_text": "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+          },
+          "source_region_ids": []
+        }
+      ],
+      "expected_count": 200,
+      "actual_count": 48,
+      "warnings": [
+        "expected 200 record(s), collected 48"
+      ]
+    }
+  },
+  "summary": {
+    "page_count": 1,
+    "record_count": 48,
+    "warning_count": 1,
+    "warnings": [
+      "expected 200 record(s), collected 48"
+    ]
+  }
+}

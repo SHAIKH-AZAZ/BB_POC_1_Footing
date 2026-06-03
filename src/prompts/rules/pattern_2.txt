@@ -69,22 +69,43 @@ These rows DO NOT belong to footing data.
 STEP 3 — CHECK COLUMN CONTENT
 --------------------------------
 
-Inside each locked column:
+Inside each locked column, FIRST look for numeric footing data:
+a FOOTING SIZE like "2600 X 3100", a DEPTH like "230 TO 1050" or "750 SOLID",
+and REINF rows like "25-10 TOR".
 
-If text contains:
+CASE A — Column HAS numeric footing data:
+  Extract it normally (size, depth, reinforcement, mix).
+  IMPORTANT: A column may show BOTH real footing data AND a "REFER RAFT FOOTING
+  PLAN ..." note in an adjacent sub-cell (this happens for C2, C4, etc.).
+  In that case the column DOES have footing data — extract the numeric values.
+  Do NOT null it just because a REFER note also appears.
 
-REFER RAFT FOOTING PLAN
-REFER COMBINED FOOTING
-REFER FOOTING PLAN
-DETAIL SECTION
+CASE B — Column has ONLY a refer/detail note and NO numeric footing data:
+  If the entire column cell is just one of:
+    REFER RAFT FOOTING PLAN
+    REFER COMBINED FOOTING
+    REFER FOOTING PLAN
+    DETAIL SECTION
+  (with no FOOTING SIZE / DEPTH / REINF numbers anywhere in that column),
+  then this column has NO footing data. Return:
+    size = null
+    reinforcement = empty
+    mix = null
 
-Then this column has NO footing data.
+Rule of thumb: if you can see a numeric FOOTING SIZE in the column, it is CASE A.
+Examples from a typical sheet:
+  C1  -> only "REFER RAFT FOOTING PLAN ..."          -> CASE B -> null
+  C2  -> "2600 X 3100 ... 25-10 TOR ..." + refer note -> CASE A -> extract data
+  C2A -> only "REFER RAFT FOOTING PLAN ..."          -> CASE B -> null
+  C3  -> only "REFER RAFT FOOTING PLAN ..."          -> CASE B -> null
+  C4  -> "2600 X 3100 ... 31-12 TOR ..." + refer note -> CASE A -> extract data
 
-Return:
-
-size = null
-reinforcement = empty
-mix = null
+MANDATORY — footing_cell_text field:
+For EVERY column, copy the exact raw text you read in that column's footing block
+into the add_footing field "footing_cell_text" (verbatim, including any REFER note).
+Example for C1: "REFER RAFT FOOTING PLAN OF RAFT-6, RAFT-7, CF-2 CF-3 & DETAIL SECTION"
+Example for C2: "2600 X 3100  2750 X 3250  230 TO 1050  25-10 TOR  21-10 TOR  M25"
+This is used to verify the column — never copy a neighbour column's text.
 
 --------------------------------
 STEP 4 — SIZE EXTRACTION
@@ -94,12 +115,13 @@ From row:
 
 FOOTING SIZE
 
-Format:
-2800 X 3100
+Format (example):
+2600 X 3100
 
-width = first number  
-length = second number
+width = first number   (2600)
+length = second number  (3100)
 
+Read the ACTUAL numbers in each column — do not assume the example values.
 Ignore PCC sizes completely.
 
 --------------------------------

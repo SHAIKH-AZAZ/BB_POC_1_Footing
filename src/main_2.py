@@ -1,4 +1,5 @@
 import os
+import re
 import json
 from tqdm import tqdm
 
@@ -13,6 +14,51 @@ from prompt_builder import build_prompt
 # ===============================
 def load_prompt():
     return build_prompt(2)
+
+
+# ===============================
+# POST-PROCESS GUARDS (pattern 2)
+# ===============================
+_SIZE_RE = re.compile(r"\d{3,4}\s*[xX]\s*\d{3,4}")
+_REFER_RE = re.compile(r"REFER|DETAIL\s+SECTION", re.IGNORECASE)
+# Footing reinforcement in this pattern is ALWAYS count-dia TOR, e.g. "25-10T".
+_COMPOUND_DIA_RE = re.compile(r"^\d{1,3}-\d{1,2}T$")
+
+
+def _null_footing(footing):
+    footing["size"] = {"width": None, "depth": None, "length": None}
+    footing["reinforcement"] = {"dia": [], "spacing": []}
+    footing["mix"] = None
+    return footing
+
+
+def apply_guards(footing):
+    """
+    Deterministic correctness guards for pattern 2:
+
+    1. Refer-only columns -> null. If the raw footing cell text contains a
+       REFER/DETAIL note and has NO numeric footing size (NNNN X NNNN), the
+       column has no footing data even if the model guessed values from a
+       neighbouring column.
+    2. Reinforcement must be the count-dia TOR form (e.g. "25-10T"). Plain
+       values like "12T"/"10T" come from the column ring rows, not the footing
+       REINF //B //L rows, so drop them.
+    """
+    cell = footing.get("footing_cell_text") or ""
+
+    # Guard 1: refer-only -> null
+    if cell and _REFER_RE.search(cell) and not _SIZE_RE.search(cell):
+        _null_footing(footing)
+        footing.pop("footing_cell_text", None)
+        return footing
+
+    # Guard 2: keep only compound count-dia TOR reinforcement
+    reinf = footing.get("reinforcement", {}) or {}
+    dia = [d for d in reinf.get("dia", []) if _COMPOUND_DIA_RE.match(str(d))]
+    footing["reinforcement"] = {"dia": dia, "spacing": []}
+
+    footing.pop("footing_cell_text", None)
+    return footing
 
 
 # ===============================
@@ -69,8 +115,10 @@ def process_pdf(pdf_path):
         if not footings:
             continue
 
-        # Assign sequential footing IDs
+        # Apply deterministic correctness guards, then assign sequential IDs
         for footing in footings:
+
+            footing = apply_guards(footing)
 
             footing["footing_id"] = str(footing_counter)
             footing_counter += 1

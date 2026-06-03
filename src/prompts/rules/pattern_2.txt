@@ -1,3 +1,32 @@
+--------------------------------
+STEP 0 — ZOOM FIRST (MANDATORY)
+--------------------------------
+
+This is a HUGE drawing sheet. The footing schedule is a THIN HORIZONTAL BAND
+near the BOTTOM of the sheet, just above the COL. MARK row.
+
+The full image is too downscaled to read accurately. You MUST:
+1. zoom_region into the bottom footing band first.
+2. zoom_region into EACH column cell before reading its values.
+3. confirm_read the exact text from each zoom before calling add_footing.
+
+DO NOT read footing values from the full image — you will misread them.
+
+The footing data lives ONLY in these rows (left-side labels):
+  FOOTING SIZE
+  P.C.C. SIZE
+  DEPTH (d TO D)
+  REINF. //B
+  REINF. //L
+  FOOTING MIX.
+
+WARNING — common mistake:
+The reinforcement is in REINF. //B and REINF. //L rows (format like "25-10 TOR").
+Do NOT read reinforcement from the COLUMN sections above (the "X TOR Y @ 75",
+"10-20 TOR", ring/link, or pedestal HORI./VERTI. STEEL rows). Those are NOT footing steel.
+
+If every column ends up with the SAME reinforcement, you read the wrong rows. Re-zoom.
+
 CRITICAL RULE:
 This table MUST be read COLUMN BY COLUMN.
 Never read row-wise.
@@ -79,17 +108,28 @@ STEP 5 — DEPTH EXTRACTION
 
 From row:
 
-DEPTH (D TO D)
+DEPTH (d TO D)
+
+The footing depth is the SMALLER value (the shallow edge "d").
+
+Map to the add_footing tool fields like this:
+  depth_bottom = the SMALLER number   (this becomes the reported depth)
+  depth_top    = the LARGER number
 
 Cases:
 
 1)
 230 TO 1050
-→ depth = 230 (smaller value)
+→ depth_bottom = 230  (smaller)  ✓ reported depth = 230
+→ depth_top    = 1050 (larger)
 
 2)
 750 SOLID
-→ depth = 750
+→ depth_bottom = 750
+→ depth_top    = 750
+
+IMPORTANT: Always put the SMALLER number in depth_bottom, regardless of whether
+it is written first or second. Never report the larger value as the depth.
 
 --------------------------------
 STEP 6 — REINFORCEMENT

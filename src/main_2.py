@@ -51,7 +51,7 @@ def process_pdf(pdf_path):
     # ===============================
     for img_path in tqdm(image_paths):
 
-        result = extract_with_tools(img_path, prompt)
+        result = extract_with_tools(img_path, prompt, enforce_zoom=True)
 
         # Model sometimes returns dict already
         if isinstance(result, dict):

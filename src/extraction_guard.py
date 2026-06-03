@@ -82,6 +82,16 @@ def extract_rebar_parts(*texts, keep_repetition=False):
         for item in _as_list(text):
             clean = str(item).upper().replace("PHI", "T").replace("Ø", "T")
 
+            # Count-diameter TOR format (pattern 2), e.g. "25-10 TOR" -> "25-10T",
+            # "31-12 TOR" -> "31-12T". Must run first and consume the token so the
+            # bare-number rules below do not also fire on its digits.
+            matched_tor = False
+            for dm in re.finditer(r"\b(\d{1,3})\s*-\s*(\d{1,2})\s*TOR\b", clean):
+                add_value(dia, f"{dm.group(1)}-{dm.group(2)}T")
+                matched_tor = True
+            if matched_tor:
+                continue
+
             # Number-first diameter, e.g. "16T" or "12T-100C/C". Must run
             # before the bare-number fallback so "16T" is not misread as the
             # number 16 and dropped.
@@ -227,6 +237,7 @@ class ExtractionState:
         duplicate_key_fields,
         pdf_extractor=None,
         page_index=0,
+        enforce_zoom=False,
     ):
         self.project = project
         self.image_path = image_path
@@ -234,6 +245,7 @@ class ExtractionState:
         self.duplicate_key_fields = duplicate_key_fields
         self.pdf_extractor = pdf_extractor
         self.page_index = page_index
+        self.enforce_zoom = enforce_zoom
         self.think_seen = False
         self.think = None
         self.zoom_regions = {}
@@ -284,13 +296,33 @@ class ExtractionState:
             self.warn(f"zoom_region purpose '{purpose}' is not recognized")
             purpose = "ambiguous_text"
 
+        try:
+            x1 = float(args.get("x1", 0.0))
+            y1 = float(args.get("y1", 0.0))
+            x2 = float(args.get("x2", 1.0))
+            y2 = float(args.get("y2", 1.0))
+        except (TypeError, ValueError):
+            return None, "x1/y1/x2/y2 must be numbers between 0.0 and 1.0."
+
+        # Coordinates must be normalized fractions. If the model sends pixel-like
+        # values (e.g. 800), reject with guidance instead of silently clamping to
+        # a degenerate strip that reads nothing.
+        if any(v < 0.0 or v > 1.0 for v in (x1, y1, x2, y2)):
+            self.warn(f"zoom_region coords out of range: ({x1},{y1})-({x2},{y2})")
+            return None, (
+                "Coordinates must be NORMALIZED FRACTIONS between 0.0 and 1.0, not pixels. "
+                "(0,0) = top-left, (1,1) = bottom-right. "
+                "Example for the bottom footing band: x1=0.0, y1=0.82, x2=1.0, y2=0.98. "
+                "Re-call zoom_region with fractional coordinates."
+            )
+
         region = {
             "region_id": region_id,
             "purpose": purpose,
-            "x1": float(args.get("x1", 0.0)),
-            "y1": float(args.get("y1", 0.0)),
-            "x2": float(args.get("x2", 1.0)),
-            "y2": float(args.get("y2", 1.0)),
+            "x1": x1,
+            "y1": y1,
+            "x2": x2,
+            "y2": y2,
             "reason": args.get("reason", ""),
         }
         self.zoom_regions[region_id] = region
@@ -322,12 +354,42 @@ class ExtractionState:
         self.confirmed_reads[region_id] = read
         return True, f"Confirmed read for region '{region_id}' recorded."
 
+    def _image_longest_side(self):
+        if getattr(self, "_img_longest", None) is None:
+            self._img_longest = 0
+            try:
+                from PIL import Image
+                Image.MAX_IMAGE_PIXELS = None
+                with Image.open(self.image_path) as im:
+                    self._img_longest = max(im.size)
+            except Exception:
+                self._img_longest = 0
+        return self._img_longest
+
     def can_add_record(self, args):
         if not self.think_seen:
             self.warn(f"add_{self.project} rejected before think")
             return False, f"Call think before add_{self.project}."
-        # zoom_region / confirm_read are optional accuracy aids, not blocking gates.
-        # source_region_ids are recorded in the trace for auditability but not required.
+
+        # On very large sheets (e.g. 94x66 in CAD exports), the full image is
+        # downscaled by the vision API until the footing band is unreadable, so
+        # the model copies values from the wrong rows. When enforce_zoom is set,
+        # require at least one confirm_read (which forces a high-res zoom crop)
+        # before accepting any record. Opt-in per pattern to avoid disrupting
+        # patterns whose table already fills the sheet.
+        if self.enforce_zoom and self.project == "footing" and self._image_longest_side() > 6000:
+            if not self.confirmed_reads:
+                self.warn("add_footing rejected on large image before any zoom/confirm_read")
+                return False, (
+                    "This drawing is very large and the full image is too downscaled to read "
+                    "the footing schedule accurately. Before adding any footing you MUST:\n"
+                    "1. zoom_region into the FOOTING schedule band (the rows FOOTING SIZE, "
+                    "DEPTH (d TO D), REINF. //B, REINF. //L, FOOTING MIX., and the COL. MARK row).\n"
+                    "2. zoom_region into the specific column you are about to record.\n"
+                    "3. confirm_read the exact text you see in that zoomed crop.\n"
+                    "Then call add_footing using ONLY the values you confirmed. "
+                    "Do NOT reuse the same reinforcement for every column."
+                )
         return True, "Record accepted."
 
     def handle_read_pdf_text(self, args):

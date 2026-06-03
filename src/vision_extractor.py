@@ -131,10 +131,10 @@ FOOTING_TOOLS = [
                                 "region_id": {"type": "string"},
                                 "purpose": {"type": "string", "enum": _REGION_PURPOSE_ENUM},
                                 "target": {"type": "string"},
-                                "x1": {"type": "number"},
-                                "y1": {"type": "number"},
-                                "x2": {"type": "number"},
-                                "y2": {"type": "number"},
+                                "x1": {"type": "number", "description": "Left edge as a fraction 0.0-1.0 of image width."},
+                                "y1": {"type": "number", "description": "Top edge as a fraction 0.0-1.0 of image height."},
+                                "x2": {"type": "number", "description": "Right edge as a fraction 0.0-1.0 of image width (must be > x1)."},
+                                "y2": {"type": "number", "description": "Bottom edge as a fraction 0.0-1.0 of image height (must be > y1)."},
                                 "reason": {"type": "string"},
                             },
                             "required": ["region_id", "purpose", "target", "reason"],
@@ -161,16 +161,22 @@ FOOTING_TOOLS = [
         "type": "function",
         "function": {
             "name": "zoom_region",
-            "description": "Crop and zoom a planned footing schedule region after think.",
+            "description": (
+                "Crop and zoom a planned footing schedule region after think. "
+                "Coordinates are NORMALIZED FRACTIONS of the image in the range 0.0 to 1.0, "
+                "NOT pixels. (0,0) is the top-left corner, (1,1) is the bottom-right corner. "
+                "Example: the bottom footing band spanning the full width is about "
+                "x1=0.0, y1=0.82, x2=1.0, y2=0.98."
+            ),
             "parameters": {
                 "type": "object",
                 "properties": {
                     "region_id": {"type": "string"},
                     "purpose": {"type": "string", "enum": _REGION_PURPOSE_ENUM},
-                    "x1": {"type": "number"},
-                    "y1": {"type": "number"},
-                    "x2": {"type": "number"},
-                    "y2": {"type": "number"},
+                    "x1": {"type": "number", "description": "Left edge as a fraction 0.0-1.0 of image width."},
+                    "y1": {"type": "number", "description": "Top edge as a fraction 0.0-1.0 of image height."},
+                    "x2": {"type": "number", "description": "Right edge as a fraction 0.0-1.0 of image width (must be > x1)."},
+                    "y2": {"type": "number", "description": "Bottom edge as a fraction 0.0-1.0 of image height (must be > y1)."},
                     "reason": {"type": "string"},
                 },
                 "required": ["region_id", "purpose", "x1", "y1", "x2", "y2", "reason"],
@@ -283,13 +289,14 @@ FOOTING_TOOLS = [
 ]
 
 
-def extract_with_tools(image_path, prompt_text, max_iterations=300):
+def extract_with_tools(image_path, prompt_text, max_iterations=300, enforce_zoom=False):
     base64_image = encode_image(image_path)
     state = ExtractionState(
         project="footing",
         image_path=image_path,
         output_key="footings",
         duplicate_key_fields=["footing_id", "column_id"],
+        enforce_zoom=enforce_zoom,
     )
     messages = [
         {

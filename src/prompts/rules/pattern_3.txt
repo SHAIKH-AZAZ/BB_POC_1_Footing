@@ -4,10 +4,12 @@ PATTERN-3 RULES
 
 1. SIZE:
    - Extract width and length from SIZE row.
-   - Ignore P.C.C.
+   - Format: "1200 x 1500" → width = 1200, length = 1500.
+   - Ignore P.C.C. row completely.
 
 2. DEPTH:
    - Extract from DEPTH (D) row only.
+   - Single number (e.g. 450) → depth = 450.
 
 3. REINFORCEMENT:
    - Extract from TOP and BOTTOM steel.
@@ -21,19 +23,35 @@ PATTERN-3 RULES
    Extract only the ones which are there if any uniques pairs are there then extract evry unique pairs.
 
 4. MIX:
-   - Extract concrete mix written vertically (example: M25).
+   - Extract concrete mix written vertically in the section header (e.g. M25).
 
 5. STEEL GRADE:
-   - Extract steel grade written vertically (example: FE500).
+   - Extract steel grade written vertically in the section header (e.g. Fe500).
 
-6. COLUMN MARKS:
-   - Two rows exist:
-        AC row
-        BC row
-   - Return each visible column group as a separate footing object.
-   - Do NOT merge AC and BC.
-   - Keep text exactly as seen.
+6. COLUMN MARKS — CRITICAL RULES:
 
-7. Keep nos -> null
+   The COLUMNS MARKED section has TWO rows:
+   - AC row (e.g. AC1,2,11,19,27,35 AC48,49)
+   - BC row (e.g. BC1,2,11,19,27,35 BC48,49)
+
+   Return EACH row as a SEPARATE footing object. Do NOT merge AC and BC into one.
+
+   DO NOT EXPAND abbreviations — copy the text EXACTLY as written in the image.
+   Example: if the cell says "AC1,2,11,19,27,35 AC48,49" → column_id = "AC1,2,11,19,27,35 AC48,49"
+   Example: if the cell says "BC3,44" → column_id = "BC3,44"
+   Expansion is handled in post-processing. Your job is exact text extraction only.
+
+   Column labels can have many different prefixes, including but not limited to:
+   C, AC, BC, GC, SW, LW, CP, NC, SC, BSW, TA-C, TB-C, TC-C, PC, RW, TW, W,
+   P, r, P11A, SW-1, PC206-12, W23a, or any alphanumeric prefix.
+   Copy whatever prefix is written — do not modify or normalize it.
+
+7. FOOTING ID:
+   - Use null for footing_id — it is assigned in post-processing.
+   - AC row = one footing object, BC row = separate footing object.
+   - So for 12 columns in the table with AC and BC rows, you get 24 footing objects.
+
+8. nos = null always.
 
 Do not extract any wrong values in any field.
+DO NOT GUESS. DO NOT COPY FROM NEIGHBOUR COLUMN.

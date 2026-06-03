@@ -23,26 +23,62 @@ def load_prompt():
 
 def expand_columns(text):
     """
-    Converts:
-    AC1,2,11 AC48,49
-    →
-    AC1,AC2,AC11,AC48,AC49
+    Converts abbreviated column marks to expanded form.
+
+    Examples:
+        AC1,2,11 AC48,49       → AC1,AC2,AC11,AC48,AC49
+        BC4,5,6, BC45,46,47    → BC4,BC5,BC6,BC45,BC46,BC47
+        TA-C1,2,3              → TA-C1,TA-C2,TA-C3
+        SW-1,2                 → SW-1,SW-2  (but see note below)
+        r2,3                   → r2,r3
+
+    The prefix is everything before the first digit in each group.
+    Bare numbers after a prefix inherit that prefix.
     """
 
     if not text:
         return None
 
-    text = text.replace("\n", " ").replace(" ", "")
+    text = text.replace("\n", " ").strip()
 
-    matches = re.findall(r'([A-Z]+)([0-9,]+)', text)
+    # Split into tokens by whitespace (each token is a prefix+numbers group)
+    tokens = text.split()
 
     result = []
+    current_prefix = ""
 
-    for prefix, numbers in matches:
-        nums = numbers.split(",")
+    for token in tokens:
+        # Remove trailing commas
+        token = token.strip(",")
+
+        # Find where the first digit starts in this token
+        # to detect if it introduces a new prefix
+        first_digit_idx = None
+        for i, ch in enumerate(token):
+            if ch.isdigit():
+                first_digit_idx = i
+                break
+
+        if first_digit_idx is None:
+            # No digits — might be a standalone prefix or text, skip
+            continue
+
+        # Check if this token starts with a letter/prefix (new prefix group)
+        if first_digit_idx > 0:
+            current_prefix = token[:first_digit_idx]
+            numbers_part = token[first_digit_idx:]
+        else:
+            # Starts with digit — use the last known prefix
+            numbers_part = token
+
+        # Split by comma and expand
+        nums = [n.strip() for n in numbers_part.split(",") if n.strip()]
         for n in nums:
             if n.isdigit():
-                result.append(f"{prefix}{n}")
+                result.append(f"{current_prefix}{n}")
+            else:
+                # Already has prefix or is alphanumeric (e.g. "48,49" or "197A")
+                result.append(f"{current_prefix}{n}")
 
     return ",".join(result) if result else None
 

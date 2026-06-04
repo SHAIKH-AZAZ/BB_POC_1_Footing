@@ -126,7 +126,7 @@
       "size": {
         "width": 2850,
         "depth": 650,
-        "length": 2100
+        "length": 2500
       },
       "reinforcement": {
         "dia": [
@@ -184,9 +184,9 @@
       "footing_id": "F10",
       "column_id": null,
       "size": {
-        "width": 4200,
+        "width": 2850,
         "depth": 900,
-        "length": 3600
+        "length": 3750
       },
       "reinforcement": {
         "dia": [
@@ -204,7 +204,7 @@
       "footing_id": "F11",
       "column_id": null,
       "size": {
-        "width": 2900,
+        "width": 3530,
         "depth": 900,
         "length": 3600
       },
@@ -264,7 +264,7 @@
       "footing_id": "F14",
       "column_id": null,
       "size": {
-        "width": 2900,
+        "width": 2990,
         "depth": 250,
         "length": 3600
       },

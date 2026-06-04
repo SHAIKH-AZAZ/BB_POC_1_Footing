@@ -28,8 +28,14 @@ def safe_json_parse(text):
 
 def clean_footing(footing):
 
-    step1 = footing.get("size", {}).get("step_1", {})
-    step2 = footing.get("size", {}).get("step_2", {})
+    size = footing.get("size", {})
+    if "step_1" in size:
+        step1 = size.get("step_1", {})
+        step2 = size.get("step_2", {})
+    else:
+        # flat size from add_footing — treat as step_1 (shouldn't happen after tool fix)
+        step1 = size
+        step2 = {}
     reinf = footing.get("reinforcement", {})
 
     # Remove duplicates while preserving order

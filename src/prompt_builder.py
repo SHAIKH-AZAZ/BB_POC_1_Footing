@@ -100,8 +100,8 @@ STEPPED_SCHEMA = """{
         "spacing": []
       },
       "nos": null,
-      "mix": null,
-      "steel_grade": null
+      "mix": [],
+      "steel_grade": []
     }
   ]
 }"""

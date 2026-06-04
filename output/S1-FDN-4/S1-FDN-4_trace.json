@@ -7,7 +7,7 @@
       "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/S1-FDN-4/page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-06-04T10:45:57.733607+00:00",
+      "generated_at": "2026-06-04T11:01:10.460714+00:00",
       "think": {
         "image_quality": "high",
         "table_bounds": {
@@ -202,21 +202,19 @@
         ],
         "normalization_rules": [
           "Ignore B' x L' (PCC) row entirely.",
-          "Use B x L row for footing width and length.",
-          "Use D row for footing depth.",
-          "Use STEEL // - B (SHORT SIDE) (BOTTOM FACE) and STEEL // - L (LONG SIDE) (BOTTOM FACE) for reinforcement.",
-          "Append STEEL // - B (SHORT SIDE) (TOP FACE) to short side reinforcement if different.",
-          "Append STEEL // - L (LONG SIDE) (TOP FACE) to long side reinforcement if different.",
-          "Extract reinforcement dia and spacing exactly as written, convert spacing to uppercase.",
-          "Do not guess or approximate any values."
+          "Use B x L row for footing size (width and length).",
+          "Use D row for footing depth (depth_bottom).",
+          "Extract reinforcement from four STEEL rows (bottom and top, short and long side).",
+          "Do not extract mix or steel grades (none found).",
+          "Do not guess or approximate unclear values."
         ],
         "extraction_order": [
-          "B x L",
-          "D",
-          "STEEL // - B (SHORT SIDE) (BOTTOM FACE)",
-          "STEEL // - L (LONG SIDE) (BOTTOM FACE)",
-          "STEEL // - B (SHORT SIDE) (TOP FACE)",
-          "STEEL // - L (LONG SIDE) (TOP FACE)"
+          "footing_id",
+          "size",
+          "reinforcement",
+          "nos",
+          "mix",
+          "steel_grade"
         ]
       },
       "zoom_regions": [],
@@ -234,9 +232,11 @@
           "reinforcement": {
             "dia": [
               "12T",
+              "12T",
               "12T"
             ],
             "spacing": [
+              "100 C/C",
               "100 C/C",
               "100 C/C"
             ]
@@ -361,7 +361,7 @@
           "size": {
             "width": 2850,
             "depth": 650,
-            "length": 2100
+            "length": 2500
           },
           "reinforcement": {
             "dia": [
@@ -425,9 +425,9 @@
           "footing_id": "F10",
           "column_id": null,
           "size": {
-            "width": 4200,
+            "width": 2850,
             "depth": 900,
-            "length": 3600
+            "length": 3750
           },
           "reinforcement": {
             "dia": [
@@ -447,7 +447,7 @@
           "footing_id": "F11",
           "column_id": null,
           "size": {
-            "width": 2900,
+            "width": 3530,
             "depth": 900,
             "length": 3600
           },
@@ -513,7 +513,7 @@
           "footing_id": "F14",
           "column_id": null,
           "size": {
-            "width": 2900,
+            "width": 2990,
             "depth": 250,
             "length": 3600
           },
@@ -521,11 +521,9 @@
             "dia": [
               "12T",
               "10T",
-              "12T",
               "10T"
             ],
             "spacing": [
-              "100 C/C",
               "100 C/C",
               "100 C/C",
               "100 C/C"
@@ -571,9 +569,11 @@
             "reinforcement": {
               "dia": [
                 "12T",
+                "12T",
                 "12T"
               ],
               "spacing": [
+                "100 C/C",
                 "100 C/C",
                 "100 C/C"
               ]
@@ -716,7 +716,7 @@
             "size": {
               "width": 2850,
               "depth": 650,
-              "length": 2100
+              "length": 2500
             },
             "reinforcement": {
               "dia": [
@@ -789,9 +789,9 @@
             "footing_id": "F10",
             "column_id": null,
             "size": {
-              "width": 4200,
+              "width": 2850,
               "depth": 900,
-              "length": 3600
+              "length": 3750
             },
             "reinforcement": {
               "dia": [
@@ -814,7 +814,7 @@
             "footing_id": "F11",
             "column_id": null,
             "size": {
-              "width": 2900,
+              "width": 3530,
               "depth": 900,
               "length": 3600
             },
@@ -889,7 +889,7 @@
             "footing_id": "F14",
             "column_id": null,
             "size": {
-              "width": 2900,
+              "width": 2990,
               "depth": 250,
               "length": 3600
             },
@@ -897,11 +897,9 @@
               "dia": [
                 "12T",
                 "10T",
-                "12T",
                 "10T"
               ],
               "spacing": [
-                "100 C/C",
                 "100 C/C",
                 "100 C/C",
                 "100 C/C"

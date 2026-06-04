@@ -291,18 +291,44 @@ FOOTING_TOOLS = [
                     "plan_length": {
                         "type": ["number", "null"],
                         "description": (
-                            "Footing length (second dimension). "
+                            "Footing length (second dimension) for single-step footings. "
                             "Row may be labeled: 'SIZE', 'B x L', 'B X L', 'FOOTING SIZE', 'L', or similar. "
-                            "Example: '1200 x 1500' → 1500. Numbers only, no units."
+                            "Example: '1200 x 1500' → 1500. Numbers only, no units. "
+                            "For stepped footings use step1_length and step2_length instead."
                         ),
                     },
                     "plan_width": {
                         "type": ["number", "null"],
                         "description": (
-                            "Footing width (first dimension). "
+                            "Footing width (first dimension) for single-step footings. "
                             "Row may be labeled: 'SIZE', 'B x L', 'B X L', 'FOOTING SIZE', 'B', or similar. "
-                            "Example: '1200 x 1500' → 1200. Numbers only, no units."
+                            "Example: '1200 x 1500' → 1200. Numbers only, no units. "
+                            "For stepped footings use step1_width and step2_width instead."
                         ),
+                    },
+                    "step1_width": {
+                        "type": ["number", "null"],
+                        "description": "STEP-1 footing width. Row labeled 'STEP-1 (B x L)' or 'STEP-1 B x L' — first value.",
+                    },
+                    "step1_length": {
+                        "type": ["number", "null"],
+                        "description": "STEP-1 footing length. Row labeled 'STEP-1 (B x L)' or 'STEP-1 B x L' — second value.",
+                    },
+                    "step1_depth": {
+                        "type": ["number", "null"],
+                        "description": "STEP-1 depth. Row labeled 'STEP-1 (D-THK)', 'STEP-1 D-THK', or 'D-THK' under STEP-1.",
+                    },
+                    "step2_width": {
+                        "type": ["number", "null"],
+                        "description": "STEP-2 footing width. Row labeled 'STEP-2 (B1 x L1)', 'STEP-2 (B x L)', or similar — first value.",
+                    },
+                    "step2_length": {
+                        "type": ["number", "null"],
+                        "description": "STEP-2 footing length. Row labeled 'STEP-2 (B1 x L1)', 'STEP-2 (B x L)', or similar — second value.",
+                    },
+                    "step2_depth": {
+                        "type": ["number", "null"],
+                        "description": "STEP-2 depth. Row labeled 'STEP-2 (d-THK)', 'STEP-2 d-THK', or 'd-THK' under STEP-2.",
                     },
                     "depth_top": {
                         "type": ["number", "null"],

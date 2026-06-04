@@ -208,16 +208,35 @@ def build_footing_record(args):
     reinf = extract_rebar_parts(*reinf_texts, keep_repetition=True)
     stirrups = extract_rebar_parts(*stirrup_texts, keep_repetition=True)
     column_id = args.get("column_id", "")
-    record = {
-        "footing_id": args.get("footing_id") or column_id,
-        "column_id": column_id,
-        "size": {
+    has_steps = any(
+        args.get(k) is not None
+        for k in ("step1_width", "step1_length", "step1_depth", "step2_width", "step2_length", "step2_depth")
+    )
+    if has_steps:
+        size = {
+            "step_1": {
+                "width": args.get("step1_width"),
+                "length": args.get("step1_length"),
+                "depth": args.get("step1_depth"),
+            },
+            "step_2": {
+                "width": args.get("step2_width"),
+                "length": args.get("step2_length"),
+                "depth": args.get("step2_depth"),
+            },
+        }
+    else:
+        size = {
             "width": args.get("plan_width"),
             "depth": args.get("depth_bottom")
             if args.get("depth_bottom") is not None
             else args.get("depth_top"),
             "length": args.get("plan_length"),
-        },
+        }
+    record = {
+        "footing_id": args.get("footing_id") or column_id,
+        "column_id": column_id,
+        "size": size,
         "reinforcement": reinf,
         "nos": args.get("nos"),
         "mix": _dedupe(_as_list(args.get("mix"))),

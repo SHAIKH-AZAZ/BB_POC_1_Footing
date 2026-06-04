@@ -8,6 +8,7 @@ think -> zoom_region -> confirm_read -> add_footing.
 import base64
 import io
 import json
+import os
 import time
 
 from PIL import Image
@@ -81,6 +82,14 @@ def _with_tool_protocol(prompt_text):
         "(may be labeled FOOTING, FOOTING SCHEDULE, ISOLATED FOOTING SCHEDULE, or similar). "
         "If the COLUMN MARK row has values like 'C1,C18', 'C2,C9' — you found the right table. "
         "If you see '4TH FLOOR COLUMN' or 'BASEMENT COLUMN' — you are reading the WRONG section.\n\n"
+        "MIX EXTRACTION RULE — READ THIS CAREFULLY:\n"
+        "Footing tables often have TWO separate concrete grades written as vertical labels on the left side:\n"
+        "  1) A label like 'M25 : Fe500' next to the TOP STEEL / BOTTOM STEEL rows.\n"
+        "     → M25 is the CONCRETE MIX GRADE. Fe500 is the STEEL GRADE. Extract BOTH separately.\n"
+        "     → M25 MUST go into the mix array. Do NOT ignore it.\n"
+        "  2) A separate label like 'M15' next to the P.C.C. row.\n"
+        "     → M15 is also a CONCRETE MIX GRADE. Add it to the same mix array.\n"
+        "Result: mix = ['M25', 'M15'], steel_grade = ['Fe500']\n\n"
         "Step 1: call think() — locate the FOOTING DETAILS table first, then plan extraction from it.\n"
         "Step 2: call add_footing() once for EVERY footing group (left to right) from that table.\n"
         "  - Do NOT stop early. Every visible footing column group must get its own add_footing call.\n"
@@ -286,7 +295,18 @@ FOOTING_TOOLS = [
                         "description": "Tie/stirrup/link spacing, for example '150 C/C'.",
                     },
                     "nos": {"type": ["number", "null"]},
-                    "mix": {"type": ["string", "null"]},
+                    "mix": {
+                        "type": ["array", "string", "null"],
+                        "items": {"type": "string"},
+                        "description": (
+                            "ALL concrete mix grades found anywhere in the table for this footing. "
+                            "CRITICAL: A vertical label like 'M25 : Fe500' contains TWO values — "
+                            "M25 is a concrete mix grade AND Fe500 is the steel grade. "
+                            "You MUST include M25 in this mix array. "
+                            "Also include any separate PCC/blinding mix (e.g. M15 next to the P.C.C. row). "
+                            "Example result: ['M25', 'M15']. Never leave this empty if any M-grade is visible."
+                        ),
+                    },
                     "concrete_mix": {"type": ["string", "null"]},
                     "steel_grade": {"type": ["string", "null"]},
                     "source_region_ids": {"type": "array", "items": {"type": "string"}},
@@ -317,6 +337,9 @@ def extract_with_tools(image_path, prompt_text, max_iterations=300, enforce_zoom
         }
     ]
     collected_footings = []
+    total_prompt_tokens = 0
+    total_completion_tokens = 0
+    api_call_count = 0
 
     for _ in range(max_iterations):
         response = client.chat.completions.create(
@@ -326,6 +349,17 @@ def extract_with_tools(image_path, prompt_text, max_iterations=300, enforce_zoom
             tool_choice="auto",
             temperature=0,
         )
+        api_call_count += 1
+        usage = response.usage
+        if usage:
+            total_prompt_tokens += usage.prompt_tokens
+            total_completion_tokens += usage.completion_tokens
+            print(
+                f"  [tokens] call #{api_call_count}: "
+                f"prompt={usage.prompt_tokens}  completion={usage.completion_tokens}  "
+                f"total={usage.total_tokens}"
+            )
+
         msg = response.choices[0].message
         messages.append(msg)
         if not msg.tool_calls:
@@ -398,7 +432,14 @@ def extract_with_tools(image_path, prompt_text, max_iterations=300, enforce_zoom
                         f"Recorded {len(collected_footings)}/{expected}: footing '{footing['column_id']}'. "
                         f"{remaining} more to go — keep calling add_footing for remaining groups."
                     )
-                    print(f"  add_footing: {footing['column_id']}")
+                    size = footing.get("size") or {}
+                    reinf = footing.get("reinforcement") or {}
+                    print(
+                        f"  [extracted] column={footing['column_id']} | "
+                        f"size={size.get('width')}x{size.get('length')}x{size.get('depth')} | "
+                        f"dia={reinf.get('dia')} spacing={reinf.get('spacing')} | "
+                        f"mix={footing.get('mix')} | steel={footing.get('steel_grade')}"
+                    )
             else:
                 state.warn(f"unknown tool ignored: {fn_name}")
                 result_content = f"Unknown tool '{fn_name}' ignored."
@@ -411,8 +452,19 @@ def extract_with_tools(image_path, prompt_text, max_iterations=300, enforce_zoom
     state.validate(collected_footings)
     trace_path = state.write_trace()
     print(f"  Trace saved to {trace_path}")
+
+    total_tokens = total_prompt_tokens + total_completion_tokens
+    print(
+        f"\n  ── Token usage ({os.path.basename(image_path)}) ──\n"
+        f"  API calls      : {api_call_count}\n"
+        f"  Prompt tokens  : {total_prompt_tokens}\n"
+        f"  Completion tok : {total_completion_tokens}\n"
+        f"  Total tokens   : {total_tokens}\n"
+        f"  Footings found : {len(collected_footings)}\n"
+        f"  ─────────────────────────────────────────"
+    )
+
     if collected_footings:
-        print(f"  {len(collected_footings)} footing(s).")
         return json.dumps({"footings": collected_footings})
 
     print("  Tool extraction returned 0 footings -- falling back.")

@@ -12,6 +12,8 @@ PATTERN-3 RULES
    - Single number (e.g. 450) → depth = 450.
 
 3. REINFORCEMENT:
+   - in Columns matchesh : "SHORT DIR" , "LONG DIR" , "SHORT DIR", "LONG DIR" extract Reinforcement detail
+   - which contains Reinforcement detail such as Dia, Spacing, etc. in format like this "T10@150 C/C" "T12@250 C/C"
    - Extract from TOP and BOTTOM steel.
    - Example: T10@150 C/C
    - Dia = T10
@@ -23,10 +25,17 @@ PATTERN-3 RULES
    Extract only the ones which are there if any uniques pairs are there then extract evry unique pairs.
 
 4. MIX:
-   - Extract concrete mix written vertically in the section header (e.g. M25).
+   - Scan the ENTIRE table for concrete mix values — they can appear anywhere: written vertically or horizontally, in any column or row header, next to any section (steel , TOP STEEL , BOTTOM STEEL, FOOTING DETEILS, PCC, blinding, etc.).
+   - IMPORTANT: A vertical label like "M25 : Fe500" contains TWO values — "M25" is the concrete mix AND "Fe500" is the steel grade. Extract M25 as a mix value from this label.
+   - The P.C.C. row often has its own separate mix label (e.g. "M15") written vertically. Extract that too.
+   - Collect ALL unique mix values found across the whole table into one array: ["M25", "M15"]
+   - Mix values match the pattern M followed by a number: "M25", "M20", "M15", "M-25", "M 20" etc.
+   - Do NOT stop at the first mix value. Look at every vertical label in the table.
 
 5. STEEL GRADE:
    - Extract steel grade written vertically in the section header (e.g. Fe500).
+   - A label like "M25 : Fe500" — Fe500 is the steel grade here.
+   - Steel grade can be in any format: "Fe500", "Fe450", "Fe-500", "Fe 450" etc. Extract all unique values.
 
 6. COLUMN MARKS — CRITICAL RULES:
 

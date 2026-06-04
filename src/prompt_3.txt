@@ -17,7 +17,7 @@ Return STRICT JSON:
         "spacing": []
       },
       "nos": null,
-      "mix": null,
+      "mix": [],
       "steel_grade": null
     }
   ]
@@ -46,10 +46,13 @@ PATTERN-3 RULES
    Extract only the ones which are there if any uniques pairs are there then extract evry unique pairs.
 
 4. MIX:
-   - Extract concrete mix written vertically (example: M25).
+   - Two separate mix values exist in the table:
+     a) "mix" → the footing concrete mix written vertically next to the TOP STEEL / BOTTOM STEEL rows (example: M25).
+     b) "pcc_mix" → the blinding/PCC concrete mix written vertically next to the P.C.C. row (example: M15).
+   - Extract BOTH. Do NOT use the P.C.C. mix for the main "mix" field.
 
 5. STEEL GRADE:
-   - Extract steel grade written vertically (example: FE500).
+   - Extract steel grade written vertically next to the TOP STEEL / BOTTOM STEEL rows (example: Fe500).
 
 6. COLUMN MARKS:
    - Two rows exist:

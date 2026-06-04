@@ -76,7 +76,7 @@ def process_pdf(pdf_path):
     file_output_folder = os.path.join(OUTPUT_DIR, file_name)
     os.makedirs(file_output_folder, exist_ok=True)
 
-    print(f"\n📄 Converting {file_name}.pdf to images...")
+    print(f"\n📄 Converting {file_name}.pdf to images...🔎")
     image_paths = convert_pdf_to_images(pdf_path, file_output_folder)
 
     prompt = load_prompt()

@@ -8,24 +8,32 @@ Only extract values vertically under that exact column.
 Never shift left or right.
 
 2. IGNORE COMPLETELY:
-- Row labeled: B' x L' (PCC)
-Never use any values from this row.
+- Row labeled: B' x L' (PCC)   ← has apostrophes AND "(PCC)" label
+Never use any values from this row under any circumstance.
+This row always has LARGER numbers than B x L — do NOT use them.
 
 3. SIZE EXTRACTION:
 
-From row labeled exactly:
-B x L
+The CORRECT size row is labeled exactly:
+B x L   ← NO apostrophes, NO "(PCC)"
 
-- First value = width
-- Second value = length
+- First value  = plan_width
+- Second value = plan_length
+
+CRITICAL DISTINCTION:
+  B' x L' (PCC)  →  WRONG row — SKIP entirely
+  B x L          →  CORRECT row — use this
+
+The B x L row always has SMALLER numbers than B' x L' (PCC).
+If you are reading larger numbers, you are on the wrong row.
 
 From row labeled exactly:
 D
 
-- depth = value in that column
+- depth_bottom = value in that column
 
 Do NOT use values from:
-- PCC row
+- B' x L' (PCC) row  ← FORBIDDEN
 - t row
 - Any other row
 

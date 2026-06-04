@@ -7,179 +7,204 @@
       "image_path": "/home/azaz/Desktop/code/POC ZIP FILES/POC-1/BB_POC_1_Footing/output/pattern-4/page_1.png",
       "page_index": 0,
       "pdf_path": null,
-      "generated_at": "2026-05-29T06:02:08.173718+00:00",
+      "generated_at": "2026-06-04T09:20:14.427485+00:00",
       "think": {
-        "image_quality": "high",
+        "image_quality": "good",
         "table_bounds": {
-          "x1": 40,
-          "y1": 700,
-          "x2": 1450,
-          "y2": 900
+          "x1": 0.04,
+          "y1": 0.75,
+          "x2": 0.96,
+          "y2": 0.95
         },
         "column_groups": [
+          "F1",
+          "F2"
+        ],
+        "row_structure": [
           "FOOTING ID",
           "LENGTH(L)",
           "BREADTH(B)",
           "DEPTH(D)",
-          "NOS",
+          "NOS.",
           "GRID REFERENCE"
-        ],
-        "row_structure": [
-          "COLUMN MARK",
-          "SIZE",
-          "D TO d",
-          "SHORT SPAN",
-          "LONG SPAN"
         ],
         "global_notes": {},
         "expected_count": 2,
         "zoom_plan": [
           {
-            "region_id": "header_footing_id",
+            "region_id": "r1",
             "purpose": "header",
-            "x1": 40,
-            "y1": 700,
-            "x2": 200,
-            "y2": 740,
-            "reason": "Read FOOTING ID header"
+            "target": "FOOTING ID",
+            "x1": 0.04,
+            "y1": 0.75,
+            "x2": 0.12,
+            "y2": 0.78,
+            "reason": "header cell for footing ID"
           },
           {
-            "region_id": "header_length",
+            "region_id": "r2",
             "purpose": "header",
-            "x1": 200,
-            "y1": 700,
-            "x2": 400,
-            "y2": 740,
-            "reason": "Read LENGTH(L) header"
+            "target": "LENGTH(L)",
+            "x1": 0.12,
+            "y1": 0.75,
+            "x2": 0.28,
+            "y2": 0.78,
+            "reason": "header cell for length"
           },
           {
-            "region_id": "header_breadth",
+            "region_id": "r3",
             "purpose": "header",
-            "x1": 400,
-            "y1": 700,
-            "x2": 600,
-            "y2": 740,
-            "reason": "Read BREADTH(B) header"
+            "target": "BREADTH(B)",
+            "x1": 0.28,
+            "y1": 0.75,
+            "x2": 0.44,
+            "y2": 0.78,
+            "reason": "header cell for breadth"
           },
           {
-            "region_id": "header_depth",
+            "region_id": "r4",
             "purpose": "header",
-            "x1": 600,
-            "y1": 700,
-            "x2": 800,
-            "y2": 740,
-            "reason": "Read DEPTH(D) header"
+            "target": "DEPTH(D)",
+            "x1": 0.44,
+            "y1": 0.75,
+            "x2": 0.58,
+            "y2": 0.78,
+            "reason": "header cell for depth"
           },
           {
-            "region_id": "header_nos",
+            "region_id": "r5",
             "purpose": "header",
-            "x1": 800,
-            "y1": 700,
-            "x2": 900,
-            "y2": 740,
-            "reason": "Read NOS header"
+            "target": "NOS.",
+            "x1": 0.58,
+            "y1": 0.75,
+            "x2": 0.66,
+            "y2": 0.78,
+            "reason": "header cell for number of footings"
           },
           {
-            "region_id": "row1_footing_id",
-            "purpose": "row_label",
-            "x1": 40,
-            "y1": 740,
-            "x2": 200,
-            "y2": 780,
-            "reason": "Read footing id F1"
+            "region_id": "r6",
+            "purpose": "header",
+            "target": "GRID REFERENCE",
+            "x1": 0.66,
+            "y1": 0.75,
+            "x2": 0.96,
+            "y2": 0.78,
+            "reason": "header cell for grid reference"
           },
           {
-            "region_id": "row1_length",
+            "region_id": "r7",
             "purpose": "data_cell",
-            "x1": 200,
-            "y1": 740,
-            "x2": 400,
-            "y2": 780,
-            "reason": "Read length for F1"
+            "target": "F1",
+            "x1": 0.04,
+            "y1": 0.78,
+            "x2": 0.12,
+            "y2": 0.85,
+            "reason": "footing ID for first footing"
           },
           {
-            "region_id": "row1_breadth",
+            "region_id": "r8",
             "purpose": "data_cell",
-            "x1": 400,
-            "y1": 740,
-            "x2": 600,
-            "y2": 780,
-            "reason": "Read breadth for F1"
+            "target": "3500",
+            "x1": 0.12,
+            "y1": 0.78,
+            "x2": 0.28,
+            "y2": 0.85,
+            "reason": "length for first footing"
           },
           {
-            "region_id": "row1_depth",
+            "region_id": "r9",
             "purpose": "data_cell",
-            "x1": 600,
-            "y1": 740,
-            "x2": 800,
-            "y2": 780,
-            "reason": "Read depth for F1"
+            "target": "3500",
+            "x1": 0.28,
+            "y1": 0.78,
+            "x2": 0.44,
+            "y2": 0.85,
+            "reason": "breadth for first footing"
           },
           {
-            "region_id": "row1_nos",
+            "region_id": "r10",
             "purpose": "data_cell",
-            "x1": 800,
-            "y1": 740,
-            "x2": 900,
-            "y2": 780,
-            "reason": "Read nos for F1"
+            "target": "600",
+            "x1": 0.44,
+            "y1": 0.78,
+            "x2": 0.58,
+            "y2": 0.85,
+            "reason": "depth for first footing"
           },
           {
-            "region_id": "row2_footing_id",
-            "purpose": "row_label",
-            "x1": 40,
-            "y1": 780,
-            "x2": 200,
-            "y2": 820,
-            "reason": "Read footing id F2"
-          },
-          {
-            "region_id": "row2_length",
+            "region_id": "r11",
             "purpose": "data_cell",
-            "x1": 200,
-            "y1": 780,
-            "x2": 400,
-            "y2": 820,
-            "reason": "Read length for F2"
+            "target": "4",
+            "x1": 0.58,
+            "y1": 0.78,
+            "x2": 0.66,
+            "y2": 0.85,
+            "reason": "number of footings for first footing"
           },
           {
-            "region_id": "row2_breadth",
+            "region_id": "r12",
             "purpose": "data_cell",
-            "x1": 400,
-            "y1": 780,
-            "x2": 600,
-            "y2": 820,
-            "reason": "Read breadth for F2"
+            "target": "F2",
+            "x1": 0.04,
+            "y1": 0.85,
+            "x2": 0.12,
+            "y2": 0.92,
+            "reason": "footing ID for second footing"
           },
           {
-            "region_id": "row2_depth",
+            "region_id": "r13",
             "purpose": "data_cell",
-            "x1": 600,
-            "y1": 780,
-            "x2": 800,
-            "y2": 820,
-            "reason": "Read depth for F2"
+            "target": "3000",
+            "x1": 0.12,
+            "y1": 0.85,
+            "x2": 0.28,
+            "y2": 0.92,
+            "reason": "length for second footing"
           },
           {
-            "region_id": "row2_nos",
+            "region_id": "r14",
             "purpose": "data_cell",
-            "x1": 800,
-            "y1": 780,
-            "x2": 900,
-            "y2": 820,
-            "reason": "Read nos for F2"
+            "target": "3000",
+            "x1": 0.28,
+            "y1": 0.85,
+            "x2": 0.44,
+            "y2": 0.92,
+            "reason": "breadth for second footing"
+          },
+          {
+            "region_id": "r15",
+            "purpose": "data_cell",
+            "target": "500",
+            "x1": 0.44,
+            "y1": 0.85,
+            "x2": 0.58,
+            "y2": 0.92,
+            "reason": "depth for second footing"
+          },
+          {
+            "region_id": "r16",
+            "purpose": "data_cell",
+            "target": "6",
+            "x1": 0.58,
+            "y1": 0.85,
+            "x2": 0.66,
+            "y2": 0.92,
+            "reason": "number of footings for second footing"
           }
         ],
         "normalization_rules": [
-          "Trim spaces",
-          "Convert numeric strings to numbers"
+          "Ignore GRID REFERENCE column",
+          "Ignore reinforcement, mix, steel grade",
+          "reinforcement must be empty arrays",
+          "mix and steel_grade must be null",
+          "column_id must be null"
         ],
         "extraction_order": [
           "FOOTING ID",
           "LENGTH(L)",
           "BREADTH(B)",
           "DEPTH(D)",
-          "NOS"
+          "NOS."
         ]
       },
       "zoom_regions": [],
@@ -190,32 +215,32 @@
           "footing_id": "F1",
           "column_id": null,
           "size": {
-            "width": 3500,
+            "width": null,
             "depth": null,
-            "length": 3500
+            "length": null
           },
           "reinforcement": {
             "dia": [],
             "spacing": []
           },
           "nos": 4,
-          "mix": null,
+          "mix": [],
           "steel_grade": null
         },
         {
           "footing_id": "F2",
           "column_id": null,
           "size": {
-            "width": 3000,
+            "width": null,
             "depth": null,
-            "length": 3000
+            "length": null
           },
           "reinforcement": {
             "dia": [],
             "spacing": []
           },
           "nos": 6,
-          "mix": null,
+          "mix": [],
           "steel_grade": null
         }
       ],
@@ -225,16 +250,16 @@
             "footing_id": "F1",
             "column_id": null,
             "size": {
-              "width": 3500,
+              "width": null,
               "depth": null,
-              "length": 3500
+              "length": null
             },
             "reinforcement": {
               "dia": [],
               "spacing": []
             },
             "nos": 4,
-            "mix": null,
+            "mix": [],
             "steel_grade": null
           },
           "source_region_ids": []
@@ -244,16 +269,16 @@
             "footing_id": "F2",
             "column_id": null,
             "size": {
-              "width": 3000,
+              "width": null,
               "depth": null,
-              "length": 3000
+              "length": null
             },
             "reinforcement": {
               "dia": [],
               "spacing": []
             },
             "nos": 6,
-            "mix": null,
+            "mix": [],
             "steel_grade": null
           },
           "source_region_ids": []
@@ -261,17 +286,13 @@
       ],
       "expected_count": 2,
       "actual_count": 2,
-      "warnings": [
-        "duplicate record key detected: ('None',)"
-      ]
+      "warnings": []
     }
   },
   "summary": {
     "page_count": 1,
     "record_count": 2,
-    "warning_count": 1,
-    "warnings": [
-      "duplicate record key detected: ('None',)"
-    ]
+    "warning_count": 0,
+    "warnings": []
   }
 }

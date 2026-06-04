@@ -4,9 +4,9 @@
       "footing_id": "F1",
       "column_id": null,
       "size": {
-        "width": 3500,
+        "width": null,
         "depth": null,
-        "length": 3500
+        "length": null
       },
       "reinforcement": {
         "dia": [],
@@ -20,9 +20,9 @@
       "footing_id": "F2",
       "column_id": null,
       "size": {
-        "width": 3000,
+        "width": null,
         "depth": null,
-        "length": 3000
+        "length": null
       },
       "reinforcement": {
         "dia": [],

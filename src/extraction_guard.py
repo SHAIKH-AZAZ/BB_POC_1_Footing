@@ -220,7 +220,7 @@ def build_footing_record(args):
         },
         "reinforcement": reinf,
         "nos": args.get("nos"),
-        "mix": _dedupe(_as_list(args.get("mix") or args.get("concrete_mix"))),
+        "mix": _dedupe(_as_list(args.get("mix"))),
         "steel_grade": args.get("steel_grade"),
     }
     if stirrups["dia"] or stirrups["spacing"]:

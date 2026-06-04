@@ -75,27 +75,63 @@ _REGION_PURPOSE_ENUM = [
 
 def _with_tool_protocol(prompt_text):
     return (
-        "ENFORCED TOOL PROTOCOL:\n"
-        "You MUST use tools — do NOT return raw JSON text.\n\n"
-        "CRITICAL: The drawing contains many sections (floor columns, beam details, cross-sections, etc.). "
-        "IGNORE ALL OF THEM. Your ONLY target is the FOOTING DETAILS table "
-        "(may be labeled FOOTING, FOOTING SCHEDULE, ISOLATED FOOTING SCHEDULE, or similar). "
-        "If the COLUMN MARK row has values like 'C1,C18', 'C2,C9' — you found the right table. "
-        "If you see '4TH FLOOR COLUMN' or 'BASEMENT COLUMN' — you are reading the WRONG section.\n\n"
-        "MIX EXTRACTION RULE — READ THIS CAREFULLY:\n"
-        "Footing tables often have TWO separate concrete grades written as vertical labels on the left side:\n"
-        "  1) A label like 'M25 : Fe500' next to the TOP STEEL / BOTTOM STEEL rows.\n"
-        "     → M25 is the CONCRETE MIX GRADE. Fe500 is the STEEL GRADE. Extract BOTH separately.\n"
-        "     → M25 MUST go into the mix array. Do NOT ignore it.\n"
-        "  2) A separate label like 'M15' next to the P.C.C. row.\n"
-        "     → M15 is also a CONCRETE MIX GRADE. Add it to the same mix array.\n"
-        "Result: mix = ['M25', 'M15'], steel_grade = ['Fe500']\n\n"
-        "Step 1: call think() — locate the FOOTING DETAILS table first, then plan extraction from it.\n"
-        "Step 2: call add_footing() once for EVERY footing group (left to right) from that table.\n"
-        "  - Do NOT stop early. Every visible footing column group must get its own add_footing call.\n"
-        "  - If vertical steel/reinforcement rows are visible, include their exact bar and spacing text in "
-        "short_span_reinf/long_span_reinf or the matching bottom/top reinforcement fields.\n"
-        "Optional: call zoom_region() + confirm_read() for any cell that is blurry or ambiguous.\n\n"
+        "MIX & STEEL GRADE EXTRACTION RULE — READ THIS CAREFULLY:\n"
+        "Concrete grades and steel grades may appear as vertical labels, side labels, merged cells, row headers, or notes within the FOOTING DETAILS table.\n\n"
+
+        "1) COMBINED CONCRETE + STEEL LABELS\n"
+        "   Examples:\n"
+        "     M25 : Fe500\n"
+        "     M30 : Fe500D\n"
+        "     M35 : Fe550\n"
+        "   Interpretation:\n"
+        "     - M25 / M30 / M35 = CONCRETE MIX GRADE\n"
+        "     - Fe500 / Fe500D / Fe550 = STEEL GRADE\n"
+        "   Extraction Rules:\n"
+        "     - ALWAYS extract BOTH values.\n"
+        "     - ALWAYS add Mxx values to the mix array.\n"
+        "     - ALWAYS add Fexxx values to the steel_grade array.\n"
+        "     - NEVER ignore the Mxx value because it appears together with a steel grade.\n\n"
+
+        "2) PCC CONCRETE LABELS\n"
+        "   Examples:\n"
+        "     M10\n"
+        "     M15\n"
+        "     M20\n"
+        "   when associated with P.C.C. / PCC rows.\n"
+        "   Extraction Rules:\n"
+        "     - These are ALSO concrete mix grades.\n"
+        "     - Add them to the same mix array.\n"
+        "     - Do not overwrite previously found mix grades.\n\n"
+
+        "3) MULTIPLE MIX GRADES ARE VALID\n"
+        "   A footing may contain:\n"
+        "     - Structural Concrete = M25\n"
+        "     - PCC Concrete = M15\n"
+        "   Both MUST be captured.\n\n"
+
+        "4) REQUIRED VALIDATION\n"
+        "   If 'Mxx : Fexxx' is detected anywhere in the footing table:\n"
+        "     - Mxx MUST appear in mix.\n"
+        "     - Fexxx MUST appear in steel_grade.\n"
+        "   Missing the Mxx value is an extraction error.\n\n"
+
+        "5) DEDUPLICATION\n"
+        "   Store only unique values.\n"
+        "   Example:\n"
+        "     mix = ['M25', 'M15']\n"
+        "     steel_grade = ['Fe500']\n\n"
+
+        "6) SEARCH AREA\n"
+        "   Look for mix and steel grades in:\n"
+        "     - Left side labels\n"
+        "     - Right side labels\n"
+        "     - Vertical text\n"
+        "     - Row headers\n"
+        "     - Table notes\n"
+        "     - Merged cells\n"
+        "     - Top and bottom annotations\n"
+        "   Do NOT limit the search to a single side of the table.\n\n"
+
         f"{prompt_text}"
     )
 
@@ -125,11 +161,31 @@ FOOTING_TOOLS = [
                     "row_structure": {
                         "type": "array",
                         "items": {"type": "string"},
-                        "description": "Confirmed schedule rows such as COLUMN MARK, SIZE, D TO d, SHORT SPAN, LONG SPAN.",
+                        "description": "Confirmed schedule rows such as COLUMN MARK, SIZE, D TO d, SHORT SPAN, LONG SPAN. ETC can be given ",
                     },
                     "global_notes": {
                         "type": "object",
-                        "description": "Concrete mix and steel grade notes found outside the table.",
+                        "description": "Concrete mix and steel grade notes found anywhere in the table.",
+                    },
+                    "concrete_grades": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": (
+                            "ALL concrete mix grades (M-grades) found anywhere in the table — "
+                            "in vertical labels, row headers, merged cells, or notes. "
+                            "IMPORTANT: A label like 'M25 : Fe500' contains M25 as a concrete grade. "
+                            "A label like 'M15' next to PCC row is also a concrete grade. "
+                            "List ALL: e.g. ['M25', 'M15']. This list will be used for every add_footing call."
+                        ),
+                    },
+                    "steel_grades": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": (
+                            "ALL steel grades (Fe-grades) found anywhere in the table. "
+                            "A label like 'M25 : Fe500' contains Fe500 as the steel grade. "
+                            "List ALL: e.g. ['Fe500']."
+                        ),
                     },
                     "expected_count": {"type": "integer"},
                     "zoom_plan": {
@@ -232,10 +288,37 @@ FOOTING_TOOLS = [
                             "This is used to verify the column actually has footing data."
                         ),
                     },
-                    "plan_length": {"type": ["number", "null"]},
-                    "plan_width": {"type": ["number", "null"]},
-                    "depth_top": {"type": ["number", "null"]},
-                    "depth_bottom": {"type": ["number", "null"]},
+                    "plan_length": {
+                        "type": ["number", "null"],
+                        "description": (
+                            "Footing length (second dimension). "
+                            "Row may be labeled: 'SIZE', 'B x L', 'B X L', 'FOOTING SIZE', 'L', or similar. "
+                            "Example: '1200 x 1500' → 1500. Numbers only, no units."
+                        ),
+                    },
+                    "plan_width": {
+                        "type": ["number", "null"],
+                        "description": (
+                            "Footing width (first dimension). "
+                            "Row may be labeled: 'SIZE', 'B x L', 'B X L', 'FOOTING SIZE', 'B', or similar. "
+                            "Example: '1200 x 1500' → 1200. Numbers only, no units."
+                        ),
+                    },
+                    "depth_top": {
+                        "type": ["number", "null"],
+                        "description": (
+                            "Footing depth. Row may be labeled: 'DEPTH', 'DEPTH (D)', 'D', 'd', 'D TO d', or similar. "
+                            "Numbers only, no units."
+                        ),
+                    },
+                    "depth_bottom": {
+                        "type": ["number", "null"],
+                        "description": (
+                            "Footing depth (preferred over depth_top). "
+                            "Row may be labeled: 'DEPTH', 'DEPTH (D)', 'D', 'd', 'D TO d', or similar. "
+                            "Numbers only, no units."
+                        ),
+                    },
                     "short_span_reinf": {
                         "type": ["string", "null"],
                         "description": (
@@ -299,16 +382,21 @@ FOOTING_TOOLS = [
                         "type": ["array", "string", "null"],
                         "items": {"type": "string"},
                         "description": (
-                            "ALL concrete mix grades found anywhere in the table for this footing. "
-                            "CRITICAL: A vertical label like 'M25 : Fe500' contains TWO values — "
-                            "M25 is a concrete mix grade AND Fe500 is the steel grade. "
-                            "You MUST include M25 in this mix array. "
-                            "Also include any separate PCC/blinding mix (e.g. M15 next to the P.C.C. row). "
-                            "Example result: ['M25', 'M15']. Never leave this empty if any M-grade is visible."
+                            "Use the concrete_grades list you identified in the think phase. "
+                            "Copy those exact values here for every add_footing call. "
+                            "Example: if think.concrete_grades = ['M25', 'M15'], set mix = ['M25', 'M15']. "
+                            "Never leave this empty if concrete_grades was non-empty in think."
                         ),
                     },
-                    "concrete_mix": {"type": ["string", "null"]},
-                    "steel_grade": {"type": ["string", "null"]},
+                    "steel_grade": {
+                        "type": ["array", "string", "null"],
+                        "items": {"type": "string"},
+                        "description": (
+                            "ALL steel grades identified in the think phase (steel_grades array). "
+                            "Use the same values you listed in think.steel_grades. "
+                            "Example: ['Fe500']."
+                        ),
+                    },
                     "source_region_ids": {"type": "array", "items": {"type": "string"}},
                 },
                 "required": ["column_id"],
@@ -377,12 +465,19 @@ def extract_with_tools(image_path, prompt_text, max_iterations=300, enforce_zoom
                 state.handle_think(args)
                 groups = args.get("column_groups") or []
                 expected = state.expected_count()
+                concrete_grades = args.get("concrete_grades") or []
+                steel_grades = args.get("steel_grades") or []
                 print("\n============================================================")
                 print("  [THINK] Structured footing extraction plan accepted")
                 print(f"  groups={len(groups)} expected={expected}")
+                print(f"  concrete_grades={concrete_grades}")
+                print(f"  steel_grades={steel_grades}")
                 print("============================================================\n")
                 result_content = (
                     f"Plan accepted. {len(groups)} footing groups = {expected} expected add_footing calls.\n"
+                    f"Concrete grades identified: {concrete_grades}. "
+                    f"Steel grades identified: {steel_grades}.\n"
+                    "For EVERY add_footing call: set mix={concrete_grades} and steel_grade={steel_grades} exactly.\n"
                     "NOW start calling add_footing immediately — one call per footing group.\n"
                     f"Column groups in order: {', '.join(groups)}.\n"
                     "Work left-to-right through ALL groups. Do NOT stop until every group has been recorded. "
